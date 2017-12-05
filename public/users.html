@@ -374,7 +374,7 @@ License: You must have a valid license purchased only from themeforest(the above
 							</h4>
 								<i class="m-menu__section-icon flaticon-more-v3"></i>
 							</li>
-							<li class="m-menu__item  m-menu__item--submenu" aria-haspopup="true"  data-menu-submenu-toggle="hover">
+							<li class="m-menu__item  m-menu__item--submenu m-menu__item--active" aria-haspopup="true"  data-menu-submenu-toggle="hover">
 								<a  href="#" class="m-menu__link m-menu__toggle">
 									<i class="m-menu__link-icon fa fa-user-circle-o"></i>
 									<span class="m-menu__link-text">
@@ -391,115 +391,51 @@ License: You must have a valid license purchased only from themeforest(the above
 					<!-- BEGIN: Subheader -->
 					<!-- END: Subheader -->
 					<div class="m-content">
-						<div class="row">
-							<div class="col-lg-12">
-								<div class="m-portlet m-portlet--full-height">
-									<div class="m-portlet__head">
-										<div class="m-portlet__head-caption">
-											<div class="m-portlet__head-title">
-												<span class="m-portlet__head-icon">
-													<i class="fa fa-user-circle-o"></i>
-												</span>
-												<h3 class="m-portlet__head-text">Profile</h3>
-											</div>
-										</div>
-									</div>
-									<!-------------->
-
-									<div class="tab-content">
-											<form class="m-form m-form--fit m-form--label-align-right">
-												<div class="m-portlet__body">
-													<div class="form-group m-form__group row">
-														<div class="col-10 ml-auto">
-															<h3 class="m-form__section">
-																1. Personal Details
-															</h3>
-														</div>
-													</div>
-													<div class="form-group m-form__group row">
-														<label for="fullname" class="col-2 col-form-label">
-															Full Name
-														</label>
-														<div class="col-10">
-															<input class="form-control m-input" type="text" value="Mark Andre">
-														</div>
-													</div>
-													<div class="form-group m-form__group row">
-														<label for="email" class="col-2 col-form-label">
-															Email
-														</label>
-														<div class="col-10">
-															<input class="form-control m-input" type="text" disabled value="johndoe@gmail.com">
-														</div>
-													</div>
-													<div class="form-group m-form__group row">
-														<label for="example-text-input" class="col-2 col-form-label">
-															Phone No.
-														</label>
-														<div class="col-10">
-															<input class="form-control m-input" type="text" value="+456669067890">
-														</div>
-													</div>
-													<div class="form-group m-form__group row">
-														<label for="email" class="col-2 col-form-label">
-															NIC
-														</label>
-														<div class="col-10">
-															<input class="form-control m-input" type="text" disabled value="960271157v" >
-														</div>
-													</div>
-													<div class="form-group m-form__group row">
-														<label for="example-text-input" class="col-2 col-form-label">
-															Address
-														</label>
-														<div class="col-10">
-															<input class="form-control m-input" type="text" value="L-12-20 Vertex, Cybersquare">
-														</div>
-													</div>
-													<div class="m-form__seperator m-form__seperator--dashed m-form__seperator--space-2x"></div>
-													<div class="form-group m-form__group row">
-														<div class="col-10 ml-auto">
-															<h3 class="m-form__section">
-																2. Change Password
-															</h3>
-														</div>
-													</div>
-													<div class="form-group m-form__group row">
-														<label for="example-text-input" class="col-2 col-form-label">
-															New Password
-														</label>
-														<div class="col-10">
-															<input class="form-control m-input" type="password" placeholder="enter new password">
-														</div>
-													</div>
-													<div class="form-group m-form__group row">
-														<label for="example-text-input" class="col-2 col-form-label">
-															Retype Password
-														</label>
-														<div class="col-10">
-															<input class="form-control m-input" type="password" placeholder="retype password">
-														</div>
-													</div>
-												</div>
-												<div class="m-portlet__foot m-portlet__foot--fit">
-													<div class="m-form__actions"><center>
-														<div class="row">
-															<div class="col-12">
-																<button type="submit" class="btn btn-primary m-btn m-btn--air m-btn--custom">
-																	Save changes
-																</button>
-																&nbsp;&nbsp;
-																<button type="reset" class="btn btn-secondary m-btn m-btn--air m-btn--custom">
-																	Cancel
-																</button>
-															</div>
-														</div></center>
-													</div>
-												</div>
-											</form>
-
+						<div class="m-portlet m-portlet--mobile">
+							<div class="m-portlet__head">
+								<div class="m-portlet__head-caption">
+									<div class="m-portlet__head-title">
+										<h3 class="m-portlet__head-text">
+											Users
+										</h3>
 									</div>
 								</div>
+							</div>
+							<div class="m-portlet__body">
+								<!--begin: Search Form -->
+								<div class="m-form m-form--label-align-right m--margin-top-20 m--margin-bottom-30">
+									<div class="row align-items-center">
+										<div class="col-xl-8 order-2 order-xl-1">
+											<div class="form-group m-form__group row align-items-center">
+												<div class="col-md-4">
+													<div class="m-input-icon m-input-icon--left">
+														<input type="text" class="form-control m-input m-input--solid" placeholder="Search..." id="m_form_search">
+														<span class="m-input-icon__icon m-input-icon__icon--left">
+															<span>
+																<i class="fa fa-search"></i>
+															</span>
+														</span>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="col-xl-4 order-1 order-xl-2 m--align-right">
+											<a href="new_user.html" class="btn btn-primary m-btn m-btn--custom m-btn--icon m-btn--air m-btn--default">
+												<span>
+													<i class="fa fa-user-plus"></i>
+													<span>
+														Add User
+													</span>
+												</span>
+											</a>
+											<div class="m-separator m-separator--dashed d-xl-none"></div>
+										</div>
+									</div>
+								</div>
+								<!--end: Search Form -->
+								<!--begin: Datatable -->
+								<div class="m_datatable" id="local_data"></div>
+								<!--end: Datatable -->
 							</div>
 						</div>
 					</div>
@@ -820,7 +756,7 @@ License: You must have a valid license purchased only from themeforest(the above
 		<script src="assets/js/scripts.bundle.js" type="text/javascript"></script>
 		<!--end::Base Scripts -->
 		<!--begin::Page Snippets -->
-		<script src="assets/js/home.js" type="text/javascript"></script>
+		<script src="assets/js/users.js" type="text/javascript"></script>
 		<!--end::Page Snippets -->
 	</body>
 	<!-- end::Body -->
