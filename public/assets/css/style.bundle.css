@@ -11852,6 +11852,140 @@ code {
   .m-radio.m-radio--state-primary.m-radio--solid > input:checked ~ span {
     background: #5867dd; }
 
+
+
+
+    .m-radio.m-radio--state-green.m-radio--disabled {
+      opacity: 0.8 ;
+      filter: alpha(opacity=80) ; }
+
+    .m-radio.m-radio--state-green > span {
+      border: 1px solid #34bfa3; }
+      .m-radio.m-radio--state-green > span:after {
+        border: solid #34bfa3; }
+
+    .m-radio.m-radio--state-green > input:checked ~ span {
+      border: 1px solid #34bfa3; }
+
+    .m-radio.m-radio--state-green > input:disabled ~ span:after {
+      border-color: #34bfa3; }
+
+    .m-radio.m-radio--state-green > input:checked ~ span {
+      border: 1px solid #34bfa3; }
+
+    .m-radio.m-radio--state-green > input:disabled ~ span {
+      opacity: 0.6 ;
+      filter: alpha(opacity=60) ; }
+
+    .m-radio.m-radio--state-green.m-radio--solid {
+      /*
+            &:hover > input:not([disabled]) ~ span {
+                background: $color-solid-bg-hover;
+            }
+            */ }
+      .m-radio.m-radio--state-green.m-radio--solid > span {
+        background: #34bfa3;
+        border: 1px solid transparent !important; }
+        .m-radio.m-radio--state-green.m-radio--solid > span:after {
+          border: solid #ffffff; }
+      .m-radio.m-radio--state-green.m-radio--solid > input:focus ~ span {
+        border: 1px solid transparent !important; }
+      .m-radio.m-radio--state-green.m-radio--solid > input:checked ~ span {
+        background: #34bfa3; }
+
+
+
+
+
+        .m-radio.m-radio--state-orange.m-radio--disabled {
+          opacity: 0.8 ;
+          filter: alpha(opacity=80) ; }
+
+        .m-radio.m-radio--state-orange > span {
+          border: 1px solid #ffb766; }
+          .m-radio.m-radio--state-orange > span:after {
+            border: solid #ffb766; }
+
+        .m-radio.m-radio--state-orange > input:checked ~ span {
+          border: 1px solid #ffb766; }
+
+        .m-radio.m-radio--state-orange > input:disabled ~ span:after {
+          border-color: #ff8800; }
+
+        .m-radio.m-radio--state-orange > input:checked ~ span {
+          border: 1px solid #ffb766; }
+
+        .m-radio.m-radio--state-orange > input:disabled ~ span {
+          opacity: 0.6 ;
+          filter: alpha(opacity=60) ; }
+
+        .m-radio.m-radio--state-orange.m-radio--solid {
+          /*
+                &:hover > input:not([disabled]) ~ span {
+                    background: $color-solid-bg-hover;
+                }
+                */ }
+          .m-radio.m-radio--state-orange.m-radio--solid > span {
+            background: #ffb766;
+            border: 1px solid transparent !important; }
+            .m-radio.m-radio--state-orange.m-radio--solid > span:after {
+              border: solid #ffffff; }
+          .m-radio.m-radio--state-orange.m-radio--solid > input:focus ~ span {
+            border: 1px solid transparent !important;
+            background-color: #ffb766;}
+          .m-radio.m-radio--state-orange.m-radio--solid > input:checked ~ span {
+            background: #ffb766; }
+
+
+
+
+
+
+
+            .m-radio.m-radio--state-red.m-radio--disabled {
+              opacity: 0.8 ;
+              filter: alpha(opacity=80) ; }
+
+            .m-radio.m-radio--state-red > span {
+              border: 1px solid #ff4b4b; }
+              .m-radio.m-radio--state-red > span:after {
+                border: solid #ff4b4b; }
+
+            .m-radio.m-radio--state-red > input:checked ~ span {
+              border: 1px solid #ff4b4b; }
+
+            .m-radio.m-radio--state-red > input:disabled ~ span:after {
+              border-color: #ff4b4b; }
+
+            .m-radio.m-radio--state-red > input:checked ~ span {
+              border: 1px solid #ff4b4b; }
+
+            .m-radio.m-radio--state-red > input:disabled ~ span {
+              opacity: 0.6 ;
+              filter: alpha(opacity=60) ; }
+
+            .m-radio.m-radio--state-red.m-radio--solid {
+              /*
+                    &:hover > input:not([disabled]) ~ span {
+                        background: $color-solid-bg-hover;
+                    }
+                    */ }
+              .m-radio.m-radio--state-red.m-radio--solid > span {
+                background: #ff4b4b;
+                border: 1px solid transparent !important; }
+                .m-radio.m-radio--state-red.m-radio--solid > span:after {
+                  border: solid #ffffff; }
+              .m-radio.m-radio--state-red.m-radio--solid > input:focus ~ span {
+                border: 1px solid transparent !important; }
+              .m-radio.m-radio--state-red.m-radio--solid > input:checked ~ span {
+                background: #ff4b4b; }
+
+
+
+
+
+
+
 .m-checkbox.m-checkbox--state-success.m-checkbox--disabled {
   opacity: 0.8 ;
   filter: alpha(opacity=80) ; }
