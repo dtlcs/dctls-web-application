@@ -63,7 +63,7 @@ app.controller('App-controller-map',function ($scope,$http) {
             /**load external html to the div*/
             $(document).ready(function()
             {
-                $.get("../public/map-infoWindow.html", function(result)
+                $.get("../public/map-infoWindow - new.html", function(result)
                 {
                     /**set content string to the info window*/
                     var content3=result;

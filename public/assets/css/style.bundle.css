@@ -11860,18 +11860,21 @@ code {
       filter: alpha(opacity=80) ; }
 
     .m-radio.m-radio--state-green > span {
-      border: 1px solid #34bfa3; }
+      border: 1px solid #addbd1; }
+
       .m-radio.m-radio--state-green > span:after {
-        border: solid #34bfa3; }
+        border: 1px solid transparent;}
 
     .m-radio.m-radio--state-green > input:checked ~ span {
-      border: 1px solid #34bfa3; }
+      border: 1px solid transparent;
+      background: none;}
 
     .m-radio.m-radio--state-green > input:disabled ~ span:after {
-      border-color: #34bfa3; }
+      background: #34bfa3; }
 
     .m-radio.m-radio--state-green > input:checked ~ span {
-      border: 1px solid #34bfa3; }
+      border: 1px solid transparent;;
+    background: #34bfa3; }
 
     .m-radio.m-radio--state-green > input:disabled ~ span {
       opacity: 0.6 ;
@@ -11902,18 +11905,19 @@ code {
           filter: alpha(opacity=80) ; }
 
         .m-radio.m-radio--state-orange > span {
-          border: 1px solid #ffb766; }
+          border: 1px solid #ffd2a0; }
           .m-radio.m-radio--state-orange > span:after {
-            border: solid #ffb766; }
+          border: 1px solid transparent; }
 
         .m-radio.m-radio--state-orange > input:checked ~ span {
-          border: 1px solid #ffb766; }
+        background: #ffb766;
+      border: 1px solid transparent; }
 
         .m-radio.m-radio--state-orange > input:disabled ~ span:after {
-          border-color: #ff8800; }
+          border: 1px solid transparent; }
 
         .m-radio.m-radio--state-orange > input:checked ~ span {
-          border: 1px solid #ffb766; }
+          border: 1px solid transparent; }
 
         .m-radio.m-radio--state-orange > input:disabled ~ span {
           opacity: 0.6 ;
@@ -11947,18 +11951,18 @@ code {
               filter: alpha(opacity=80) ; }
 
             .m-radio.m-radio--state-red > span {
-              border: 1px solid #ff4b4b; }
+              border: 1px solid #ffa8a8; }
               .m-radio.m-radio--state-red > span:after {
-                border: solid #ff4b4b; }
+                border: 1px solid transparent; }
 
             .m-radio.m-radio--state-red > input:checked ~ span {
               border: 1px solid #ff4b4b; }
 
             .m-radio.m-radio--state-red > input:disabled ~ span:after {
-              border-color: #ff4b4b; }
+              background: #ff4b4b; }
 
             .m-radio.m-radio--state-red > input:checked ~ span {
-              border: 1px solid #ff4b4b; }
+              background: #ff4b4b; }
 
             .m-radio.m-radio--state-red > input:disabled ~ span {
               opacity: 0.6 ;
