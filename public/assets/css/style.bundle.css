@@ -17318,7 +17318,7 @@ body.m-content--skin-light2 {
     -webkit-transform: translateZ(0);
     backface-visibility: hidden;
     -webkit-backface-visibility: hidden;
-    width: 300px !important;
+    width: 175px !important;
     -webkit-transition: all 0.3s ease;
     -moz-transition: all 0.3s ease;
     -ms-transition: all 0.3s ease;
