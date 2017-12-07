@@ -393,7 +393,7 @@ License: You must have a valid license purchased only from themeforest(the above
 					<div class="m-content">
 						<div class="row">
 							<div class="col-lg-6">
-								<div class="m-portlet">
+								<div class="m-portlet m-portlet--full-height">
 									<div class="m-portlet__body  m-portlet__body--no-padding">
 										<div class="row m-row--no-padding m-row--col-separator-xl" ng-app="MainApp" ng-controller="App-controller-map">
 											<div id="m_gmap_3" style="height:550px; width: 100%;">
@@ -403,324 +403,383 @@ License: You must have a valid license purchased only from themeforest(the above
 									</div>
 								</div>
 							</div>
-							<div class="col-lg-6">
-								<div class="m-portlet m-portlet--tabs">
+							<div class="col-lg-3">
+								<div class="m-portlet m-portlet--mobile">
 									<div class="m-portlet__head">
-
-										<div class="m-portlet__head-tools">
-											<ul class="nav nav-tabs m-tabs m-tabs-line   m-tabs-line--left m-tabs-line-danger" role="tablist">
-												<li class="nav-item m-tabs__item">
-													<a class="nav-link m-tabs__link active" data-toggle="tab" href="#m_portlet_base_demo_1_tab_content" role="tab">
-														Control Settings
-													</a>
-												</li>
-												<!--
-												<li class="nav-item m-tabs__item">
-													<a class="nav-link m-tabs__link" data-toggle="tab" href="#m_portlet_base_demo_1_tab_content" role="tab">
-														Messages
-													</a>
-												</li>
-												<li class="nav-item m-tabs__item">
-													<a class="nav-link m-tabs__link" data-toggle="tab" href="#m_portlet_base_demo_1_tab_content" role="tab">
-														Settings
-													</a>
-												</li>
-											-->
-											</ul>
+										<div class="m-portlet__head-caption">
+											<div class="m-portlet__head-title">
+												<h3 class="m-portlet__head-text">North Lane</h3>
+											</div>
 										</div>
 									</div>
-									<div class="tab-centent">
-									<form class="m-form m-form--fit m-form--label-align-right">
-										<div class="m-portlet__body">
-										<div class="form-group m-form__group row">
-											<div class="col-10 ml-auto">
-												<h3 class="m-form__section">
-													1. North Lane
-												</h3>
+
+
+
+									<div class="tab-content">
+											<form class="m-form m-form--fit m-form--label-align-right">
+												<div class="m-portlet__body" style="padding-top: 20px; padding-bottom: 10px">
+
+													<div class="form-group m-form__group row">
+														<div class="col-12">
+														<label for="">
+															Left Lane
+														</label>
+													</div>
+														<div class="col-12">
+															<div class="m-radio-inline" style="padding-left: 0px;">
+																<label class="m-radio m-radio--bold m-radio--state-green" style="padding: 10px; "	>
+																	<input type="radio" name="nlane1" value="1">
+																	<span></span>
+																</label>
+																<label class="m-radio m-radio--bold m-radio--state-orange "  style="padding: 10px;">
+																	<input type="radio" name="nlane1" value="2">
+																	<span></span>
+																</label>
+																<label class="m-radio m-radio--bold m-radio--state-red"   style="padding: 10px;">
+																	<input type="radio" name="nlane1" value="3">
+																	<span></span>
+																</label>
+															</div>
+														</div>
+													</div>
+													<div class="form-group m-form__group row">
+														<div class="col-12">
+														<label for="">
+															Middle Lane
+														</label>
+													</div>
+														<div class="col-12">
+															<div class="m-radio-inline" style="padding-left: 0px;">
+																<label class="m-radio m-radio--bold m-radio--state-green" style="padding: 10px; "	>
+																	<input type="radio" name="nlane2" value="1">
+																	<span></span>
+																</label>
+																<label class="m-radio m-radio--bold m-radio--state-orange "  style="padding: 10px;">
+																	<input type="radio" name="nlane2" value="2">
+																	<span></span>
+																</label>
+																<label class="m-radio m-radio--bold m-radio--state-red"   style="padding: 10px;">
+																	<input type="radio" name="nlane2" value="3">
+																	<span></span>
+																</label>
+															</div>
+														</div>
+													</div>
+													<div class="form-group m-form__group row" style="padding-bottom: 0px;">
+														<div class="col-12">
+														<label for="">
+															Right Lane
+														</label>
+													</div>
+														<div class="col-12">
+															<div class="m-radio-inline" style="padding-left: 0px;">
+																<label class="m-radio m-radio--bold m-radio--state-green" style="padding: 10px; "	>
+																	<input type="radio" name="nlane3" value="1">
+																	<span></span>
+																</label>
+																<label class="m-radio m-radio--bold m-radio--state-orange "  style="padding: 10px;">
+																	<input type="radio" name="nlane3" value="2">
+																	<span></span>
+																</label>
+																<label class="m-radio m-radio--bold m-radio--state-red"   style="padding: 10px;">
+																	<input type="radio" name="nlane3" value="3">
+																	<span></span>
+																</label>
+															</div>
+														</div>
+													</div>
+
+												</div>
+
+											</form>
+
+									</div>
+
+
+								</div>
+								<div class="m-portlet m-portlet--mobile" style="margin-top: 30px;">
+									<div class="m-portlet__head">
+										<div class="m-portlet__head-caption">
+											<div class="m-portlet__head-title">
+												<h3 class="m-portlet__head-text">West Lane</h3>
 											</div>
-										</div>
-										<div class="m-form__group form-group">
-											<label for="" class="col-3 col-form-label">
-												Lane 01
-											</label>
-											<div class="col-9">
-											<div class="m-radio-inline">
-												<label class="m-radio m-radio--bold m-radio--state-green">
-													<input type="radio" name="nlane1" value="1">go
-													<span></span>
-												</label>
-												<label class="m-radio m-radio--bold m-radio--state-orange">
-													<input type="radio" name="nlane1" value="2">wait
-													<span></span>
-												</label>
-												<label class="m-radio m-radio--bold m-radio--state-red">
-													<input type="radio" name="nlane1" value="3">stop
-													<span></span>
-												</label>
-											</div>
-										</div>
-
-											<label for="" class="col-3 col-form-label">
-												Lane 02
-											</label>
-											<div class="col-9">
-											<div class="m-radio-inline">
-												<label class="m-radio m-radio--bold m-radio--state-green">
-													<input type="radio" name="nlane2" value="1">go
-													<span></span>
-												</label>
-												<label class="m-radio m-radio--bold m-radio--state-orange">
-													<input type="radio" name="nlane2" value="2">wait
-													<span></span>
-												</label>
-												<label class="m-radio m-radio--bold m-radio--state-red">
-													<input type="radio" name="nlane2" value="3">stop
-													<span></span>
-												</label>
-											</div>
-										</div>
-
-											<label for="" class="col-3 col-form-label">
-												Lane 03
-											</label>
-											<div class="col-9">
-											<div class="m-radio-inline">
-												<label class="m-radio m-radio--bold m-radio--state-green">
-													<input type="radio" name="nlane3" value="1">go
-													<span></span>
-												</label>
-												<label class="m-radio m-radio--bold m-radio--state-orange">
-													<input type="radio" name="nlane3" value="2">wait
-													<span></span>
-												</label>
-												<label class="m-radio m-radio--bold m-radio--state-red">
-													<input type="radio" name="nlane3" value="3">stop
-													<span></span>
-												</label>
-											</div>
-										</div>
-
-										</div>
-										<div class="m-form__seperator m-form__seperator--dashed m-form__seperator--space-2x"></div>
-										<div class="form-group m-form__group row">
-											<div class="col-10 ml-auto">
-												<h3 class="m-form__section">
-													2. East Lane
-												</h3>
-											</div>
-										</div>
-										<div class="m-form__group form-group">
-											<label for="" class="col-3 col-form-label">
-												Lane 01
-											</label>
-											<div class="col-9">
-											<div class="m-radio-inline">
-												<label class="m-radio m-radio--bold m-radio--state-green">
-													<input type="radio" name="elane1" value="1">go
-													<span></span>
-												</label>
-												<label class="m-radio m-radio--bold m-radio--state-orange">
-													<input type="radio" name="elane1" value="2">wait
-													<span></span>
-												</label>
-												<label class="m-radio m-radio--bold m-radio--state-red">
-													<input type="radio" name="elane1" value="3">stop
-													<span></span>
-												</label>
-											</div>
-										</div>
-
-											<label for="" class="col-3 col-form-label">
-												Lane 02
-											</label>
-											<div class="col-9">
-											<div class="m-radio-inline">
-												<label class="m-radio m-radio--bold m-radio--state-green">
-													<input type="radio" name="elane2" value="1">go
-													<span></span>
-												</label>
-												<label class="m-radio m-radio--bold m-radio--state-orange">
-													<input type="radio" name="elane2" value="2">wait
-													<span></span>
-												</label>
-												<label class="m-radio m-radio--bold m-radio--state-red">
-													<input type="radio" name="elane2" value="3">stop
-													<span></span>
-												</label>
-											</div>
-										</div>
-
-											<label for="" class="col-3 col-form-label">
-												Lane 03
-											</label>
-											<div class="col-9">
-											<div class="m-radio-inline">
-												<label class="m-radio m-radio--bold m-radio--state-green">
-													<input type="radio" name="elane3" value="1">go
-													<span></span>
-												</label>
-												<label class="m-radio m-radio--bold m-radio--state-orange">
-													<input type="radio" name="elane3" value="2">wait
-													<span></span>
-												</label>
-												<label class="m-radio m-radio--bold m-radio--state-red">
-													<input type="radio" name="elane3" value="3">stop
-													<span></span>
-												</label>
-											</div>
-										</div>
-
-										</div>
-
-										<div class="m-form__seperator m-form__seperator--dashed m-form__seperator--space-2x"></div>
-
-
-										<div class="form-group m-form__group row">
-											<div class="col-10 ml-auto">
-												<h3 class="m-form__section">
-													3. South Lane
-												</h3>
-											</div>
-										</div>
-										<div class="m-form__group form-group">
-											<label for="" class="col-3 col-form-label">
-												Lane 01
-											</label>
-											<div class="col-9">
-											<div class="m-radio-inline">
-												<label class="m-radio m-radio--bold m-radio--state-green">
-													<input type="radio" name="slane1" value="1">go
-													<span></span>
-												</label>
-												<label class="m-radio m-radio--bold m-radio--state-orange">
-													<input type="radio" name="slane1" value="2">wait
-													<span></span>
-												</label>
-												<label class="m-radio m-radio--bold m-radio--state-red">
-													<input type="radio" name="slane1" value="3">stop
-													<span></span>
-												</label>
-											</div>
-										</div>
-
-											<label for="" class="col-3 col-form-label">
-												Lane 02
-											</label>
-											<div class="col-9">
-											<div class="m-radio-inline">
-												<label class="m-radio m-radio--bold m-radio--state-green">
-													<input type="radio" name="slane2" value="1">go
-													<span></span>
-												</label>
-												<label class="m-radio m-radio--bold m-radio--state-orange">
-													<input type="radio" name="slane2" value="2">wait
-													<span></span>
-												</label>
-												<label class="m-radio m-radio--bold m-radio--state-red">
-													<input type="radio" name="slane2" value="3">stop
-													<span></span>
-												</label>
-											</div>
-										</div>
-
-											<label for="" class="col-3 col-form-label">
-												Lane 03
-											</label>
-											<div class="col-9">
-											<div class="m-radio-inline">
-												<label class="m-radio m-radio--bold m-radio--state-green">
-													<input type="radio" name="slane3" value="1">go
-													<span></span>
-												</label>
-												<label class="m-radio m-radio--bold m-radio--state-orange">
-													<input type="radio" name="slane3" value="2">wait
-													<span></span>
-												</label>
-												<label class="m-radio m-radio--bold m-radio--state-red">
-													<input type="radio" name="slane3" value="3">stop
-													<span></span>
-												</label>
-											</div>
-										</div>
-
-										</div>
-										<div class="m-form__seperator m-form__seperator--dashed m-form__seperator--space-2x"></div>
-
-
-										<div class="form-group m-form__group row">
-											<div class="col-10 ml-auto">
-												<h3 class="m-form__section">
-													4. West Lane
-												</h3>
-											</div>
-										</div>
-										<div class="m-form__group form-group">
-											<label for="" class="col-3 col-form-label">
-												Lane 01
-											</label>
-											<div class="col-9">
-											<div class="m-radio-inline">
-												<label class="m-radio m-radio--bold m-radio--state-green">
-													<input type="radio" name="wlane1" value="1">go
-													<span></span>
-												</label>
-												<label class="m-radio m-radio--bold m-radio--state-orange">
-													<input type="radio" name="wlane1" value="2">wait
-													<span></span>
-												</label>
-												<label class="m-radio m-radio--bold m-radio--state-red">
-													<input type="radio" name="wlane1" value="3">stop
-													<span></span>
-												</label>
-											</div>
-										</div>
-
-											<label for="" class="col-3 col-form-label">
-												Lane 02
-											</label>
-											<div class="col-9">
-											<div class="m-radio-inline">
-												<label class="m-radio m-radio--bold m-radio--state-green">
-													<input type="radio" name="wlane2" value="1">go
-													<span></span>
-												</label>
-												<label class="m-radio m-radio--bold m-radio--state-orange">
-													<input type="radio" name="wlane2" value="2">wait
-													<span></span>
-												</label>
-												<label class="m-radio m-radio--bold m-radio--state-red">
-													<input type="radio" name="wlane2" value="3">stop
-													<span></span>
-												</label>
-											</div>
-										</div>
-
-											<label for="" class="col-3 col-form-label">
-												Lane 03
-											</label>
-											<div class="col-9">
-											<div class="m-radio-inline">
-												<label class="m-radio m-radio--bold m-radio--state-green">
-													<input type="radio" name="wlane3" value="1">go
-													<span></span>
-												</label>
-												<label class="m-radio m-radio--bold m-radio--state-orange">
-													<input type="radio" name="wlane3" value="2">wait
-													<span></span>
-												</label>
-												<label class="m-radio m-radio--bold m-radio--state-red">
-													<input type="radio" name="wlane3" value="3">stop
-													<span></span>
-												</label>
-											</div>
-										</div>
-
 										</div>
 									</div>
-									</form>
+
+
+
+									<div class="tab-content">
+											<form class="m-form m-form--fit m-form--label-align-right">
+												<div class="m-portlet__body" style="padding-top: 20px; padding-bottom: 10px">
+
+													<div class="form-group m-form__group row">
+														<div class="col-12">
+														<label for="">
+															Left Lane
+														</label>
+													</div>
+														<div class="col-12">
+															<div class="m-radio-inline" style="padding-left: 0px;">
+																<label class="m-radio m-radio--bold m-radio--state-green" style="padding: 10px; "	>
+																	<input type="radio" name="wlane1" value="1">
+																	<span></span>
+																</label>
+																<label class="m-radio m-radio--bold m-radio--state-orange "  style="padding: 10px;">
+																	<input type="radio" name="wlane1" value="2">
+																	<span></span>
+																</label>
+																<label class="m-radio m-radio--bold m-radio--state-red"   style="padding: 10px;">
+																	<input type="radio" name="wlane1" value="3">
+																	<span></span>
+																</label>
+															</div>
+														</div>
+													</div>
+													<div class="form-group m-form__group row">
+														<div class="col-12">
+														<label for="">
+															Middle Lane
+														</label>
+													</div>
+														<div class="col-12">
+															<div class="m-radio-inline" style="padding-left: 0px;">
+																<label class="m-radio m-radio--bold m-radio--state-green" style="padding: 10px; "	>
+																	<input type="radio" name="wlane2" value="1">
+																	<span></span>
+																</label>
+																<label class="m-radio m-radio--bold m-radio--state-orange "  style="padding: 10px;">
+																	<input type="radio" name="wlane2" value="2">
+																	<span></span>
+																</label>
+																<label class="m-radio m-radio--bold m-radio--state-red"   style="padding: 10px;">
+																	<input type="radio" name="wlane2" value="3">
+																	<span></span>
+																</label>
+															</div>
+														</div>
+													</div>
+													<div class="form-group m-form__group row" style="padding-bottom: 0px;">
+														<div class="col-12">
+														<label for="">
+															Right Lane
+														</label>
+													</div>
+														<div class="col-12">
+															<div class="m-radio-inline" style="padding-left: 0px;">
+																<label class="m-radio m-radio--bold m-radio--state-green" style="padding: 10px; "	>
+																	<input type="radio" name="wlane3" value="1">
+																	<span></span>
+																</label>
+																<label class="m-radio m-radio--bold m-radio--state-orange "  style="padding: 10px;">
+																	<input type="radio" name="wlane3" value="2">
+																	<span></span>
+																</label>
+																<label class="m-radio m-radio--bold m-radio--state-red"   style="padding: 10px;">
+																	<input type="radio" name="wlane3" value="3">
+																	<span></span>
+																</label>
+															</div>
+														</div>
+													</div>
+
+												</div>
+
+											</form>
+
+									</div>
+
+
 								</div>
+							</div>
+							<div class="col-lg-3">
+								<div class="m-portlet m-portlet--mobile">
+									<div class="m-portlet__head">
+										<div class="m-portlet__head-caption">
+											<div class="m-portlet__head-title">
+												<h3 class="m-portlet__head-text">East Lane</h3>
+											</div>
+										</div>
+									</div>
+
+
+
+									<div class="tab-content">
+											<form class="m-form m-form--fit m-form--label-align-right">
+												<div class="m-portlet__body" style="padding-top: 20px; padding-bottom: 10px">
+
+													<div class="form-group m-form__group row">
+														<div class="col-12">
+														<label for="">
+															Left Lane
+														</label>
+													</div>
+														<div class="col-12">
+															<div class="m-radio-inline" style="padding-left: 0px;">
+																<label class="m-radio m-radio--bold m-radio--state-green" style="padding: 10px; "	>
+																	<input type="radio" name="elane1" value="1">
+																	<span></span>
+																</label>
+																<label class="m-radio m-radio--bold m-radio--state-orange "  style="padding: 10px;">
+																	<input type="radio" name="elane1" value="2">
+																	<span></span>
+																</label>
+																<label class="m-radio m-radio--bold m-radio--state-red"   style="padding: 10px;">
+																	<input type="radio" name="elane1" value="3">
+																	<span></span>
+																</label>
+															</div>
+														</div>
+													</div>
+													<div class="form-group m-form__group row">
+														<div class="col-12">
+														<label for="">
+															Middle Lane
+														</label>
+													</div>
+														<div class="col-12">
+															<div class="m-radio-inline" style="padding-left: 0px;">
+																<label class="m-radio m-radio--bold m-radio--state-green" style="padding: 10px; "	>
+																	<input type="radio" name="elane2" value="1">
+																	<span></span>
+																</label>
+																<label class="m-radio m-radio--bold m-radio--state-orange "  style="padding: 10px;">
+																	<input type="radio" name="elane2" value="2">
+																	<span></span>
+																</label>
+																<label class="m-radio m-radio--bold m-radio--state-red"   style="padding: 10px;">
+																	<input type="radio" name="elane2" value="3">
+																	<span></span>
+																</label>
+															</div>
+														</div>
+													</div>
+													<div class="form-group m-form__group row" style="padding-bottom: 0px;">
+														<div class="col-12">
+														<label for="">
+															Right Lane
+														</label>
+													</div>
+														<div class="col-12">
+															<div class="m-radio-inline" style="padding-left: 0px;">
+																<label class="m-radio m-radio--bold m-radio--state-green" style="padding: 10px; "	>
+																	<input type="radio" name="elane3" value="1">
+																	<span></span>
+																</label>
+																<label class="m-radio m-radio--bold m-radio--state-orange "  style="padding: 10px;">
+																	<input type="radio" name="elane3" value="2">
+																	<span></span>
+																</label>
+																<label class="m-radio m-radio--bold m-radio--state-red"   style="padding: 10px;">
+																	<input type="radio" name="elane3" value="3">
+																	<span></span>
+																</label>
+															</div>
+														</div>
+													</div>
+
+												</div>
+
+											</form>
+
+									</div>
+
+
 								</div>
+								<div class="m-portlet m-portlet--mobile" style="margin-top: 30px;">
+									<div class="m-portlet__head">
+										<div class="m-portlet__head-caption">
+											<div class="m-portlet__head-title">
+												<h3 class="m-portlet__head-text">South Lane</h3>
+											</div>
+										</div>
+									</div>
+
+
+
+									<div class="tab-content">
+											<form class="m-form m-form--fit m-form--label-align-right">
+												<div class="m-portlet__body" style="padding-top: 20px; padding-bottom: 10px">
+
+													<div class="form-group m-form__group row">
+														<div class="col-12">
+														<label for="">
+															Left Lane
+														</label>
+													</div>
+														<div class="col-12">
+															<div class="m-radio-inline" style="padding-left: 0px;">
+																<label class="m-radio m-radio--bold m-radio--state-green" style="padding: 10px; "	>
+																	<input type="radio" name="slane1" value="1">
+																	<span></span>
+																</label>
+																<label class="m-radio m-radio--bold m-radio--state-orange "  style="padding: 10px;">
+																	<input type="radio" name="slane1" value="2">
+																	<span></span>
+																</label>
+																<label class="m-radio m-radio--bold m-radio--state-red"   style="padding: 10px;">
+																	<input type="radio" name="slane1" value="3">
+																	<span></span>
+																</label>
+															</div>
+														</div>
+													</div>
+													<div class="form-group m-form__group row">
+														<div class="col-12">
+														<label for="">
+															Middle Lane
+														</label>
+													</div>
+														<div class="col-12">
+															<div class="m-radio-inline" style="padding-left: 0px;">
+																<label class="m-radio m-radio--bold m-radio--state-green" style="padding: 10px; "	>
+																	<input type="radio" name="slane2" value="1">
+																	<span></span>
+																</label>
+																<label class="m-radio m-radio--bold m-radio--state-orange "  style="padding: 10px;">
+																	<input type="radio" name="slane2" value="2">
+																	<span></span>
+																</label>
+																<label class="m-radio m-radio--bold m-radio--state-red"   style="padding: 10px;">
+																	<input type="radio" name="slane2" value="3">
+																	<span></span>
+																</label>
+															</div>
+														</div>
+													</div>
+													<div class="form-group m-form__group row" style="padding-bottom: 0px;">
+														<div class="col-12">
+														<label for="">
+															Right Lane
+														</label>
+													</div>
+														<div class="col-12">
+															<div class="m-radio-inline" style="padding-left: 0px;">
+																<label class="m-radio m-radio--bold m-radio--state-green" style="padding: 10px; "	>
+																	<input type="radio" name="slane3" value="1">
+																	<span></span>
+																</label>
+																<label class="m-radio m-radio--bold m-radio--state-orange "  style="padding: 10px;">
+																	<input type="radio" name="slane3" value="2">
+																	<span></span>
+																</label>
+																<label class="m-radio m-radio--bold m-radio--state-red"   style="padding: 10px;">
+																	<input type="radio" name="slane3" value="3">
+																	<span></span>
+																</label>
+															</div>
+														</div>
+													</div>
+
+												</div>
+
+											</form>
+
+									</div>
+
+
 								</div>
+							</div>
+
 							</div>
 						</div>
 					</div>
