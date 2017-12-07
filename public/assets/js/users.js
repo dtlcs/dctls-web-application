@@ -70,7 +70,7 @@ var DatatableDataLocalDemo = function () {
 
 					return '\
 						<div class="dropdown '+ dropup +'">\
-							<a href="#" class="btn m-btn m-btn--hover-primary m-btn--icon m-btn--icon-only m-btn--pill" data-toggle="dropdown">\
+							<a href="#" class="btn m-btn m-btn--hover-info m-btn--icon m-btn--icon-only m-btn--pill" data-toggle="dropdown">\
                                 <i class="fa fa-pencil"></i>\
                             </a>\
 						</div>\
