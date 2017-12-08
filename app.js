@@ -56,6 +56,17 @@ app.post('/junction',function(req,res,next){
     });
 });
 
+
+//////////////////////////
+app.post('/adminUser',function(req,res,next){
+    db.junction.insert(req.body,function(err,docs){
+        res.json(docs);
+        console.log(docs);
+    });
+});
+//////////////////////////
+
+
 app.get('/',function (req,res) {
     db.junction.find(function (err, docs) {
         res.json(docs);
