@@ -376,7 +376,7 @@
 															Junction ID*
 														</label>
 														<div class="col-10">
-															<input class="form-control m-input" type="text" value="J001">
+															<input class="form-control m-input" type="text" placeholder="enter junction id" ng-model="newJunction.id">
 														</div>
 													</div>
 													<div class="form-group m-form__group row">
@@ -384,7 +384,7 @@
 															Junction Name*
 														</label>
 														<div class="col-10">
-															<input class="form-control m-input" type="text" value="Sample Name">
+															<input class="form-control m-input" type="text" placeholder="enter junction name" ng-model="newJunction.name">
 														</div>
 													</div>
 													<div class="form-group m-form__group row">
@@ -392,16 +392,47 @@
 															Description*
 														</label>
 														<div class="col-10">
-															<textarea class="form-control m-input" id="exampleTextarea" rows="3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque feugiat sollicitudin tempus. Nullam dapibus nibh diam, ut rhoncus nisl vulputate sit amet. Nam non est ut mauris luctus lacinia.</textarea>
+															<textarea class="form-control m-input" id="exampleTextarea" rows="3" placeholder="enter your description..." ng-model="newJunction.description"></textarea>
 														</div>
 													</div>
-
+													<div class="form-group m-form__group row">
+														<label for="fullname" class="col-2 col-form-label">
+															Street*
+														</label>
+														<div class="col-10">
+															<input class="form-control m-input" type="text" placeholder="enter street" ng-model="newStreet.id">
+														</div>
+													</div>
+													<div class="form-group m-form__group row">
+														<label for="fullname" class="col-2 col-form-label">
+															City*
+														</label>
+														<div class="col-10">
+															<input class="form-control m-input" type="text" placeholder="enter city" ng-model="newCity.id">
+														</div>
+													</div>
+													<div class="form-group m-form__group row">
+														<label for="fullname" class="col-2 col-form-label">
+															Province*
+														</label>
+														<div class="col-10">
+															<input class="form-control m-input" type="text" placeholder="enter province" ng-model="newProvince.id">
+														</div>
+													</div>
+													<div class="form-group m-form__group row">
+														<label for="fullname" class="col-2 col-form-label">
+															Postal Code*
+														</label>
+														<div class="col-10">
+															<input class="form-control m-input" type="text" placeholder="enter postal code" ng-model="newPostalcode.id">
+														</div>
+													</div>
 													<div class="form-group m-form__group row">
 														<label for="email" class="col-2 col-form-label">
 															Latitude*
 														</label>
 														<div class="col-8">
-															<input class="form-control m-input" type="text" value="9876:5432:98:76">
+															<input class="form-control m-input" type="text" placeholder="select latitude" ng-model="newJunction.latitude">
 
 														</div>
 														<div class="col-2">
@@ -415,14 +446,13 @@
 															Longtitude*
 														</label>
 														<div class="col-8">
-															<input class="form-control m-input" type="text" value="1234:5678:12:34">
+															<input class="form-control m-input" type="text" placeholder="select longtitude" ng-model="newJunction.longtitude">
 														</div><div class="col-2">
 														<button type="reset" class="btn btn-success m-btn m-btn--custom">
 															select
 														</button>
 													</div>
 													</div>
-
 												</div>
 												<div class="m-portlet__foot m-portlet__foot--fit">
 													<div class="m-form__actions"><center>
