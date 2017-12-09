@@ -380,55 +380,74 @@
 													</div>
 													<div class="form-group m-form__group row">
 														<label for="fullname" class="col-2 col-form-label">
-															Full Name
+															Full Name*
 														</label>
 														<div class="col-10">
-															<input class="form-control m-input" type="text" value="Mark Andre">
+															<input class="form-control m-input" type="text" value="john doe" ng-model="newUser.fname">
 														</div>
 													</div>
 													<div class="form-group m-form__group row">
 														<label for="email" class="col-2 col-form-label">
-															Email
+															NIC*
 														</label>
 														<div class="col-10">
-															<input class="form-control m-input" type="text" disabled value="johndoe@gmail.com">
-														</div>
-													</div>
-													<div class="form-group m-form__group row">
-														<label for="example-text-input" class="col-2 col-form-label">
-															Date of Birth
-														</label>
-														<div class="col-10">
-															<div class='input-group date' id='m_datepicker_2'>
-															<input class="form-control m-input" type="text" readonly value="01/27/1996"/>
-															<span class="input-group-addon">
-																<i class="fa fa-calendar"></i>
-															</span>
-														</div>
-														</div>
-													</div>
-													<div class="form-group m-form__group row">
-														<label for="example-text-input" class="col-2 col-form-label">
-															Phone No.
-														</label>
-														<div class="col-10">
-															<input class="form-control m-input" type="text" value="+456669067890">
+															<input class="form-control m-input" disabled value="98765432v" type="text" ng-model="newUser.nic">
 														</div>
 													</div>
 													<div class="form-group m-form__group row">
 														<label for="email" class="col-2 col-form-label">
-															NIC
+															Role ID*
 														</label>
 														<div class="col-10">
-															<input class="form-control m-input" type="text" disabled value="960271157v" >
+															<input class="form-control m-input" type="text" value="2" ng-model="newUser.rid">
+														</div>
+													</div>
+													<div class="form-group m-form__group row">
+														<label for="email" class="col-2 col-form-label">
+															Email*
+														</label>
+														<div class="col-10">
+															<input class="form-control m-input" disabled value="johndoe@gmail.com" type="text" ng-model="newUser.email">
 														</div>
 													</div>
 													<div class="form-group m-form__group row">
 														<label for="example-text-input" class="col-2 col-form-label">
-															Address
+															Phone No.*
 														</label>
 														<div class="col-10">
-															<input class="form-control m-input" type="text" value="L-12-20 Vertex, Cybersquare">
+															<input class="form-control m-input" type="text" value="0778859662" ng-model="newUser.phone">
+														</div>
+													</div>
+													<div class="form-group m-form__group row">
+														<label for="email" class="col-2 col-form-label">
+															Street*
+														</label>
+														<div class="col-10">
+															<input class="form-control m-input" type="text" value="sample street" ng-model="newUser.street">
+														</div>
+													</div>
+													<div class="form-group m-form__group row">
+														<label for="email" class="col-2 col-form-label">
+															City*
+														</label>
+														<div class="col-10">
+															<input class="form-control m-input" type="text" value="sample city" ng-model="newUser.city">
+														</div>
+													</div>
+													<div class="form-group m-form__group row">
+														<label for="email" class="col-2 col-form-label">
+															Province*
+														</label>
+														<div class="col-10">
+															<input class="form-control m-input" type="text" value="sample province" ng-model="newUser.province">
+														</div>
+													</div>
+													<div class="form-group m-form__group row">
+														<label for="email" class="col-2 col-form-label">
+															Postal Code*
+														</label>
+														<div class="col-10">
+															<input class="form-control m-input" type="text" value="40000" ng-model="newUser.postal">
 														</div>
 													</div>
 													<div class="m-form__seperator m-form__seperator--dashed m-form__seperator--space-2x"></div>
