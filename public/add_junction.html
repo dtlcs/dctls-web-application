@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html lang="en" >
+<html lang="en" ng-app="MainApp" ng-controller="App-controller-junction">
 	<head>
 		<meta charset="utf-8" />
 		<title>
@@ -368,7 +368,7 @@
 									</div>
 									<!-------------->
 									<!--begin::add user form-->
-									<div class="tab-content" ng-app="MainApp" ng-controller="App-controller-user">
+									<div class="tab-content" ng-app="MainApp" ng-controller="App-controller-junction">
 											<form class="m-form m-form--fit m-form--label-align-right">
 												<div class="m-portlet__body">
 													<div class="form-group m-form__group row">
@@ -376,7 +376,7 @@
 															Junction ID*
 														</label>
 														<div class="col-10">
-															<input class="form-control m-input" type="text" placeholder="enter junction id" ng-model="newUser.fname">
+															<input class="form-control m-input" type="text" placeholder="enter junction id" ng-model="newJunction.id">
 														</div>
 													</div>
 													<div class="form-group m-form__group row">
@@ -384,7 +384,7 @@
 															Junction Name*
 														</label>
 														<div class="col-10">
-															<input class="form-control m-input" type="text" placeholder="enter junction name" ng-model="newUser.email">
+															<input class="form-control m-input" type="text" placeholder="enter junction name" ng-model="newJunction.name">
 														</div>
 													</div>
 													<div class="form-group m-form__group row">
@@ -392,7 +392,7 @@
 															Description*
 														</label>
 														<div class="col-10">
-															<textarea class="form-control m-input" id="exampleTextarea" rows="3" placeholder="enter your description..."></textarea>
+															<textarea class="form-control m-input" id="exampleTextarea" rows="3" placeholder="enter your description..." ng-model="newJunction.description"></textarea>
 														</div>
 													</div>
 
@@ -401,7 +401,7 @@
 															Latitude*
 														</label>
 														<div class="col-8">
-															<input class="form-control m-input" type="text" placeholder="select latitude" ng-model="newUser.email">
+															<input class="form-control m-input" type="text" placeholder="select latitude" ng-model="newJunction.latitude">
 
 														</div>
 														<div class="col-2">
@@ -415,7 +415,7 @@
 															Longtitude*
 														</label>
 														<div class="col-8">
-															<input class="form-control m-input" type="text" placeholder="select longtitude" ng-model="newUser.nic">
+															<input class="form-control m-input" type="text" placeholder="select longtitude" ng-model="newJunction.longtitude">
 														</div><div class="col-2">
 														<button type="reset" class="btn btn-success m-btn m-btn--custom">
 															select
@@ -428,7 +428,7 @@
 													<div class="m-form__actions"><center>
 														<div class="row">
 															<div class="col-12">
-																<button type="submit" class="btn btn-primary m-btn m-btn--air m-btn--custom" ng-click="addUser()">
+																<button type="submit" class="btn btn-primary m-btn m-btn--air m-btn--custom" ng-click="addJuncton()">
 																	Add Junction
 																</button>
 																&nbsp;&nbsp;
@@ -770,8 +770,9 @@
 		<!--begin:: src to -angularJs -ng-app -ng-controller -->
 		<script type="text/javascript" src="./angular-1.2.28/angular.min.js"></script>
 		<script type="text/javascript" src="./javascripts/app.main.js"></script>
-		<script type="text/javascript" src="./javascripts/user-controller.js"></script>
+		<script type="text/javascript" src="./javascripts/junction-controller.js"></script>
 		<!--end::src to ng-app and ng-controller-->
+		<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.28/angular-cookies.js"></script>
 	</body>
 	<!-- end::Body -->
 </html>

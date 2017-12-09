@@ -1,38 +1,27 @@
-// <<<<<<< HEAD
-// var express = require('express');
-// var bodyParser = require('body-parser');
-// var mongojs=require('mongojs');
-// var db=mongojs('junction',['junction']);
-// var app = express();
-// app.use(bodyParser.json());
-// app.use(bodyParser.urlencoded({ extended: false }));
-// app.use(express.static(__dirname+'public'));
-//
-// app.get('/',function (req,res) {
-//     db.junction.find(function (err, docs) {
-//         res.json(docs);
-//         console.log(docs);
-//     });
+/**
+ * Created by Sachini on 12/7/2017.
+ */
+// server.js
+var express = require('express');
+var path = require('path');
+var favicon = require('serve-favicon');
+var logger = require('morgan');
+var cookieParser = require('cookie-parser');
+// var cors = require('cors');
+
+
+var app = express();
+// app.use(cors());
+// ...
+// For all GET requests, send back index.html
+// so that PathLocationStrategy can be used
+
+app.use(express.static(__dirname+"/public/",{index: 'home.html'}));
+
+
+// app.get('/*', function(req, res) {
+//     res.sendFile(path.join(__dirname + '/public/login.html'));
 // });
-//
-// app.listen(3000);
-// =======
-// var express = require('express');
-// var bodyParser = require('body-parser');
-// var mongojs=require('mongojs');
-// var db=mongojs('junction',['junction']);
-// var app = express();
-// app.use(bodyParser.json());
-// app.use(bodyParser.urlencoded({ extended: false }));
-// app.use(express.static(__dirname+'public'));
-//
-// app.get('/',function (req,res) {
-//     db.junction.find(function (err, docs) {
-//         res.json(docs);
-//         console.log(docs);
-//     });
-// });
-//
-// app.listen(3000);
-// >>>>>>> 67a00c80c60d9da0fe2b68cf924b17b431dd892d
-// console.log("Server running on port 3000");
+
+app.listen(process.env.PORT || 7000);
+console.log('app is running on port 7000');

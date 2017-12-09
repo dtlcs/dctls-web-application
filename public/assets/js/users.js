@@ -104,11 +104,11 @@ var DatatableDataLocalDemo = function () {
 		//== Public functions
 		init: function () {
 			// init dmeo
-			demo();
+			//demo();
 		}
 	};
 }();
 
 jQuery(document).ready(function () {
-	DatatableDataLocalDemo.init();
+	//DatatableDataLocalDemo.init();
 });
