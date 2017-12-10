@@ -5,24 +5,19 @@
 app.controller('App-controller-check',function ($scope,$http,$cookieStore) {
 
 //== Class definition
-    $scope.editUser={
-        id:'',
-        name:'',
-        role_id:'',
-        email:'',
-        phone:'',
-        street:'',
-        city:'',
-        province:'',
-        postal_code:''
-    };
+//     $scope.editUser={
+//         id:'2',
+//         name:'aa',
+//         role_id:'22',
+//         email:'rty',
+//         phone:'456',
+//         street:'rrr',
+//         city:'rr',
+//         province:'rrr',
+//         postal_code:'33'
+//     };
+    $scope.datasetArray=[];
 
-    //function to edit users
-    $scope.editUser=function(){
-        $http.post('http://localhost:8080/api/user/update',$scope.editUser).then(function (response) {
-            console.log(response);
-        });
-    };
 
 // //Get all users
     $http.get('http://localhost:8080/api/users/all').then(function (response) {
@@ -33,8 +28,6 @@ app.controller('App-controller-check',function ($scope,$http,$cookieStore) {
             //== Private functions
             // demo initializer
             var demo = function (data) {
-               // var data=[{"id":1,"name":"Oshan","nic":"950722355V","role_id":1,"email":"oshan.ivantha@gmail.com","telephone":"0719084020","street":null,"city":null,"province":null,"postal_code":null},{"id":2,"name":"Sachini","nic":"100000001V","role_id":2,"email":"sachini.thaksala@gmail.com","telephone":"071 325603","street":null,"city":null,"province":null,"postal_code":null},{"id":4,"name":"Sameera","nic":"100000003V","role_id":3,"email":"ppathumm@gmail.com","telephone":"071 403781","street":null,"city":null,"province":null,"postal_code":null},{"id":5,"name":"001c42146bac","nic":"123","role_id":2,"email":"001c42146bac","telephone":"NULL","street":"NULL","city":"NULL","province":"NULL","postal_code":"NULL"},{"id":6,"name":"fgh","nic":"35","role_id":2,"email":"fgh@.bom","telephone":"567","street":"dfg","city":"fggh","province":"fff","postal_code":"fff"},{"id":7,"name":"Sachini Palliyaguru","nic":"369","role_id":2,"email":"sachi@gmail.com","telephone":"4566","street":"\"Awanthi\",Kohuliyadda,Hakmana.","city":"Pannipityia","province":"Sri Lanka","postal_code":"10230"}];
-                //var data2;
                 var datatable = $('.m_datatable').mDatatable({
                     // datasource definition
                     data: {
@@ -47,7 +40,7 @@ app.controller('App-controller-check',function ($scope,$http,$cookieStore) {
                     layout: {
                         theme: 'default', // datatable theme
                         class: '', // custom wrapper class
-                        scroll: false, // enable/disable datatable scroll both horizontal and vertical when needed.
+                        scroll: true, // enable/disable datatable scroll both horizontal and vertical when needed.
                         height: 450, // datatable's body's fixed height
                         footer: false // display/hide footer
                     },
@@ -105,13 +98,32 @@ app.controller('App-controller-check',function ($scope,$http,$cookieStore) {
                             template: function (row) {
                                 var dropup = (row.getDatatable().getPageSize() - row.getIndex()) <= 4 ? 'dropup' : '';
 
+                                //jquery scripts
+                                // $('.m_datatable + tbody').on('click', 'tr', function (){
+                                //     var dataset =datatable .api().row(this).data();
+                                //     alert(dataset);
+                                // });
+
+
+
+
+
+
+                                    // $('#example tbody').on('click', 'tr', function () {
+                                    //     var data = table.row( this ).data();
+                                    //     alert( 'You clicked on '+data[0]+'\'s row' );
+                                    // } );
+
+
                                 return '\
 						<div class="dropdown '+ dropup +'">\
-							<a href="#" class="btn m-btn m-btn--hover-info m-btn--icon m-btn--icon-only m-btn--pill" data-toggle="dropdown" ng-click="editUser()">\
-                                <i class="fa fa-pencil"></i>\
+							<a href="edit_user.html" id="edit-user" class="btn m-btn m-btn--hover-info m-btn--icon m-btn--icon-only m-btn--pill" data-toggle="dropdown" >\
+							\
+                                 <i class="fa fa-pencil"></i>\
+                            \
                             </a>\
 						</div>\
-						<a href="#" class="m-portlet__nav-link btn m-btn m-btn--hover-danger m-btn--icon m-btn--icon-only m-btn--pill" title="View ">\
+						<a href="#" id="delete-user" class="m-portlet__nav-link btn m-btn m-btn--hover-danger m-btn--icon m-btn--icon-only m-btn--pill" title="View ">\
                             <i class="fa fa-remove"></i>\
                         </a>\
 					';
@@ -135,13 +147,37 @@ app.controller('App-controller-check',function ($scope,$http,$cookieStore) {
 
                 $('#m_form_status, #m_form_type').selectpicker();
 
+
             };
+
+            // var getbtn=function () {
+            //
+            //     $('.m_datatable tbody').on('click', '#edit-user', function () {
+            //         var tr = $(this).closest('tr');
+            //         var row = dataTable.row(tr);
+            //         var rowData = row.data();
+            //         console.log(rowData);
+            //
+            //         $scope.datasetArray.push(rowData);
+            //         var json = JSON.stringify(rowData);
+            //     });
+            //
+            //     $('.m_datatable tbody').on('click', '#delete-user', function () {
+            //         var tr = $(this).closest('tr');
+            //         var row = dataTable.row(tr);
+            //         var rowData = row.data();
+            //
+            //         $scope.datasetArray.push(rowData);
+            //         var json = JSON.stringify(rowData);
+            //     });
+            // }
 
             return {
                 //== Public functions
                 init: function () {
                     // init dmeo
                     demo(data2);
+                    // getbtn();
                 }
             };
         }();
@@ -151,6 +187,12 @@ app.controller('App-controller-check',function ($scope,$http,$cookieStore) {
         });
     });
 
+    //  //function to edit users
+    // $scope.editUser=function(){
+    //     $http.post('http://localhost:8080/api/user/update',$scope.editUser).then(function (response) {
+    //         console.log(response);
+    //     });
+    // };
 
 
 
