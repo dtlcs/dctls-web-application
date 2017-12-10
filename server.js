@@ -1,3 +1,7 @@
+/**
+ * Created by Sachini on 12/7/2017.
+ */
+// server.js
 var express = require('express');
 var path = require('path');
 var favicon = require('serve-favicon');
