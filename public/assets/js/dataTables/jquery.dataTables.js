@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 /*! DataTables 1.10.0-dev
  * ©2008-2013 SpryMedia Ltd - datatables.net/license
  */
@@ -28026,4 +28026,4 @@
 }));
 
 }(window, document, jQuery));
->>>>>>> 67a00c80c60d9da0fe2b68cf924b17b431dd892d
+

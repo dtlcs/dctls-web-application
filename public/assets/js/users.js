@@ -103,12 +103,12 @@ var DatatableDataLocalDemo = function () {
 	return {
 		//== Public functions
 		init: function () {
-			// init dmeo
-			//demo();
+			//init dmeo
+			demo();
 		}
 	};
 }();
 
 jQuery(document).ready(function () {
-	//DatatableDataLocalDemo.init();
+	DatatableDataLocalDemo.init();
 });

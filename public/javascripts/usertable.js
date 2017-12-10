@@ -9,8 +9,9 @@ var DatatableDataLocalDemo = function () {
     // demo initializer
     var demo = function () {
 
-        var dataJSONArray = JSON.parse('');
+       // var dataJSONArray = JSON.parse([{"number":1,"userid":"54473-251","ShipCountry":"GT","ShipCity":"San Pedro Ayampuc","fullname":"Sanford-Halvorson","address":"897 Magdeline Park","CompanyEmail":"sgormally0@dot.gov","CompanyAgent":"Shandra"}]);
         //module.exports()
+        var dataJSONArray={"number":1,"userid":"54473-251","ShipCountry":"GT","ShipCity":"San Pedro Ayampuc","fullname":"Sanford-Halvorson","address":"897 Magdeline Park"};
 
         var datatable = $('.m_datatable').mDatatable({
             // datasource definition

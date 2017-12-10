@@ -368,7 +368,7 @@
 									</div>
 									<!-------------->
 
-									<div class="tab-content">
+									<div class="tab-content" ng-app="MainApp" ng-controller="App-controller-check">
 											<form class="m-form m-form--fit m-form--label-align-right">
 												<div class="m-portlet__body">
 													<div class="form-group m-form__group row">
@@ -383,7 +383,7 @@
 															Full Name*
 														</label>
 														<div class="col-10">
-															<input class="form-control m-input" type="text" value="john doe" ng-model="newUser.fname">
+															<input class="form-control m-input" type="text" value="john doe" ng-model="editUser.name">
 														</div>
 													</div>
 													<div class="form-group m-form__group row">
@@ -391,7 +391,7 @@
 															NIC*
 														</label>
 														<div class="col-10">
-															<input class="form-control m-input" disabled value="98765432v" type="text" ng-model="newUser.nic">
+															<input class="form-control m-input" disabled value="98765432v" type="text" ng-model="editUser.nic">
 														</div>
 													</div>
 													<div class="form-group m-form__group row">
@@ -399,7 +399,7 @@
 															Role ID*
 														</label>
 														<div class="col-10">
-															<input class="form-control m-input" type="text" value="2" ng-model="newUser.rid">
+															<input class="form-control m-input" type="text" value="2" ng-model="editUser.role_id">
 														</div>
 													</div>
 													<div class="form-group m-form__group row">
@@ -407,7 +407,7 @@
 															Email*
 														</label>
 														<div class="col-10">
-															<input class="form-control m-input" disabled value="johndoe@gmail.com" type="text" ng-model="newUser.email">
+															<input class="form-control m-input" disabled value="johndoe@gmail.com" type="text" ng-model="editUser.email">
 														</div>
 													</div>
 													<div class="form-group m-form__group row">
@@ -415,7 +415,7 @@
 															Phone No.*
 														</label>
 														<div class="col-10">
-															<input class="form-control m-input" type="text" value="0778859662" ng-model="newUser.phone">
+															<input class="form-control m-input" type="text" value="0778859662" ng-model="editUser.telephone">
 														</div>
 													</div>
 													<div class="form-group m-form__group row">
@@ -423,7 +423,7 @@
 															Street*
 														</label>
 														<div class="col-10">
-															<input class="form-control m-input" type="text" value="sample street" ng-model="newUser.street">
+															<input class="form-control m-input" type="text" value="sample street" ng-model="editUser.street">
 														</div>
 													</div>
 													<div class="form-group m-form__group row">
@@ -439,7 +439,7 @@
 															Province*
 														</label>
 														<div class="col-10">
-															<input class="form-control m-input" type="text" value="sample province" ng-model="newUser.province">
+															<input class="form-control m-input" type="text" value="sample province" ng-model="editUser.province">
 														</div>
 													</div>
 													<div class="form-group m-form__group row">
@@ -447,7 +447,7 @@
 															Postal Code*
 														</label>
 														<div class="col-10">
-															<input class="form-control m-input" type="text" value="40000" ng-model="newUser.postal">
+															<input class="form-control m-input" type="text" value="40000" ng-model="editUser.postal_code">
 														</div>
 													</div>
 													</div>
@@ -455,7 +455,7 @@
 													<div class="m-form__actions"><center>
 														<div class="row">
 															<div class="col-12">
-																<button type="submit" class="btn btn-primary m-btn m-btn--air m-btn--custom">
+																<button type="submit" class="btn btn-primary m-btn m-btn--air m-btn--custom" ng-click="editUser()">
 																	Save changes
 																</button>
 																&nbsp;&nbsp;
@@ -791,7 +791,16 @@
 		<!--end::Base Scripts -->
 		<!--begin::Page Snippets -->
 		<script src="assets/js/bootstrap-datepicker.js" type="text/javascript"></script>
+		<!--<script type="text/javascript" src="assets/js/users.js"></script>-->
+
 		<!--end::Page Snippets -->
+
+		<script type="text/javascript" src="./angular-1.2.28/angular.min.js"></script>
+		<script type="text/javascript" src="./javascripts/app.main.js"></script>
+		<!--<script type="text/javascript" src="./javascripts/check.js"></script>-->
+		<script type="text/javascript" src="./javascripts/check.js"></script>
+
+		<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.28/angular-cookies.js"></script>
 	</body>
 	<!-- end::Body -->
 </html>

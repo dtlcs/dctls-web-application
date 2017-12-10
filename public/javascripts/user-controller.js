@@ -1,8 +1,10 @@
 /**
  * Created by Sachini on 12/7/2017.
  */
-require('usertable');
+
 "use strict";
+//var tbl= require('usertable');
+
 app.controller('App-controller-user',function ($scope,$http,$cookieStore) { /*,'cookieDetails' $cookieStore*/
 
     /**store global variables*/
@@ -12,20 +14,23 @@ app.controller('App-controller-user',function ($scope,$http,$cookieStore) { /*,'
     $scope.sess_id = null;
 
     /**bind new user schema to $scope*/
-    $scope.newUser={
-        fname:'aa',
-        email:'',
-        dob:'',
-        phone:'',
-        nic:'',
-        address:'',
-        password:'',
-        confirmPassword:'',
-    };
+    // $scope.newUser={
+    //    name:'',
+    //     nic:'',
+    //     role_id:'',
+    //     email:'',
+    //     telephone:'',
+    //     street:'',
+    //     city:'',
+    //     province:'',
+    //     postal_code:'',
+    //     password:'',
+    //     confirmPassword:''
+    // };
 
 
     /**bind login user data*/
-    $scope.loginUser={
+    $scope.newLogin={
         uid:'',
         username:'',
         password:''
@@ -60,12 +65,13 @@ app.controller('App-controller-user',function ($scope,$http,$cookieStore) { /*,'
 
     //Get all users
     $http.get('http://localhost:8080/api/users/all').then(function (response) {
-        var dataJSONArray=response;
+        console.log(response.data);
+        //$scope.datatbl=response;
     });
 
     //Add new admin-user
     $scope.addUser=function () {
-        //console.log($scope.newUser);
+        console.log($scope.newUser);
         $http.post('http://localhost:8080/api/user/add', $scope.newUser).then(function (res, err) {
            console.log(res.data);
         }, function (err) {
@@ -109,32 +115,36 @@ app.controller('App-controller-user',function ($scope,$http,$cookieStore) { /*,'
 
    // console.log($scope.global.sess_id);
     //var current_user=$scope.global.sess_id;
-    var current_user=1;
-    $http.get('http://localhost:8080/api/user/'+current_user).then(function (response) {
-        console.log(response.data[0]);
-        //$scope.userProfile=response.data[0];
-        console.log($scope.userProfile);
-        /**store valid user data into userProfile*/
-        $scope.userProfile.uid=response.data[0].id;
-        $scope.userProfile.fname=response.data[0].first_name;
-        $scope.userProfile.email=response.data[0].email;
-        $scope.userProfile.dob=response.data[0].dob;
-        $scope.userProfile.phone=response.data[0].telephone;
-        $scope.userProfile.nic=response.data[0].nic;
-        $scope.userProfile.address=response.data[0].city;
-    });
+    // var current_user=1;
+    // $http.get('http://localhost:8080/api/user/'+current_user).then(function (response) {
+    //     console.log(response.data[0]);
+    //     //$scope.userProfile=response.data[0];
+    //     console.log($scope.userProfile);
+    //     /**store valid user data into userProfile*/
+    //     $scope.userProfile.uid=response.data[0].id;
+    //     $scope.userProfile.fname=response.data[0].first_name;
+    //     $scope.userProfile.email=response.data[0].email;
+    //     $scope.userProfile.dob=response.data[0].dob;
+    //     $scope.userProfile.phone=response.data[0].telephone;
+    //     $scope.userProfile.nic=response.data[0].nic;
+    //     $scope.userProfile.address=response.data[0].city;
+    // });
 
-    //Update user
-    $scope.editUser=function () {
-        var id=$scope.userProfile.id;
+    //Edit user profile
+    // $scope.editUser=function () {
+    //     //var id=$scope.userProfile.id;
+    //
+    //     /**store update data- new password data into paramList*/
+    //     var paramList={'param1':$scope.userProfile,'param2':$scope.updatePassword};
+    //     console.log(paramList);
+    //     $http.put('/api/user/update/'+id, paramList).then(function (res, err) {
+    //         console.log(res);
+    //     }, function (err) {
+    //         console.log("error :" + err);
+    //     });
+    // }
 
-        /**store update data- new password data into paramList*/
-        var paramList={'param1':$scope.userProfile,'param2':$scope.updatePassword};
-        console.log(paramList);
-        $http.put('/api/user/update/'+id, paramList).then(function (res, err) {
-            console.log(res);
-        }, function (err) {
-            console.log("error :" + err);
-        });
+    $scope.editUser=function(){
+
     }
 });
