@@ -5,23 +5,21 @@
 app.controller('App-controller-check',function ($scope,$http,$cookieStore) {
 
 //== Class definition
-//     $scope.editUser={
-//         id:'2',
-//         name:'aa',
-//         role_id:'22',
-//         email:'rty',
-//         phone:'456',
-//         street:'rrr',
-//         city:'rr',
-//         province:'rrr',
-//         postal_code:'33'
-//     };
+
     $scope.datasetArray=[];
+    $scope.removeUserId.id=1;
 
-
-// //Get all users
+    //Remove User
+    $scope.deleteUser = function () {
+        $http.post('http://localhost:8080/api/user/delete',$scope.removeUserId).then(function (response) {
+            console.log(response);
+        });
+        Refresh();
+    };
+var Refresh=function () {
+    // //Get all users
     $http.get('http://localhost:8080/api/users/all').then(function (response) {
-        //console.log(response.data[0]);
+
         var data2=response.data;
         console.log(data2);
         var DatatableDataLocalDemo = function (data) {
@@ -65,7 +63,7 @@ app.controller('App-controller-check',function ($scope,$http,$cookieStore) {
                         responsive: {visible: 'lg'}
                     }, {
                         field: "nic",
-                        title: "NIC",
+                        title: "NIC"
                     }, {
                         field: "role_id",
                         title: "Role ID"
@@ -96,28 +94,18 @@ app.controller('App-controller-check',function ($scope,$http,$cookieStore) {
                             sortable: false,
                             overflow: 'visible',
                             template: function (row) {
+
                                 var dropup = (row.getDatatable().getPageSize() - row.getIndex()) <= 4 ? 'dropup' : '';
 
-                                //jquery scripts
-                                // $('.m_datatable + tbody').on('click', 'tr', function (){
-                                //     var dataset =datatable .api().row(this).data();
-                                //     alert(dataset);
-                                // });
 
-
-
-
-
-
-                                    // $('#example tbody').on('click', 'tr', function () {
-                                    //     var data = table.row( this ).data();
-                                    //     alert( 'You clicked on '+data[0]+'\'s row' );
-                                    // } );
-
+                                //Remove user when #delete-user btn is clicked
+                                $("#delete-user").click(function(e) {
+                                    deleteUser();
+                                });
 
                                 return '\
 						<div class="dropdown '+ dropup +'">\
-							<a href="edit_user.html" id="edit-user" class="btn m-btn m-btn--hover-info m-btn--icon m-btn--icon-only m-btn--pill" data-toggle="dropdown" >\
+							<a href="edit_user.html" id="edit-user" class="btn m-btn m-btn--hover-info m-btn--icon m-btn--icon-only m-btn--pill" >\
 							\
                                  <i class="fa fa-pencil"></i>\
                             \
@@ -144,6 +132,11 @@ app.controller('App-controller-check',function ($scope,$http,$cookieStore) {
                 $('#m_form_type').on('change', function () {
                     datatable.search($(this).val(), 'Type');
                 }).val(typeof query.Type !== 'undefined' ? query.Type : '');
+
+
+                $('#m_edit').on('click', function () {
+                    datatable.search($(this).val(), 'Type');
+                });
 
                 $('#m_form_status, #m_form_type').selectpicker();
 
@@ -186,17 +179,8 @@ app.controller('App-controller-check',function ($scope,$http,$cookieStore) {
             DatatableDataLocalDemo.init(data2);
         });
     });
+}
 
-    //  //function to edit users
-    // $scope.editUser=function(){
-    //     $http.post('http://localhost:8080/api/user/update',$scope.editUser).then(function (response) {
-    //         console.log(response);
-    //     });
-    // };
-
-
-
-
-
+Refresh();
 
 });

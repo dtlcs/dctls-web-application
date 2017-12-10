@@ -391,7 +391,7 @@
 															NIC*
 														</label>
 														<div class="col-10">
-															<input class="form-control m-input" disabled value="98765432v" type="text" ng-model="editUser.nic">
+															<input class="form-control m-input" readonly value="98765432v" type="text" ng-model="editUser.nic">
 														</div>
 													</div>
 													<div class="form-group m-form__group row">
@@ -407,7 +407,7 @@
 															Email*
 														</label>
 														<div class="col-10">
-															<input class="form-control m-input" disabled value="johndoe@gmail.com" type="text" ng-model="editUser.email">
+															<input class="form-control m-input" readonly value="johndoe@gmail.com" type="text" ng-model="editUser.email">
 														</div>
 													</div>
 													<div class="form-group m-form__group row">
@@ -455,7 +455,7 @@
 													<div class="m-form__actions"><center>
 														<div class="row">
 															<div class="col-12">
-																<button type="submit" class="btn btn-primary m-btn m-btn--air m-btn--custom" ng-click="editUser()">
+																<button type="submit" class="btn btn-primary m-btn m-btn--air m-btn--custom" ng-click="updateUser()">
 																	Save changes
 																</button>
 																&nbsp;&nbsp;

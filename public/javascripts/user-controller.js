@@ -67,7 +67,7 @@ app.controller('App-controller-user',function ($scope,$http,$cookieStore) { /*,'
     //Get all users
     $http.get('http://localhost:8080/api/users/all').then(function (response) {
         console.log(response.data);
-        $scope.allUsers=response;
+        $scope.allUsers=response.data;
     });
 
     //Add new admin-user
@@ -85,6 +85,13 @@ app.controller('App-controller-user',function ($scope,$http,$cookieStore) { /*,'
 
     };
 
+    //Edit user
+    $scope.editUser=$scope.edituser;
+    $scope.updateUser=function(){
+        $http.post('http://localhost:8080/api/user/update',$scope.editUser).then(function (response) {
+            console.log(response);
+        });
+    };
 
     //User login -authenticate user and store user session data
     $scope.login=function () {
@@ -144,23 +151,17 @@ app.controller('App-controller-user',function ($scope,$http,$cookieStore) { /*,'
     //         console.log("error :" + err);
     //     });
     // }
-//     $scope.editUser={
-//         id:'2',
-//         name:'aa',
-//         role_id:'22',
-//         email:'rty',
-//         phone:'456',
-//         street:'rrr',
-//         city:'rr',
-//         province:'rrr',
-//         postal_code:'33'
-//     };
+    $scope.edituser={
+        id:'2',
+        name:'aa',
+        nic:'55',
+        role_id:'2',
+        email:'rty',
+        telephone:'456',
+        street:'rrr',
+        city:'rr',
+        province:'rrr',
+        postal_code:'33'
+    };
 // console.log($scope.editUser);
-//     //function to edit users
-//     //$scope.editUser=$scope.allUsers;
-//     $scope.editUser=function(){
-//         $http.post('http://localhost:8080/api/user/update',$scope.editUser).then(function (response) {
-//             console.log(response);
-//         });
-//     };
 });
