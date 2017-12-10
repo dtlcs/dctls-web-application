@@ -26,18 +26,20 @@ app.controller('App-controller-check',function ($scope,$http,$cookieStore) {
 
 // //Get all users
     $http.get('http://localhost:8080/api/users/all').then(function (response) {
-        console.log(response);
-        var DatatableDataLocalDemo = function () {
+        //console.log(response.data[0]);
+        var data2=response.data;
+        console.log(data2);
+        var DatatableDataLocalDemo = function (data) {
             //== Private functions
             // demo initializer
-            var demo = function () {
+            var demo = function (data) {
                // var data=[{"id":1,"name":"Oshan","nic":"950722355V","role_id":1,"email":"oshan.ivantha@gmail.com","telephone":"0719084020","street":null,"city":null,"province":null,"postal_code":null},{"id":2,"name":"Sachini","nic":"100000001V","role_id":2,"email":"sachini.thaksala@gmail.com","telephone":"071 325603","street":null,"city":null,"province":null,"postal_code":null},{"id":4,"name":"Sameera","nic":"100000003V","role_id":3,"email":"ppathumm@gmail.com","telephone":"071 403781","street":null,"city":null,"province":null,"postal_code":null},{"id":5,"name":"001c42146bac","nic":"123","role_id":2,"email":"001c42146bac","telephone":"NULL","street":"NULL","city":"NULL","province":"NULL","postal_code":"NULL"},{"id":6,"name":"fgh","nic":"35","role_id":2,"email":"fgh@.bom","telephone":"567","street":"dfg","city":"fggh","province":"fff","postal_code":"fff"},{"id":7,"name":"Sachini Palliyaguru","nic":"369","role_id":2,"email":"sachi@gmail.com","telephone":"4566","street":"\"Awanthi\",Kohuliyadda,Hakmana.","city":"Pannipityia","province":"Sri Lanka","postal_code":"10230"}];
-                var data2;
+                //var data2;
                 var datatable = $('.m_datatable').mDatatable({
                     // datasource definition
                     data: {
                         type: 'local',
-                        source:data2 ,
+                        source:data ,
                         pageSize: 10
                     },
 
@@ -139,13 +141,13 @@ app.controller('App-controller-check',function ($scope,$http,$cookieStore) {
                 //== Public functions
                 init: function () {
                     // init dmeo
-                    demo();
+                    demo(data2);
                 }
             };
         }();
 
         jQuery(document).ready(function () {
-            DatatableDataLocalDemo.init();
+            DatatableDataLocalDemo.init(data2);
         });
     });
 
