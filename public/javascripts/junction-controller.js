@@ -58,9 +58,9 @@ app.controller('App-controller-junction',function ($scope,$http,$cookieStore) {
                 $(document).ready(function()
                 {//map-infoWindow
                     $.get("map-infoWindow.html", function(locations)
-                    {    var result;
+                    {    var locations;
                         /**set content string to the info window*/
-                        var content3=result;
+                        var content3=locations;
                         infowindow.setContent('<div id="myInfoWinDiv">'+  content3+'</div>'); //wrap content to add js function
 
                     },'html');
