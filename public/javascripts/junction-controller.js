@@ -30,7 +30,6 @@ app.controller('App-controller-junction',function ($scope,$http,$cookieStore) {
             return script;
         }
     };
-    $scope.loadScript('https://maps.googleapis.com/maps/api/js?key=AIzaSyB693OGyXpXPdwHgeQY03CH_9_okwjReRc', 'text/javascript', 'utf-8');
 
     ////
     //Add new Junction
@@ -82,17 +81,17 @@ app.controller('App-controller-junction',function ($scope,$http,$cookieStore) {
                 var infowindow = new google.maps.InfoWindow();
 
                 /**load external html to the div*/
-
-                $(document).ready(function()
-                {//map-infoWindow
-                    $.get("map-infoWindow.html", function(locations)
-                    {    var locations;
-                        /**set content string to the info window*/
-                        var content3=locations;
-                        infowindow.setContent('<div id="myInfoWinDiv">'+  content3+'</div>'); //wrap content to add js function
-
-                    },'html');
-                });
+                infowindow.setContent('<div id="myInfoWinDiv">'+  'abb'+'</div>')
+                // $(document).ready(function()
+                // {//map-infoWindow
+                //     $.get("map-infoWindow.html", function(locations)
+                //     {    var locations;
+                //         /**set content string to the info window*/
+                //         var content3=locations;
+                //         infowindow.setContent('<div id="myInfoWinDiv">'+  content3+'</div>'); //wrap content to add js function
+                //
+                //     },'html');
+                // });
 
                 /*make infoWindow key*/
                 marker.infowindow = infowindow;
@@ -108,7 +107,7 @@ app.controller('App-controller-junction',function ($scope,$http,$cookieStore) {
          * function to int map object
          */
         function initMap() {
-            // console.log('init map');
+            console.log('init map');
             var myOptions = {
                 center: new google.maps.LatLng(6.955828,79.884022),
                 zoom: 15,
@@ -118,15 +117,22 @@ app.controller('App-controller-junction',function ($scope,$http,$cookieStore) {
                 myOptions);
             console.log(newMap);
             setMarkers(newMap, locations);
+
         }
 
         /**
          * function to init map- set markers- set infoWindow
          */
         $(function () {
-            // console.log('globall function');
-            /*load map on winodow.load event*/
-            google.maps.event.addDomListener(window, 'load', initMap);
+            console.log('globall function');
+            $scope.loadScript('https://maps.googleapis.com/maps/api/js?key=AIzaSyB693OGyXpXPdwHgeQY03CH_9_okwjReRc', 'text/javascript', 'utf-8')
+            setTimeout(function() { initMap(); console.log('globall function2'); console.log(google);}, 3000);
+            //setTimeout(function() { google.maps.event.addDomListener(window, 'load', initMap); console.log('globall function2'); console.log(google);}, 3000);
+            //console.log(window);
+            //console.log(initMap)
+            console.log('globall function2');
+            ;
+
         });
     });
 
