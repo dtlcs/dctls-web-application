@@ -1,10 +1,38 @@
 /**
  * Created by Sachini on 12/9/2017.
  */
+//
 
+
+
+//
 "use strict";
 app.controller('App-controller-junction',function ($scope,$http,$cookieStore) {
 
+    ////////
+    $scope.loadScript = function(url, type, charset) {
+        if (type===undefined) type = 'text/javascript';
+        if (url) {
+            var script = document.querySelector("script[src*='"+url+"']");
+            if (!script) {
+                var heads = document.getElementsByTagName("head");
+                if (heads && heads.length) {
+                    var head = heads[0];
+                    if (head) {
+                        script = document.createElement('script');
+                        script.setAttribute('src', url);
+                        script.setAttribute('type', type);
+                        if (charset) script.setAttribute('charset', charset);
+                        head.appendChild(script);
+                    }
+                }
+            }
+            return script;
+        }
+    };
+    $scope.loadScript('https://maps.googleapis.com/maps/api/js?key=AIzaSyB693OGyXpXPdwHgeQY03CH_9_okwjReRc', 'text/javascript', 'utf-8');
+
+    ////
     //Add new Junction
     $scope.add=function () {
         console.log($scope.newJunction);
@@ -88,7 +116,7 @@ app.controller('App-controller-junction',function ($scope,$http,$cookieStore) {
             };
             var newMap = new google.maps.Map(document.getElementById("m_gmap_3"),
                 myOptions);
-
+            console.log(newMap);
             setMarkers(newMap, locations);
         }
 
