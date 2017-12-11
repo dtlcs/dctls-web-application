@@ -6,8 +6,8 @@ app.controller('App-controller-check',function ($scope,$http,$cookieStore) {
 
 //== Class definition
 
-    $scope.datasetArray=[];
-    $scope.removeUserId.id=1;
+    // $scope.datasetArray=[];
+    // $scope.removeUserId.id=1;
 
     //Remove User
     $scope.deleteUser = function () {

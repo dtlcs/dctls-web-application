@@ -15,6 +15,10 @@
             }
           });
 		</script>
+
+		<script src="assets/js/vendors.bundle.js" type="text/javascript"></script>
+		<script src="assets/js/scripts.bundle.js" type="text/javascript"></script>
+
 		<link href="assets/css/vendors.bundle.css" rel="stylesheet" type="text/css" />
 		<link href="assets/css/style.bundle.css" rel="stylesheet" type="text/css" />
 		<link rel="shortcut icon" href="assets/images/common/favicon.png" />
@@ -61,6 +65,7 @@
 							<div id="m_header_topbar" class="m-topbar  m-stack m-stack--ver m-stack--general">
 								<div class="m-stack__item m-topbar__nav-wrapper">
 									<ul class="m-topbar__nav m-nav m-nav--inline">
+
 										<li class="m-nav__item m-topbar__user-profile m-topbar__user-profile--img  m-dropdown m-dropdown--medium m-dropdown--arrow m-dropdown--header-bg-fill m-dropdown--align-right m-dropdown--mobile-full-width m-dropdown--skin-light" data-dropdown-toggle="click">
 											<a href="#" class="m-nav__link m-dropdown__toggle">
 												<span class="m-topbar__userpic">
@@ -116,7 +121,7 @@
 																		</span>
 																	</a>
 																</li>
-																
+
 																<li class="m-nav__separator m-nav__separator--fit"></li>
 																<li class="m-nav__item">
 																	<center><a href="login.html" class="btn m-btn--default btn-secondary m-btn m-btn--custom m-btn--label-brand m-btn--bolder">
@@ -163,8 +168,8 @@
 							</li>
 							<li class="m-menu__section">
 								<h4 class="m-menu__section-text">
-								Junction
-							</h4>
+									Junction
+								</h4>
 								<i class="m-menu__section-icon flaticon-more-v3"></i>
 							</li>
 							<li class="m-menu__item  m-menu__item--submenu" aria-haspopup="true"  data-menu-submenu-toggle="hover">
@@ -175,7 +180,7 @@
 									</span>
 								</a>
 							</li>
-							<li class="m-menu__item  m-menu__item--submenu" aria-haspopup="true"  data-menu-submenu-toggle="hover">
+							<li class="m-menu__item  m-menu__item--submenu  " aria-haspopup="true"  data-menu-submenu-toggle="hover">
 								<a  href="statistics.html" class="m-menu__link m-menu__toggle">
 									<i class="m-menu__link-icon fa fa-bar-chart"></i>
 									<span class="m-menu__link-text">
@@ -185,8 +190,8 @@
 							</li>
 							<li class="m-menu__section">
 								<h4 class="m-menu__section-text">
-								Manage
-							</h4>
+									Manage
+								</h4>
 								<i class="m-menu__section-icon flaticon-more-v3"></i>
 							</li>
 							<li class="m-menu__item  m-menu__item--submenu" aria-haspopup="true"  data-menu-submenu-toggle="hover">
@@ -197,7 +202,7 @@
 									</span>
 								</a>
 							</li>
-							<li class="m-menu__item  m-menu__item--submenu   m-menu__item--active" aria-haspopup="true"  data-menu-submenu-toggle="hover">
+							<li class="m-menu__item  m-menu__item--submenu m-menu__item--active" aria-haspopup="true"  data-menu-submenu-toggle="hover">
 								<a  href="junctions.html" class="m-menu__link m-menu__toggle">
 									<i class="m-menu__link-icon fa fa-road"></i>
 									<span class="m-menu__link-text">
@@ -205,12 +210,12 @@
 									</span>
 								</a>
 							</li>
-							</ul>
+						</ul>
 					</div>
 					<!-- END: Aside Menu -->
 				</div>
 				<!-- END: Left Aside -->
-				<div class="m-grid__item m-grid__item--fluid m-wrapper">
+				<div class="m-grid__item m-grid__item--fluid m-wrapper" ng-app="MainApp">
 					<!-- BEGIN: Subheader -->
 					<!-- END: Subheader -->
 					<div class="m-content">
@@ -227,7 +232,7 @@
 									</div>
 								</div>
 							</div>
-							<div class="m-portlet__body">
+							<div class="m-portlet__body" ng-controller="App-controller-checkJunction">
 								<!--begin: Search Form -->
 								<div class="m-form m-form--label-align-right m--margin-bottom-30">
 									<div class="row align-items-center">
@@ -578,12 +583,18 @@
 		<!-- end::Scroll Top -->
 
 		<!--begin::Base Scripts -->
-		<script src="assets/js/vendors.bundle.js" type="text/javascript"></script>
-		<script src="assets/js/scripts.bundle.js" type="text/javascript"></script>
+		<!--<script src="assets/js/vendors.bundle.js" type="text/javascript"></script>-->
+		<!--<script src="assets/js/scripts.bundle.js" type="text/javascript"></script>-->
 		<!--end::Base Scripts -->
 		<!--begin::Page Snippets -->
-		<script src="assets/js/junctions.js" type="text/javascript"></script>
+		<!--<script src="assets/js/junctions.js" type="text/javascript"></script>-->
 		<!--end::Page Snippets -->
+
+		<script type="text/javascript" src="./angular-1.2.28/angular.min.js"></script>
+		<script type="text/javascript" src="./javascripts/app.main.js"></script>
+		<script type="text/javascript" src="./javascripts/check-junction.js"></script>
+
+		<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.28/angular-cookies.js"></script>
 	</body>
 	<!-- end::Body -->
 </html>
