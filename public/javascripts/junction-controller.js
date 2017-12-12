@@ -127,6 +127,7 @@ app.controller('App-controller-junction',function ($scope,$http,$cookieStore) {
             console.log('globall function');
             $scope.loadScript('https://maps.googleapis.com/maps/api/js?key=AIzaSyB693OGyXpXPdwHgeQY03CH_9_okwjReRc', 'text/javascript', 'utf-8')
             setTimeout(function() { initMap(); console.log('globall function2'); console.log(google);}, 3000);
+            ///google.maps.event.addDomListener(window, 'load', function() {initMap();});
             //setTimeout(function() { google.maps.event.addDomListener(window, 'load', initMap); console.log('globall function2'); console.log(google);}, 3000);
             //console.log(window);
             //console.log(initMap)
