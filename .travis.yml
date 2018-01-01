@@ -41,4 +41,4 @@ before_script:
   - sleep 3
 
 script:
-  - npm run ci:travis
+#  - npm run ci:travis

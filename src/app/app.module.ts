@@ -1,11 +1,8 @@
 import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
 
-
 import {AppComponent} from './app.component';
 import {SimulatorComponent} from './simulator/simulator.component';
-import {GlobalVarService} from "./global-var.service";
-
 
 @NgModule({
   declarations: [
@@ -13,10 +10,9 @@ import {GlobalVarService} from "./global-var.service";
     SimulatorComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
   ],
   providers: [
-    GlobalVarService
   ],
   bootstrap: [AppComponent]
 })
