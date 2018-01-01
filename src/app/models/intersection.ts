@@ -1,7 +1,10 @@
 import {Lane} from "./lane";
 import {Vehicle} from "./vehicle";
+import {Session} from "../session";
 
 export class Intersection {
+
+  session: Session;
 
   // Road list
   nIntRoad = new Map();
@@ -11,13 +14,15 @@ export class Intersection {
 
   intLaneMap = [this.nIntRoad, this.eIntRoad, this.sIntRoad, this.wIntRoad];
 
-  constructor() {
+  constructor(session: Session) {
+    this.session = session;
+
     // Initializing intersection lanes
     for (let i = 0; i < 4; i++) {
       let intRoad = this.intLaneMap[i];
-      intRoad.set(6, new Lane(6));
-      intRoad.set(7, new Lane(7));
-      intRoad.set(8, new Lane(8));
+      intRoad.set(6, new Lane(session,6));
+      intRoad.set(7, new Lane(session,7));
+      intRoad.set(8, new Lane(session,8));
     }
   }
 
@@ -26,7 +31,7 @@ export class Intersection {
   }
 
   appendVehicleToIntLane(vehicle: Vehicle, roadId: number, laneId: number) {
-    vehicle.getTrajectory().setLocation(0);
+    vehicle.trajectory.location = 0;
     this.intLaneMap[roadId].get(laneId).addVehicleToQueue(vehicle);
   }
 

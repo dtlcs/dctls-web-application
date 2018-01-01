@@ -2,8 +2,11 @@ import {LaneType} from "./lane-type.enum";
 import {Vehicle} from "./vehicle";
 import {TrafficLight} from "./traffic-light";
 import {ROAD_LENGTH, ROAD_RADIUS} from "../globals";
+import {Session} from "../session";
 
 export class Lane {
+
+  session: Session;
 
   laneId: number;
   laneType: LaneType;
@@ -12,7 +15,9 @@ export class Lane {
   vehicleList: Vehicle[];                 // Vehicle queue
   trafficLight = new TrafficLight();      // Traffic light model
 
-  constructor(laneId: number) {
+  constructor(session: Session, laneId: number) {
+    this.session = session;
+
     this.laneId = laneId;
 
     switch (laneId) {
@@ -45,14 +50,14 @@ export class Lane {
 
   addVehicleToQueue(vehicle: Vehicle) {
     this.vehicleList.push(vehicle);
-    vehicle.getTrajectory().setLane(this);
-    vehicle.getTrajectory().setLaneIndex(this.vehicleList.length - 1);
+    vehicle.trajectory.lane = this;
+    vehicle.trajectory.laneIndex = this.vehicleList.length - 1;
   }
 
   isSpaceAvailable(vehicle: Vehicle) {
     if (this.vehicleList.length > 0) {
-      frontVehicle: Vehicle = this.vehicleList.[this.vehicleList.length - 1];
-      if (vehicle.getLength() < frontVehicle.getTrajectory().getLocation() - frontVehicle.getLength() - Session.getAverageGap()) {
+      var frontVehicle = this.vehicleList[this.vehicleList.length - 1];
+      if (vehicle.length < frontVehicle.trajectory.location - frontVehicle.length - this.session.averageGap) {
         return true;
       } else {
         return false;

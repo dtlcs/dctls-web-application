@@ -1,12 +1,20 @@
 import {Junction} from './junction';
+import {Session} from "../session";
 
 export class RoadMap {
+
+  session:Session;
+
   junction: Junction;
 
   isNorthEnabled = false;
   isEastEnabled = false;
   isSouthEnabled = false;
   isWestEnabled = false;
+
+  constructor(session: Session) {
+    this.session = session;
+  }
 
   populateRoadMap(){
     if(this.isNorthEnabled) {
