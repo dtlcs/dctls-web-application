@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {CANVAS_LENGTH, CANVAS_RADIUS, ROAD_LENGTH, ROAD_RADIUS} from "../globals";
+import {Intersection} from "../models/intersection";
 
 @Component({
   selector: 'app-simulator',
@@ -99,7 +100,7 @@ export class SimulatorComponent implements OnInit {
   }
 
   ngOnInit() {
-
+    var n = new Intersection();
   }
 
 }
