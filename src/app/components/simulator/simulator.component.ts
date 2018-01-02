@@ -2,18 +2,18 @@ import {Component, OnInit} from '@angular/core';
 import {
   BACKGROUND_REFRESH_INTERVAL, CANVAS_RADIUS, CANVAS_REFRESH_INTERVAL, ROAD_LENGTH, ROAD_RADIUS,
   TRAFFIC_LIGHT_RADIUS
-} from "../common/globals";
-import {SessionService} from "../services/session.service";
-import {RoadMap} from "../models/road-map";
+} from "../../common/globals";
+import {SessionService} from "../../services/session.service";
+import {RoadMap} from "../../models/road-map";
 import {
   drawBackground, drawTrafficLight, drawVehicleOnIntersection, drawVehicleOnIntersectionArc,
   drawVehicleOnLane, setBackgroundLayout
-} from "../functions/draw";
+} from "../../functions/draw";
 import {
   moveInLaneVehicles,
   moveIntersectionVehiclesLargeArc, moveIntersectionVehiclesSmallArc, moveIntersectionVehiclesStraight,
   moveOutLaneVehicles
-} from "../functions/worker";
+} from "../../functions/worker";
 
 @Component({
   selector: 'app-simulator',
