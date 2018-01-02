@@ -1,26 +1,23 @@
 import {Road} from "./road";
 import {Intersection} from "./intersection";
-import {Session} from "../session";
 
 export class Junction {
-
-  session: Session;
 
   roadList: Road[];
   intersection: Intersection;
 
-  constructor(session: Session) {
-    this.session = session;
+  constructor() {
+    this.roadList = [];
 
-    this.roadList.push(new Road(session,0));    // North
-    this.roadList.push(new Road(session,1));    // East
-    this.roadList.push(new Road(session,2));    // South
-    this.roadList.push(new Road(session,3));    // West
+    this.roadList.push(new Road(0));    // North
+    this.roadList.push(new Road(1));    // East
+    this.roadList.push(new Road(2));    // South
+    this.roadList.push(new Road(3));    // West
 
-    this.intersection = new Intersection(session);
+    this.intersection = new Intersection();
   }
 
-  getRoad(roadId: number){
+  getRoad = (roadId: number): Road => {
     return this.roadList[roadId];
   }
 

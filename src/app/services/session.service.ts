@@ -1,10 +1,14 @@
-import {TrafficLight} from "./models/traffic-light";
-import {RoadMap} from "./models/road-map";
-import {Junction} from "./models/junction";
-import {Road} from "./models/road";
-import {Intersection} from "./models/intersection";
+import { Injectable } from '@angular/core';
+import {Road} from "../models/road";
+import {Junction} from "../models/junction";
+import {Lane} from "../models/lane";
+import {RoadMap} from "../models/road-map";
+import {TrafficLight} from "../models/traffic-light";
+import {Intersection} from "../models/intersection";
+import {Vehicle} from "../models/vehicle";
 
-export class Session {
+@Injectable()
+export class SessionService {
 
   isStarted = false;
 
@@ -22,10 +26,10 @@ export class Session {
 
   intersection: Intersection;
 
-  nIntRoad: Map;
-  eIntRoad: Map;
-  sIntRoad: Map;
-  wIntRoad: Map;
+  nIntRoad: Map<number, Lane>;
+  eIntRoad: Map<number, Lane>;
+  sIntRoad: Map<number, Lane>;
+  wIntRoad: Map<number, Lane>;
 
   northLane1TrafficLight: TrafficLight;
   northLane2TrafficLight: TrafficLight;
@@ -40,18 +44,24 @@ export class Session {
   westLane2TrafficLight: TrafficLight;
   westLane3TrafficLight: TrafficLight;
 
-  vehicleMap = new Map();
+  vehicleMap: Map<string, Vehicle>;
+
+  constructor() {
+    console.log('Session initialized');
+    console.log(this);
+  }
 
   setRoadMap(roadMap: RoadMap) {
     this.roadMap = roadMap;
+    this.vehicleMap = new Map();
 
-    this.junction = roadMap.junction;
-    this.nRoad = roadMap.junction.getRoad(1);
-    this.eRoad = roadMap.junction.getRoad(2);
-    this.sRoad = roadMap.junction.getRoad(3);
-    this.wRoad = roadMap.junction.getRoad(4);
+    this.junction = this.roadMap.junction;
+    this.nRoad = this.roadMap.junction.getRoad(0);
+    this.eRoad = this.roadMap.junction.getRoad(1);
+    this.sRoad = this.roadMap.junction.getRoad(2);
+    this.wRoad = this.roadMap.junction.getRoad(3);
 
-    this.intersection = roadMap.junction.intersection;
+    this.intersection = this.roadMap.junction.intersection;
     this.nIntRoad = this.intersection.nIntRoad;
     this.eIntRoad = this.intersection.eIntRoad;
     this.sIntRoad = this.intersection.sIntRoad;
@@ -70,5 +80,4 @@ export class Session {
     this.westLane2TrafficLight = this.wRoad.getLane(2).trafficLight;
     this.westLane3TrafficLight = this.wRoad.getLane(3).trafficLight;
   }
-
 }

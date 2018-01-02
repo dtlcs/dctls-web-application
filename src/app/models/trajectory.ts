@@ -1,4 +1,5 @@
 import {Lane} from "./lane";
+import {Vehicle} from "./vehicle";
 
 export class Trajectory {
 
@@ -21,11 +22,11 @@ export class Trajectory {
     this.location = location;
   }
 
-  isAtFront() {
+  isAtFront(): boolean {
     return this.laneIndex == 0;
   }
 
-  getFrontVehicle() {
+  getFrontVehicle(): Vehicle {
     if (this.isAtFront()) {
       return null;
     } else {
@@ -33,8 +34,8 @@ export class Trajectory {
     }
   }
 
-  getDistanceToStopLine() {
-    return Math.abs(this.lane.length - location);
+  getDistanceToStopLine(): number {
+    return Math.abs(this.lane.length - this.location);
   }
 
 }

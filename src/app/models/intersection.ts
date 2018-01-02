@@ -1,10 +1,7 @@
 import {Lane} from "./lane";
 import {Vehicle} from "./vehicle";
-import {Session} from "../session";
 
 export class Intersection {
-
-  session: Session;
 
   // Road list
   nIntRoad = new Map();
@@ -14,19 +11,17 @@ export class Intersection {
 
   intLaneMap = [this.nIntRoad, this.eIntRoad, this.sIntRoad, this.wIntRoad];
 
-  constructor(session: Session) {
-    this.session = session;
-
+  constructor() {
     // Initializing intersection lanes
-    for (let i = 0; i < 4; i++) {
-      let intRoad = this.intLaneMap[i];
-      intRoad.set(6, new Lane(session,6));
-      intRoad.set(7, new Lane(session,7));
-      intRoad.set(8, new Lane(session,8));
+    for (var i = 0; i < 4; i++) {
+      var intRoad = this.intLaneMap[i];
+      intRoad.set(6, new Lane(6));
+      intRoad.set(7, new Lane(7));
+      intRoad.set(8, new Lane(8));
     }
   }
 
-  getIntLane(roadId: number, laneId: number) {
+  getIntLane(roadId: number, laneId: number): Lane {
     return this.intLaneMap[roadId].get(laneId);
   }
 

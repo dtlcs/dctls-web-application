@@ -1,10 +1,11 @@
 import {Trajectory} from "./trajectory";
-import {CANVAS_RADIUS} from "../globals";
-import {Session} from "../session";
+import {CANVAS_RADIUS} from "../common/globals";
+import {AppInjector} from "../common/injector";
+import {SessionService} from "../services/session.service";
 
 export class Vehicle {
 
-  session: Session;
+  session: SessionService;
 
   birthTime = Date.now();
   length = 15 + (Math.random() * 10);
@@ -20,20 +21,20 @@ export class Vehicle {
 
   trajectory: Trajectory;
 
-  constructor(session: Session, origin: number, destination: number, preDestination: number, startLaneId: number) {
-    this.session = session;
+  constructor(origin: number, destination: number, preDestination: number, startLaneId: number) {
+     this.session = AppInjector.get(SessionService);
 
-    if (!session.vehicleMap.has(this.toString())) {
-      session.vehicleMap.set(this.toString(), this);
+    if (!this.session.vehicleMap.has(this.toString())) {
+      this.session.vehicleMap.set(this.toString(), this);
     }
 
-    this.desiredVelocity = Math.random() * 3.5 + (session.averageSpeed * 0.5);
+    this.desiredVelocity = Math.random() * 3.5 + (this.session.averageSpeed * 0.5);
 
     this.trajectory = new Trajectory(origin, destination, preDestination, startLaneId, this.length);
   }
 
   // Return a random vehicle color from a predefined list
-  getRandomVehicleColor() {
+  getRandomVehicleColor(): string {
     var colors = [];
     colors.push('#1976D2');
     colors.push('#C2185B');
@@ -57,13 +58,13 @@ export class Vehicle {
   }
 
   // Calculate acceleration
-  getAcceleration() {
+  getAcceleration(): number {
     var distanceToNextCar;
     if (this.trajectory.isAtFront()) {
       distanceToNextCar = CANVAS_RADIUS - this.trajectory.location;
     } else {
       var frontVehicle = this.trajectory.getFrontVehicle();
-      distanceToNextCar = frontVehicle.trajectory.getLocation() - this.trajectory.location - frontVehicle.length;
+      distanceToNextCar = frontVehicle.trajectory.location - this.trajectory.location - frontVehicle.length;
     }
 
     var a = this.maxAcceleration;
@@ -89,11 +90,11 @@ export class Vehicle {
   }
 
   // Speed difference
-  getDeltaSpeed() {
+  getDeltaSpeed(): number {
     if (this.trajectory.isAtFront()) {
       return this.velocity;
     } else {
-      return this.velocity - this.trajectory.getFrontVehicle().getVelocity();
+      return this.velocity - this.trajectory.getFrontVehicle().velocity;
     }
   }
 
@@ -108,7 +109,7 @@ export class Vehicle {
 
     // I am not sure if we need this condition. >> Just a way to stop negative steps and over steps
     if (temp_step >= 0 && (this.trajectory.getFrontVehicle() == null
-        || this.trajectory.location + this.session.averageGap + Math.abs(temp_step) < this.trajectory.getFrontVehicle().trajectory.getLocation() - this.trajectory.getFrontVehicle().length)) {
+        || this.trajectory.location + this.session.averageGap + Math.abs(temp_step) < this.trajectory.getFrontVehicle().trajectory.location - this.trajectory.getFrontVehicle().length)) {
       this.velocity += acceleration * delta;
       var step = (this.velocity * delta) + (0.5 * acceleration * Math.pow(delta, 2));
 
