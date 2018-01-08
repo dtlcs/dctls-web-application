@@ -5,7 +5,7 @@ import {AppComponent} from './app.component';
 import {SimulatorComponent} from './components/junction/simulator/simulator.component';
 import {SessionService} from "./services/session.service";
 import {setAppInjector} from "./common/injector";
-import { MapComponent } from './components/junction/map/map.component';
+import { MapComponent } from './components/map/map.component';
 import { NewUserComponent } from './components/user/new-user/new-user.component';
 import { ControlComponent } from './components/junction/control/control.component';
 import { NewJunctionComponent } from './components/junction/new-junction/new-junction.component';
@@ -14,7 +14,7 @@ import { ManageUsersComponent } from './components/user/manage-users/manage-user
 import { ServerLogComponent } from './components/server/server-log/server-log.component';
 import { DashboardComponent } from './components/administration/dashboard/dashboard.component';
 import { SidebarComponent } from './components/skeleton/sidebar/sidebar.component';
-import { PreloaderComponent } from './components/junction/preloader/preloader.component';
+import { PreloaderComponent } from './components/preloader/preloader.component';
 import { HeaderComponent } from './components/skeleton/header/header.component';
 import { SignInComponent } from './components/login/sign-in/sign-in.component';
 import { ForgotPasswordComponent } from './components/login/forgot-password/forgot-password.component';
