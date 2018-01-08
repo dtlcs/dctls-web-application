@@ -4,3 +4,7 @@
 @import "../node_modules/roboto-fontface/css/roboto/roboto-fontface.css";
 
 @import "assets/css/material_theme.css";
+
+html, body {
+  height: 100%;
+}

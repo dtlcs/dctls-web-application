@@ -1,7 +1,15 @@
-<div id="app" class="container-fluid">
-  <div class="row">
-    <app-sidebar></app-sidebar>
-    <app-header></app-header>
-    <app-content></app-content>
-  </div>
+<div id="app" class="container-fluid app-container">
+  <!--<div class="row">-->
+    <span class="sidebar-container">
+      <app-sidebar></app-sidebar>
+    </span>
+    <span class="right-container">
+      <div class="header-container">
+        <app-header></app-header>
+      </div>
+      <div class="content-container">
+        <app-content></app-content>
+      </div>
+    </span>
+  <!--</div>-->
 </div>
