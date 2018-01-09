@@ -9,8 +9,7 @@ import {ContentComponent} from "./skeleton/content/content.component";
 import {EditJunctionComponent} from "./content/junction/edit-junction/edit-junction.component";
 import {EditUserComponent} from "./content/user/edit-user/edit-user.component";
 import {NotificationsComponent} from "./skeleton/notifications/notifications.component";
-import {LoginHistoryComponent} from "./content/history/login-history/login-history.component";
-import {OverviewComponent} from "./content/junction/overview/overview.component";
+import {LoginHistoryComponent} from "./content/administration/login-history/login-history.component";
 import {JunctionPopupComponent} from "./content/junction/junction-popup/junction-popup.component";
 import {EditProfileComponent} from "./content/user/edit-profile/edit-profile.component";
 import {SettingsComponent} from "./content/administration/settings/settings.component";
@@ -20,7 +19,7 @@ import {HeaderComponent} from "./skeleton/header/header.component";
 import {PreloaderComponent} from "./skeleton/preloader/preloader.component";
 import {SidebarComponent} from "./skeleton/sidebar/sidebar.component";
 import {DashboardComponent} from "./content/administration/dashboard/dashboard.component";
-import {ServerLogComponent} from "./content/server/server-log/server-log.component";
+import {ServerLogComponent} from "./content/administration/server-log/server-log.component";
 import {ManageUsersComponent} from "./content/user/manage-users/manage-users.component";
 import {ManageJunctionsComponent} from "./content/junction/manage-junctions/manage-junctions.component";
 import {NewJunctionComponent} from "./content/junction/new-junction/new-junction.component";
@@ -31,6 +30,7 @@ import {SimulatorComponent} from "./content/junction/simulator/simulator.compone
 import {SessionService} from "./content/junction/simulator/services/session.service";
 import {ContentService} from "./services/content.service";
 import {setAppInjector} from "./common/injector";
+import { JunctionHistoryComponent } from './content/junction/junction-history/junction-history.component';
 
 @NgModule({
   declarations: [
@@ -52,7 +52,6 @@ import {setAppInjector} from "./common/injector";
     SettingsComponent,
     EditProfileComponent,
     JunctionPopupComponent,
-    OverviewComponent,
     LoginHistoryComponent,
     NotificationsComponent,
     EditUserComponent,
@@ -60,9 +59,24 @@ import {setAppInjector} from "./common/injector";
     ContentComponent,
     VideoFeedComponent,
     JunctionProfileComponent,
+    JunctionHistoryComponent,
   ],
   entryComponents: [
-    ControlComponent
+    DashboardComponent,
+
+    MapComponent,
+
+    ControlComponent,
+    VideoFeedComponent,
+    JunctionProfileComponent,
+    JunctionHistoryComponent,
+    SimulatorComponent,
+
+    NewUserComponent,
+    ManageUsersComponent,
+
+    ServerLogComponent,
+    LoginHistoryComponent,
   ],
   imports: [
     BrowserModule,

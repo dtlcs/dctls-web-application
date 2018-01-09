@@ -70,22 +70,22 @@
       display: flex;
       justify-content: center;
       align-items: center; }
-      .side-nav .side-nav-option .side-nav-option-button .fa-cog {
+      .side-nav .side-nav-option .side-nav-option-button .zmdi-settings {
         font-size: 18px;
         margin-left: 10px;
         color: #bfc1c5; }
-      .side-nav .side-nav-option .side-nav-option-button .fa-caret-right {
+      .side-nav .side-nav-option .side-nav-option-button .zmdi-caret-right {
         font-size: 18px;
         margin-left: 5px;
         color: transparent; }
     .side-nav .side-nav-option .side-nav-option-button:hover {
       cursor: pointer; }
-      .side-nav .side-nav-option .side-nav-option-button:hover .fa-cog {
+      .side-nav .side-nav-option .side-nav-option-button:hover .zmdi-settings {
         margin-left: 0px;
         animation-name: option-cog;
         animation-duration: 300ms;
         animation-iteration-count: 1; }
-      .side-nav .side-nav-option .side-nav-option-button:hover .fa-caret-right {
+      .side-nav .side-nav-option .side-nav-option-button:hover .zmdi-caret-right {
         color: #bfc1c5;
         animation-name: option-caret;
         animation-duration: 300ms;

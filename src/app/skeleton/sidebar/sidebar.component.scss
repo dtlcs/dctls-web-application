@@ -112,7 +112,7 @@ $sidebar-width: 250px;
       justify-content: center;
       align-items: center;
 
-      .fa-cog{
+      .zmdi-settings{
         font-size: 18px;
 
         margin-left: 10px;
@@ -120,7 +120,7 @@ $sidebar-width: 250px;
         color: #bfc1c5;
       }
 
-      .fa-caret-right{
+      .zmdi-caret-right{
         font-size: 18px;
 
         margin-left: 5px;
@@ -134,7 +134,7 @@ $sidebar-width: 250px;
 
       cursor: pointer;
 
-      .fa-cog{
+      .zmdi-settings{
         margin-left: 0px;
 
         animation-name: option-cog;
@@ -142,7 +142,7 @@ $sidebar-width: 250px;
         animation-iteration-count: 1;
       }
 
-      .fa-caret-right{
+      .zmdi-caret-right{
         color: #bfc1c5;
 
         animation-name: option-caret;

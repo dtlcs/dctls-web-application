@@ -10,8 +10,6 @@ export class ContentService {
   }
 
   loadComponent(component: Type<any>) {
-    console.log(this.viewContainerRef);
-
     let componentFactory = this.componentFactoryResolver.resolveComponentFactory(component);
     this.viewContainerRef.clear();
     let componentRef = this.viewContainerRef.createComponent(componentFactory);

@@ -1,5 +1,6 @@
 import {Component, OnInit, ViewChild, ViewContainerRef} from '@angular/core';
 import {ContentService} from "../../services/content.service";
+import {SimulatorComponent} from "../../content/junction/simulator/simulator.component";
 
 @Component({
   selector: 'app-content',
@@ -17,5 +18,7 @@ export class ContentComponent implements OnInit {
 
   ngOnInit() {
     this.contentService.viewContainerRef = this.viewContainerRef;
+
+    // this.contentService.loadComponent(SimulatorComponent);
   }
 }
