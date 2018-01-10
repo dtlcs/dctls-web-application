@@ -1,5 +1,5 @@
 // Set background layout
-import {CANVAS_LENGTH, CANVAS_RADIUS, ROAD_LENGTH, ROAD_RADIUS, TRAFFIC_LIGHT_RADIUS} from "../globals";
+import {CANVAS_LENGTH, CANVAS_RADIUS, ROAD_LENGTH, ROAD_RADIUS, TRAFFIC_LIGHT_RADIUS} from "../simulator.constants";
 import {Vehicle} from "../models/vehicle";
 import {TrafficLightState} from "../models/traffic-light-state.enum";
 

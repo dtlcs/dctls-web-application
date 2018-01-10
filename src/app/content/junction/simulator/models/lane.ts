@@ -1,7 +1,7 @@
 import {LaneType} from "./lane-type.enum";
 import {Vehicle} from "./vehicle";
 import {TrafficLight} from "./traffic-light";
-import {ROAD_LENGTH, ROAD_RADIUS} from "../globals";
+import {ROAD_LENGTH, ROAD_RADIUS} from "../simulator.constants";
 import {AppInjector} from "../../../../common/injector";
 import {SessionService} from "../services/session.service";
 import {TrafficLightState} from "./traffic-light-state.enum";

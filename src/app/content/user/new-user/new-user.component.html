@@ -1,73 +1,64 @@
 <div class="container">
-  <form>
+  <form #newUserForm="ngForm" (ngSubmit)="submitNewUser(newUserForm.value)" novalidate>
     <div class="form-group row">
       <label for="name-input" class="col-2 col-form-label">Full name</label>
       <div class="col-10">
-        <input class="form-control" type="text" value="" id="name-input" placeholder="Full name">
+        <input class="form-control" type="text" value="" id="name-input" name="fullName"
+               [(ngModel)]="fullName">
       </div>
     </div>
     <div class="form-group row">
       <label for="nic-input" class="col-2 col-form-label">NIC</label>
       <div class="col-10">
-        <input class="form-control" type="text" value="" id="nic-input" placeholder="National Identy Card number">
+        <input class="form-control" type="text" value="" id="nic-input" name="nic">
       </div>
     </div>
     <div class="form-group row">
       <label for="roleSelect" class="col-2 col-form-label">Role</label>
       <div class="col-10">
-        <select class="form-control" id="roleSelect">
-          <option>Role 1</option>
-          <option>Role 2</option>
-          <option>Role 3</option>
-          <option>Role 4</option>
-          <option>Role 5</option>
+        <select class="form-control" id="roleSelect" name="role" [(ngModel)]="role">
+          <option *ngFor="let r of roles" [ngValue]="r">{{r}}</option>
         </select>
       </div>
     </div>
     <div class="form-group row">
       <label for="emailInput" class="col-2 col-form-label">Email address</label>
       <div class="col-10">
-        <input type="email" class="form-control col-10" id="emailInput" placeholder="Email address">
+        <input type="email" class="form-control col-10" id="emailInput" name="email"
+               [(ngModel)]="email">
       </div>
     </div>
     <div class="form-group row">
       <label for="telephone-input" class="col-2 col-form-label">Telephone</label>
       <div class="col-10">
-        <input class="form-control" type="text" value="" id="telephone-input">
-      </div>
-    </div>
-    <div class="form-group row">
-      <label for="streetInput" class="col-2 col-form-label">Street</label>
-      <div class="col-10">
-        <input class="form-control" type="text" value="" id="streetInput">
-      </div>
-    </div>
-    <div class="form-group row">
-      <label for="cityInput" class="col-2 col-form-label">City</label>
-      <div class="col-10">
-        <input class="form-control" type="text" value="" id="cityInput">
-      </div>
-    </div>
-    <div class="form-group row">
-      <label for="provinceInput" class="col-2 col-form-label">Province</label>
-      <div class="col-10">
-        <input class="form-control" type="text" value="" id="provinceInput">
-      </div>
-    </div>
-    <div class="form-group row">
-      <label for="postalCodeInput" class="col-2 col-form-label">Postal code</label>
-      <div class="col-10">
-        <input class="form-control" type="text" value="" id="postalCodeInput">
+        <input class="form-control" type="text" value="" id="telephone-input" name="telephone" [(ngModel)]="telephone">
       </div>
     </div>
     <div class="form-group">
-      <label for="profilePictureInput">Profile picture</label>
-      <input type="file" class="form-control-file" id="profilePictureInput" aria-describedby="fileHelp">
-    </div>
-    <div class="form-check">
-      <label class="form-check-label">
-        <input type="checkbox" class="form-check-input"> I agree to the Terms and Conditions
-      </label>
+      <div class="row">
+        <label for="streetInput" class="col-2 col-form-label">Street</label>
+        <div class="col-10">
+          <input class="form-control" type="text" value="" id="streetInput">
+        </div>
+      </div>
+      <div class="row">
+        <label for="cityInput" class="col-2 col-form-label">City</label>
+        <div class="col-10">
+          <input class="form-control" type="text" value="" id="cityInput">
+        </div>
+      </div>
+      <div class="row">
+        <label for="provinceInput" class="col-2 col-form-label">Province</label>
+        <div class="col-10">
+          <input class="form-control" type="text" value="" id="provinceInput">
+        </div>
+      </div>
+      <div class="row">
+        <label for="postalCodeInput" class="col-2 col-form-label">Postal code</label>
+        <div class="col-10">
+          <input class="form-control" type="text" value="" id="postalCodeInput">
+        </div>
+      </div>
     </div>
     <button type="submit" class="btn btn-primary">Submit</button>
   </form>

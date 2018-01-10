@@ -1,5 +1,5 @@
 import {Trajectory} from "./trajectory";
-import {CANVAS_RADIUS} from "../globals";
+import {CANVAS_RADIUS} from "../simulator.constants";
 import {AppInjector} from "../../../../common/injector";
 import {SessionService} from "../services/session.service";
 

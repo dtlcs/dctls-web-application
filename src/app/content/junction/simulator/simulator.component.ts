@@ -10,7 +10,7 @@ import {
 import {
   BACKGROUND_REFRESH_INTERVAL, CANVAS_RADIUS, CANVAS_REFRESH_INTERVAL, ROAD_LENGTH, ROAD_RADIUS,
   TRAFFIC_LIGHT_RADIUS
-} from "./globals";
+} from "./simulator.constants";
 import {
   drawBackground, drawTrafficLight, drawVehicleOnIntersection, drawVehicleOnIntersectionArc,
   drawVehicleOnLane, setBackgroundLayout

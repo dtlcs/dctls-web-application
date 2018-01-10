@@ -7,9 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NewUserComponent implements OnInit {
 
-  constructor() { }
+  public roles = ['cat', 'bat', 'bar', 'people'];
+
+  constructor() {
+  }
 
   ngOnInit() {
+  }
+
+  submitNewUser(form){
+    console.log(form);
   }
 
 }

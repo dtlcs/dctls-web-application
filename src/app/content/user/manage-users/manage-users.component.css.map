@@ -1,7 +1,7 @@
 {
 "version": 3,
-"mappings": "",
-"sources": [],
+"mappings": "AAAA,UAAU;EACN,MAAM,EAAE,EAAE",
+"sources": ["manage-users.component.scss"],
 "names": [],
 "file": "manage-users.component.css"
 }

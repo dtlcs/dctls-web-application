@@ -16,6 +16,7 @@
     display: block;
     height: 103px; }
   .right-container .content-container {
-    flex-grow: 1; }
+    flex-grow: 1;
+    overflow-y: scroll; }
 
 /*# sourceMappingURL=app.component.css.map */

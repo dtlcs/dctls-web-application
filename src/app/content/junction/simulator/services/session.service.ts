@@ -1,11 +1,11 @@
 import { Injectable } from '@angular/core';
-import {Road} from "../models/road";
-import {Junction} from "../models/junction";
-import {Lane} from "../models/lane";
-import {RoadMap} from "../models/road-map";
-import {TrafficLight} from "../models/traffic-light";
-import {Intersection} from "../models/intersection";
-import {Vehicle} from "../models/vehicle";
+import {Road} from '../models/road';
+import {Junction} from '../models/junction';
+import {Lane} from '../models/lane';
+import {RoadMap} from '../models/road-map';
+import {TrafficLight} from '../models/traffic-light';
+import {Intersection} from '../models/intersection';
+import {Vehicle} from '../models/vehicle';
 
 @Injectable()
 export class SessionService {

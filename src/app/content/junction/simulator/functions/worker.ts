@@ -1,6 +1,6 @@
 
 import {Lane} from "../models/lane";
-import {ROAD_LENGTH, ROAD_RADIUS} from "../globals";
+import {ROAD_LENGTH, ROAD_RADIUS} from "../simulator.constants";
 import {TrafficLightState} from "../models/traffic-light-state.enum";
 import {Junction} from "../models/junction";
 
