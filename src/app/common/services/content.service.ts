@@ -4,17 +4,19 @@ import {Content} from "../models/content";
 @Injectable()
 export class ContentService {
 
-  viewContainerRef: ViewContainerRef;
+  public contentViewContainerRef: ViewContainerRef;
+
+  public changeContentTitle: any;
 
   constructor(private componentFactoryResolver: ComponentFactoryResolver) {
   }
 
-  loadComponent(component: Type<any>) {
+  loadComponent(component: Type<{}>) {
     let componentFactory = this.componentFactoryResolver.resolveComponentFactory(component);
-    this.viewContainerRef.clear();
-    let componentRef = this.viewContainerRef.createComponent(componentFactory);
-    let childContent: Content = componentRef.instance;
+    this.contentViewContainerRef.clear();
+    let componentRef = this.contentViewContainerRef.createComponent(componentFactory);
 
-    // Can set data to childContent
+    let childContent: any = componentRef.instance;
+    this.changeContentTitle(childContent.title);
   }
 }

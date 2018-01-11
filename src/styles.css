@@ -1,10 +1,16 @@
+/*Bootstrap CSS*/
 @import "~bootstrap/dist/css/bootstrap.css";
+
+/*Material Design Iconic Font*/
 @import '../node_modules/material-design-iconic-font/dist/css/material-design-iconic-font.css';
+
+/*Roboto fontface*/
 @import "../node_modules/roboto-fontface/css/roboto/roboto-fontface.css";
 
+/*Angular Material Default theme*/
+/*@import "~@angular/material/prebuilt-themes/indigo-pink.css";*/
+
+/*STLS Custom theme*/
 @import "assets/css/material_theme.css";
 
-html, body {
-  height: 100%;
-  overflow: hidden;
-}
+

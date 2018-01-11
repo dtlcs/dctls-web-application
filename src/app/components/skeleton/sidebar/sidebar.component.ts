@@ -19,6 +19,7 @@ import {LoginHistoryComponent} from "../../administration/login-history/login-hi
   styleUrls: ['./sidebar.component.scss']
 })
 export class SidebarComponent implements OnInit {
+
   constructor(private contentService: ContentService) {
     this.contentService = contentService;
   }

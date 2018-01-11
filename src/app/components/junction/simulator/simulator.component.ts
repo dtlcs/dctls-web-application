@@ -22,6 +22,7 @@ import {
   styleUrls: ['./simulator.component.scss']
 })
 export class SimulatorComponent implements OnInit, Content {
+  title: string = 'Simulator';
 
   constructor(sessionService: SessionService) {
     sessionService.setRoadMap(new RoadMap());

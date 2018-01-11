@@ -1,11 +1,13 @@
 import { Component, OnInit } from '@angular/core';
+import {Content} from "../../../common/models/content";
 
 @Component({
   selector: 'app-edit-user',
   templateUrl: './edit-user.component.html',
   styleUrls: ['./edit-user.component.scss']
 })
-export class EditUserComponent implements OnInit {
+export class EditUserComponent implements OnInit, Content {
+  title: string = 'Edit User';
 
   constructor() { }
 

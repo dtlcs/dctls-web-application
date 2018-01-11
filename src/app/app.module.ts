@@ -2,7 +2,7 @@ import {BrowserModule} from '@angular/platform-browser';
 import {Injector, NgModule} from '@angular/core';
 
 import {AppComponent} from './app.component';
-import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {ReactiveFormsModule} from '@angular/forms';
 import {ContentService} from './common/services/content.service';
 import {setAppInjector} from './common/injector';
 import {SimulatorComponent} from "./components/junction/simulator/simulator.component";
@@ -20,7 +20,6 @@ import {SettingsComponent} from "./components/administration/settings/settings.c
 import {ForgotPasswordComponent} from "./components/skeleton/login/forgot-password/forgot-password.component";
 import {SignInComponent} from "./components/skeleton/login/sign-in/sign-in.component";
 import {HeaderComponent} from "./components/skeleton/header/header.component";
-import {PreloaderComponent} from "./components/skeleton/preloader/preloader.component";
 import {SidebarComponent} from "./components/skeleton/sidebar/sidebar.component";
 import {DashboardComponent} from "./components/administration/dashboard/dashboard.component";
 import {ServerLogComponent} from "./components/administration/server-log/server-log.component";
@@ -31,6 +30,12 @@ import {ControlComponent} from "./components/junction/control/control.component"
 import {NewUserComponent} from "./components/user/new-user/new-user.component";
 import {MapComponent} from "./components/junction/map/map.component";
 import {SessionService} from "./components/junction/simulator/services/session.service";
+import { HttpClientModule } from '@angular/common/http';
+import {NewUserService} from "./components/user/new-user/new-user.service";
+import {ManageUsersService} from "./components/user/manage-users/manage-users.service";
+import { AppPreloaderComponent } from './components/skeleton/app-preloader/app-preloader.component';
+import { ContentPreloaderComponent } from './components/skeleton/content-preloader/content-preloader.component';
+
 
 @NgModule({
   declarations: [
@@ -45,7 +50,6 @@ import {SessionService} from "./components/junction/simulator/services/session.s
     ServerLogComponent,
     DashboardComponent,
     SidebarComponent,
-    PreloaderComponent,
     HeaderComponent,
     SignInComponent,
     ForgotPasswordComponent,
@@ -60,6 +64,8 @@ import {SessionService} from "./components/junction/simulator/services/session.s
     VideoFeedComponent,
     JunctionProfileComponent,
     JunctionHistoryComponent,
+    AppPreloaderComponent,
+    ContentPreloaderComponent,
   ],
   entryComponents: [
     DashboardComponent,
@@ -76,11 +82,14 @@ import {SessionService} from "./components/junction/simulator/services/session.s
   ],
   imports: [
     BrowserModule,
-    FormsModule,
+    HttpClientModule,
+    ReactiveFormsModule,
   ],
   providers: [
     SessionService,
-    ContentService
+    ContentService,
+    NewUserService,
+    ManageUsersService,
   ],
   bootstrap: [AppComponent]
 })

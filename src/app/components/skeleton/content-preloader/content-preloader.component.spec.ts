@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { PreloaderComponent } from './preloader.component';
+import { ContentPreloaderComponent } from './content-preloader.component';
 
-describe('PreloaderComponent', () => {
-  let component: PreloaderComponent;
-  let fixture: ComponentFixture<PreloaderComponent>;
+describe('ContentPreloaderComponent', () => {
+  let component: ContentPreloaderComponent;
+  let fixture: ComponentFixture<ContentPreloaderComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ PreloaderComponent ]
+      declarations: [ ContentPreloaderComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(PreloaderComponent);
+    fixture = TestBed.createComponent(ContentPreloaderComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

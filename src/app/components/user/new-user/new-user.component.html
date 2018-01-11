@@ -1,65 +1,61 @@
 <div class="container">
-  <form #newUserForm="ngForm" (ngSubmit)="submitNewUser(newUserForm.value)" novalidate>
+  <form [formGroup]="newUserForm" (ngSubmit)="submitNewUser(newUserForm.value)" novalidate>
     <div class="form-group row">
       <label for="name-input" class="col-2 col-form-label">Full name</label>
       <div class="col-10">
-        <input class="form-control" type="text" value="" id="name-input" name="fullName"
-               [(ngModel)]="fullName">
+        <input class="form-control" type="text" value="" id="name-input" formControlName="name">
       </div>
     </div>
     <div class="form-group row">
       <label for="nic-input" class="col-2 col-form-label">NIC</label>
       <div class="col-10">
-        <input class="form-control" type="text" value="" id="nic-input" name="nic">
+        <input class="form-control" type="text" value="" id="nic-input" formControlName="nic">
       </div>
     </div>
     <div class="form-group row">
       <label for="roleSelect" class="col-2 col-form-label">Role</label>
       <div class="col-10">
-        <select class="form-control" id="roleSelect" name="role" [(ngModel)]="role">
-          <option *ngFor="let r of roles" [ngValue]="r">{{r}}</option>
+        <select class="form-control" id="roleSelect" formControlName="role">
+          <option *ngFor="let r of roles" [ngValue]="r.id">{{r.name}}</option>
         </select>
       </div>
     </div>
     <div class="form-group row">
       <label for="emailInput" class="col-2 col-form-label">Email address</label>
       <div class="col-10">
-        <input type="email" class="form-control col-10" id="emailInput" name="email"
-               [(ngModel)]="email">
+        <input type="email" class="form-control col-10" id="emailInput" formControlName="email">
       </div>
     </div>
     <div class="form-group row">
       <label for="telephone-input" class="col-2 col-form-label">Telephone</label>
       <div class="col-10">
-        <input class="form-control" type="text" value="" id="telephone-input" name="telephone" [(ngModel)]="telephone">
+        <input class="form-control" type="text" value="" id="telephone-input" formControlName="telephone">
       </div>
     </div>
-    <div class="form-group">
-      <div class="row">
-        <label for="streetInput" class="col-2 col-form-label">Street</label>
-        <div class="col-10">
-          <input class="form-control" type="text" value="" id="streetInput">
-        </div>
-      </div>
-      <div class="row">
-        <label for="cityInput" class="col-2 col-form-label">City</label>
-        <div class="col-10">
-          <input class="form-control" type="text" value="" id="cityInput">
-        </div>
-      </div>
-      <div class="row">
-        <label for="provinceInput" class="col-2 col-form-label">Province</label>
-        <div class="col-10">
-          <input class="form-control" type="text" value="" id="provinceInput">
-        </div>
-      </div>
-      <div class="row">
-        <label for="postalCodeInput" class="col-2 col-form-label">Postal code</label>
-        <div class="col-10">
-          <input class="form-control" type="text" value="" id="postalCodeInput">
-        </div>
+    <div class="form-group row" formGroupName="address">
+      <label for="streetInput" class="col-2 col-form-label">Street</label>
+      <div class="col-10">
+        <input class="form-control" type="text" value="" id="streetInput" formControlName="street">
       </div>
     </div>
-    <button type="submit" class="btn btn-primary">Submit</button>
+    <div class="form-group row" formGroupName="address">
+      <label for="cityInput" class="col-2 col-form-label">City</label>
+      <div class="col-10">
+        <input class="form-control" type="text" value="" id="cityInput" formControlName="city">
+      </div>
+    </div>
+    <div class="form-group row" formGroupName="address">
+      <label for="provinceInput" class="col-2 col-form-label">Province</label>
+      <div class="col-10">
+        <input class="form-control" type="text" value="" id="provinceInput" formControlName="province">
+      </div>
+    </div>
+    <div class="form-group row" formGroupName="address">
+      <label for="postalCodeInput" class="col-2 col-form-label">Postal code</label>
+      <div class="col-10">
+        <input class="form-control" type="text" value="" id="postalCodeInput" formControlName="postalCode">
+      </div>
+    </div>
+    <button type="submit" class="btn btn-primary" [disabled]="!newUserForm.valid">Submit</button>
   </form>
 </div>

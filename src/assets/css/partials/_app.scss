@@ -1,0 +1,5 @@
+//Avoid the elastic animation in Safari
+html, body {
+  height: 100%;
+  overflow: hidden;
+}
