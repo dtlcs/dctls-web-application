@@ -35,6 +35,13 @@ import {NewUserService} from "./components/user/new-user/new-user.service";
 import {ManageUsersService} from "./components/user/manage-users/manage-users.service";
 import { AppPreloaderComponent } from './components/skeleton/app-preloader/app-preloader.component';
 import { ContentPreloaderComponent } from './components/skeleton/content-preloader/content-preloader.component';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {MatMenuModule} from '@angular/material/menu';
+import {MatButtonModule} from '@angular/material/button';
+import {MatIconModule} from '@angular/material/icon';
+import { ActivityHistoryComponent } from './components/administration/activity-history/activity-history.component';
+import {ManageJunctionsService} from "./components/junction/manage-junctions/manage-junctions.service";
+import { AgmCoreModule } from '@agm/core';
 
 
 @NgModule({
@@ -66,6 +73,7 @@ import { ContentPreloaderComponent } from './components/skeleton/content-preload
     JunctionHistoryComponent,
     AppPreloaderComponent,
     ContentPreloaderComponent,
+    ActivityHistoryComponent,
   ],
   entryComponents: [
     DashboardComponent,
@@ -79,17 +87,27 @@ import { ContentPreloaderComponent } from './components/skeleton/content-preload
     ManageUsersComponent,
     ServerLogComponent,
     LoginHistoryComponent,
+    ManageJunctionsComponent,
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     ReactiveFormsModule,
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyB693OGyXpXPdwHgeQY03CH_9_okwjReRc'
+    }),
+
+    BrowserAnimationsModule,
+    MatMenuModule,
+    MatButtonModule,
+    MatIconModule,
   ],
   providers: [
     SessionService,
     ContentService,
     NewUserService,
     ManageUsersService,
+    ManageJunctionsService,
   ],
   bootstrap: [AppComponent]
 })

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Content} from "../../../common/models/content";
+import {ManageJunctionsService} from "./manage-junctions.service";
 
 @Component({
   selector: 'app-manage-junctions',
@@ -9,9 +10,20 @@ import {Content} from "../../../common/models/content";
 export class ManageJunctionsComponent implements OnInit, Content {
   title: string = 'Manage Junctions';
 
-  constructor() { }
+  public junctions: any;
+
+  constructor(private manageJunctionsService: ManageJunctionsService) {
+    this.junctions = [];
+  }
 
   ngOnInit() {
+    this.manageJunctionsService.getAllJunctions()
+      .then(res => {
+        this.junctions = res;
+      })
+      .catch(err => {
+        console.log(err);
+      });
   }
 
 }

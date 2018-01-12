@@ -8,9 +8,9 @@
 @import "../node_modules/roboto-fontface/css/roboto/roboto-fontface.css";
 
 /*Angular Material Default theme*/
-/*@import "~@angular/material/prebuilt-themes/indigo-pink.css";*/
+@import "assets/css/custom_material_theme.css";
 
 /*STLS Custom theme*/
-@import "assets/css/material_theme.css";
+@import "assets/css/app.css";
 
 

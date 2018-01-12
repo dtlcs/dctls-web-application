@@ -1,6 +1,5 @@
 import {Component, OnInit, ViewChild, ViewContainerRef} from '@angular/core';
 import {ContentService} from "../../../common/services/content.service";
-import * as $ from 'jquery/dist/jquery.min.js';
 
 @Component({
   selector: 'app-content',

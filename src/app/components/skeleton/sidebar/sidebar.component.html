@@ -11,12 +11,18 @@
         <span>Junction Overview</span>
       </div>
     </a>
-    <a class="side-nav-option-button" (click)="onClickJunctionOverviewSettings()">
+    <a class="side-nav-option-button"
+       #junctionOverviewMenuTrigger="matMenuTrigger" [matMenuTriggerFor]="junctionOverViewSettingsMenu">
       <i class="zmdi zmdi-settings"></i>
       <i class="zmdi zmdi-caret-right"></i>
     </a>
+    <mat-menu #junctionOverViewSettingsMenu="matMenu" class="sidebar-mat-menu">
+      <a class="sidebar-mat-menu-item" (click)="onClickManageJunctions()">Manage Junctions</a>
+      <div class="sidebar-mat-menu-divider"></div>
+      <div class="sidebar-mat-menu-section-header">Managed in Smart Traffic System</div>
+      <a class="sidebar-mat-menu-item">[Item]</a>
+    </mat-menu>
   </div>
-
   <div id="accordion" role="tablist">
     <div class="card">
       <a id="headingJunction" class="card-header collapsed" data-toggle="collapse" href="#collapseJunction" role="button" aria-expanded="false" aria-controls="collapseJunction">

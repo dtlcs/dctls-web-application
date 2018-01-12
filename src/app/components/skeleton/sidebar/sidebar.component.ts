@@ -1,5 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import * as $ from 'jquery/dist/jquery.min.js';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import {ContentService} from "../../../common/services/content.service";
 import {DashboardComponent} from "../../administration/dashboard/dashboard.component";
 import {MapComponent} from "../../junction/map/map.component";
@@ -12,6 +11,8 @@ import {NewUserComponent} from "../../user/new-user/new-user.component";
 import {ManageUsersComponent} from "../../user/manage-users/manage-users.component";
 import {ServerLogComponent} from "../../administration/server-log/server-log.component";
 import {LoginHistoryComponent} from "../../administration/login-history/login-history.component";
+import {MatMenuTrigger} from "@angular/material/menu";
+import {ManageJunctionsComponent} from "../../junction/manage-junctions/manage-junctions.component";
 
 @Component({
   selector: 'app-sidebar',
@@ -19,6 +20,8 @@ import {LoginHistoryComponent} from "../../administration/login-history/login-hi
   styleUrls: ['./sidebar.component.scss']
 })
 export class SidebarComponent implements OnInit {
+
+  @ViewChild(MatMenuTrigger) junctionOverviewMenuTrigger: MatMenuTrigger;
 
   constructor(private contentService: ContentService) {
     this.contentService = contentService;
@@ -35,8 +38,8 @@ export class SidebarComponent implements OnInit {
     this.contentService.loadComponent(MapComponent);
   }
 
-  onClickJunctionOverviewSettings() {
-    this.contentService.loadComponent(MapComponent);
+  onClickManageJunctions() {
+    this.contentService.loadComponent(ManageJunctionsComponent);
   }
 
   onClickControl() {
