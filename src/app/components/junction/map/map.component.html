@@ -1,3 +1,7 @@
-<agm-map [latitude]="lat" [longitude]="lng" [styles]="styles">
-  <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+<div class="form-group" id="searchGroup">
+  <input class="form-control" id="search" #search placeholder="Search for junctions" [formControl]="searchControl"
+         autocorrect="off" autocapitalize="off" spellcheck="off" type="text">
+</div>
+<agm-map [latitude]="latitude" [longitude]="longitude" [scrollwheel]="true" [zoom]="zoom" [styles]="styles">
+  <agm-marker [latitude]="latitude" [longitude]="longitude"></agm-marker>
 </agm-map>

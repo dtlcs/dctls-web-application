@@ -2,7 +2,7 @@ import {BrowserModule} from '@angular/platform-browser';
 import {Injector, NgModule} from '@angular/core';
 
 import {AppComponent} from './app.component';
-import {ReactiveFormsModule} from '@angular/forms';
+import {ReactiveFormsModule, FormsModule} from '@angular/forms';
 import {ContentService} from './common/services/content.service';
 import {setAppInjector} from './common/injector';
 import {SimulatorComponent} from "./components/junction/simulator/simulator.component";
@@ -92,15 +92,17 @@ import { AgmCoreModule } from '@agm/core';
   imports: [
     BrowserModule,
     HttpClientModule,
+    FormsModule,
     ReactiveFormsModule,
     AgmCoreModule.forRoot({
-      apiKey: 'AIzaSyB693OGyXpXPdwHgeQY03CH_9_okwjReRc'
+      apiKey: 'AIzaSyB693OGyXpXPdwHgeQY03CH_9_okwjReRc',
+      libraries: ["places"]
     }),
 
     BrowserAnimationsModule,
     MatMenuModule,
     MatButtonModule,
-    MatIconModule,
+    MatIconModule
   ],
   providers: [
     SessionService,
