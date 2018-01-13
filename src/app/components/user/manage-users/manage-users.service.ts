@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import {REST_API_HOST} from "../../../common/globals";
+import {restApiHost} from "../../../common/globals";
 import { HttpClient } from '@angular/common/http';
 
 @Injectable()
@@ -10,7 +10,7 @@ export class ManageUsersService {
   }
 
   getAllUsersWithRoles(): Promise<Object>{
-    let url = REST_API_HOST + '/user/all';
+    let url = restApiHost + '/user/all';
     return this.http.get(url).toPromise();
   }
 

@@ -1,0 +1,32 @@
+.app-container{
+  display: flex;
+
+  height: 100%;
+
+  padding: 0;
+}
+
+.sidebar-container{
+  display: inline-block;
+
+  width: 250px;
+}
+
+.right-container{
+  display: flex;
+  flex-direction: column;
+
+  height: 100%;
+  flex-grow: 1;
+
+  .header-container{
+    display: block;
+
+    height: 103px;
+  }
+
+  .content-container{
+    flex-grow: 1;
+    overflow-y: scroll;
+  }
+}

@@ -2,7 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {NewUserService} from "./new-user.service";
 import {FormBuilder, FormControl, FormGroup, Validators} from '@angular/forms';
 import {Content} from "../../../common/models/content";
-import {DEFAULT_PASSWORD} from "../../../common/globals";
+import {defaultUserPassword} from "../../../common/globals";
 
 @Component({
   selector: 'app-new-user',
@@ -68,7 +68,7 @@ export class NewUserComponent implements OnInit, Content {
     console.log(user);
     user['role_id'] = user.role;
     // delete user['role'];
-    user['password'] = DEFAULT_PASSWORD;
+    user['password'] = defaultUserPassword;
     user['street'] = user.address.street;
     user['city'] = user.address.city;
     user['province'] = user.address.province;
