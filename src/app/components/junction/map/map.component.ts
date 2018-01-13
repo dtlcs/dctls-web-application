@@ -1,3 +1,4 @@
+import { MapService } from './map.service';
 import { Component, OnInit, ElementRef, ViewChild, NgZone } from '@angular/core';
 import {Content} from '../../../common/models/content';
 import {MAP_STYLE} from './map.style';
@@ -14,6 +15,8 @@ import {DEFAULT_MAP_ZOOM} from './map.constants';
 export class MapComponent implements OnInit, Content {
   title = 'Map';
 
+  public junctions: any;
+
   public styles = MAP_STYLE;
 
   public searchControl: FormControl;
@@ -24,11 +27,13 @@ export class MapComponent implements OnInit, Content {
   @ViewChild('search')
   public searchElementRef: ElementRef;
 
-  constructor(private mapsAPILoader: MapsAPILoader, private ngZone: NgZone) {
+  constructor(private mapsAPILoader: MapsAPILoader, private ngZone: NgZone, private mapService: MapService) {
 
   }
 
   ngOnInit() {
+    this.junctions = [];
+
     // Set google maps defaults
     this.latitude = 6.844001;
     this.longitude = 79.940726;
@@ -61,6 +66,14 @@ export class MapComponent implements OnInit, Content {
           this.zoom = DEFAULT_MAP_ZOOM;
         });
       });
+    });
+
+    this.mapService.getAllJunctions()
+    .then(res => {
+      this.junctions = res;
+    })
+    .catch(err => {
+      console.log(err);
     });
   }
 
