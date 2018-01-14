@@ -26,12 +26,9 @@
       display: inline-block;
       width: 32px;
       margin-right: 25px;
-      border-radius: 50%;
-      opacity: 0.9; }
+      border-radius: 50%; }
     .main-header div a:hover {
       cursor: pointer; }
-      .main-header div a:hover img {
-        opacity: 1; }
 
 .sub-header {
   height: 55px;

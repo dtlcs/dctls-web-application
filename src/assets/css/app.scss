@@ -1,4 +1,5 @@
 @import "partials/sidebar";
+@import "partials/header";
 
 //Avoid the elastic animation in Safari
 html, body {
@@ -6,5 +7,6 @@ html, body {
   overflow: hidden;
 
   font-family: Roboto;
+  -webkit-font-smoothing: antialiased;
 }
 

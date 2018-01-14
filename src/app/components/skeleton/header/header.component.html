@@ -2,8 +2,22 @@
   <div class="space-flex"></div>
   <div>
     <i class="zmdi zmdi-notifications zmdi-hc-fw"></i>
-    <a><img src="../../../../assets/img/oshan.jpg" alt="Avatar"></a>
+    <a #profileMenuTrigger="matMenuTrigger" [matMenuTriggerFor]="profileMenu"><img src="../../../../assets/img/oshan.jpg" alt="Avatar"></a>
   </div>
+  <mat-menu #profileMenu="matMenu" class="header-mat-menu">
+    <div class="header-mat-menu-top">
+      <a><img src="../../../../assets/img/oshan.jpg" alt="Avatar"></a>
+      <div class="header-mat-menu-top-content">
+        <div class="header-mat-menu-top-content-name">Oshan Mudannayake</div>
+        <div class="header-mat-menu-top-content-email">oshan.ivantha@gmail.com</div>
+        <div class="header-mat-menu-top-content-link">
+          <a>History</a><p>-</p><a>Permission</a>
+        </div>
+        <a class="header-mat-menu-top-content-button">My Account</a>
+      </div>
+    </div>
+    <div class="header-mat-menu-bottom"></div>
+  </mat-menu>
 </div>
 <div class="sub-header">
   <div id="contentTitle">{{contentTitle}}</div>

@@ -29,7 +29,7 @@
       margin-left: 8px;
       margin-bottom: 0;
       color: #ffffff;
-      font-weight: 400; }
+      font-weight: 500; }
   .side-nav #brand:hover {
     cursor: pointer; }
   .side-nav .side-nav-option {
@@ -61,7 +61,7 @@
           position: relative;
           margin-left: 10px;
           color: #bbbdc0;
-          font-weight: 400; }
+          font-weight: 500; }
     .side-nav .side-nav-option .side-nav-option-title:hover {
       background-color: #38404c;
       cursor: pointer; }
@@ -113,6 +113,7 @@
       text-decoration: none; }
       .side-nav .card .card-header span {
         font-size: 14px;
+        font-weight: 500;
         display: block;
         line-height: 20px;
         margin-top: 3px;
@@ -221,6 +222,7 @@
           .side-nav .card .card-body .card-body-item div span {
             position: absolute;
             font-size: 14px;
+            font-weight: 500;
             margin-left: 55px; }
       .side-nav .card .card-body .card-body-item:hover {
         background-color: #38404c;

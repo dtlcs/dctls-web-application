@@ -1,0 +1,113 @@
+.mat-menu-panel.header-mat-menu {
+  max-width: 315px;
+}
+
+.header-mat-menu {
+  display: block;
+
+  width: 315px;
+
+  margin-top: 50px;
+  margin-right: 25px;
+  padding: 0;
+
+  .mat-menu-content{
+    padding: 0;
+
+    .header-mat-menu-top{
+      margin: 20px;
+
+      display: flex;
+      flex-direction: row;
+
+      a{
+        margin-right: 20px;
+
+        img{
+          display: inline-block;
+          width: auto;
+          max-width: 100%;
+
+          border-radius: 50%;
+          margin: 0;
+        }
+      }
+
+      a:hover{
+        cursor: pointer;
+      }
+
+      .header-mat-menu-top-content{
+        display: inline-block;
+
+        font-size: 13px;
+
+        .header-mat-menu-top-content-name{
+          font-weight: 700;
+        }
+
+        .header-mat-menu-top-content-email{
+          font-weight: 400;
+        }
+
+        .header-mat-menu-top-content-link{
+          margin-top: 6px;
+          margin-bottom: 6px;
+
+          font-weight: 400;
+
+          a{
+            margin-right: 10px;
+
+            color: #3366cc;
+          }
+
+          a:hover{
+            text-decoration: underline;
+            cursor: pointer;
+          }
+
+          p{
+            display: inline;
+
+            margin-right: 10px;
+
+            color: #c0c0c0;
+          }
+        }
+
+        .header-mat-menu-top-content-button{
+          display: inline-block;
+          line-height: 28px;
+
+          margin-top: 10px;
+          padding-left: 12px;
+          padding-right: 12px;
+
+          border-radius: 2px;
+          border-width: 1px;
+          font-size: 13px;
+          line-height: 28px;
+          font-weight: 700;
+
+          background-color: rgb(77, 144, 254);
+          border-color: rgb(48, 121, 237);
+          color: #ffffff;
+
+          -webkit-font-smoothing: antialiased;
+        }
+
+        .header-mat-menu-top-content-button:hover{
+          background-color: rgb(53, 122, 232);
+          border-color: rgb(47, 91, 183);
+
+          cursor: pointer;
+        }
+      }
+    }
+
+    .header-mat-menu-bottom{
+
+    }
+  }
+}
