@@ -25,11 +25,7 @@ export class FirebaseAuthService {
   }
 
   get isUserEmailLoggedIn(): boolean {
-    if (this.authState !== null) {
-      return true;
-    } else {
-      return false;
-    }
+    return this.authState !== null;
   }
 
   signInWithEmail(email: string, password: string) {

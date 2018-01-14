@@ -3,6 +3,7 @@ import { AngularFireDatabase, AngularFireList, AngularFireObject } from 'angular
 import { AngularFireAuth } from 'angularfire2/auth';
 import { Observable } from 'rxjs/Observable';
 import * as firebase from 'firebase/app';
+import {FirebaseAuthService} from "./services/firebase-auth.service";
 
 @Component({
   selector: 'app-root',
@@ -11,4 +12,11 @@ import * as firebase from 'firebase/app';
 })
 export class AppComponent {
   title = 'app';
+
+  constructor(public firebaseAuthService: FirebaseAuthService) {
+  }
+
+  isAuthenticated(){
+    return this.firebaseAuthService.authState !== null;
+  }
 }

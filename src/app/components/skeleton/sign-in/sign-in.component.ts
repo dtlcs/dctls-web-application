@@ -9,8 +9,6 @@ import {FirebaseAuthService} from "../../../services/firebase-auth.service";
 })
 export class SignInComponent implements OnInit {
 
-  isAuthChecked = false;
-
   email = '';
   password = '';
 
@@ -22,13 +20,6 @@ export class SignInComponent implements OnInit {
   }
 
   ngOnInit() {
-  }
-
-  checkUserInfo() {
-    if (this.firebaseAuthService.isUserEmailLoggedIn) {
-      this.router.navigate(['/console'])
-    }
-    this.isAuthChecked = true;
   }
 
   clearErrorMessage() {
