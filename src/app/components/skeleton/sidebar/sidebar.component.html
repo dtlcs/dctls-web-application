@@ -6,7 +6,7 @@
 
   <div class="side-nav-option">
     <a class="side-nav-option-title" (click)="onClickJunctionOverview()">
-      <div>
+      <div [ngClass]="{'current': selected == 'Junction Overview'}">
         <i class="zmdi zmdi-home"></i>
         <span>Junction Overview</span>
       </div>
@@ -31,31 +31,31 @@
 
       <div id="collapseJunction" class="collapse" role="tabpanel" aria-labelledby="collapseJunction">
         <div class="card-body">
-          <a class="card-body-item" (click)="onClickControl()">
+          <a class="card-body-item" (click)="onClickControl()" [ngClass]="{'current': selected == 'Control'}">
             <div>
               <i class="zmdi zmdi-traffic zmdi-hc-fw"></i>
               <span>Control</span>
             </div>
           </a>
-          <a class="card-body-item" (click)="onClickVideoFeed()">
+          <a class="card-body-item" (click)="onClickVideoFeed()" [ngClass]="{'current': selected == 'Video Feed'}">
             <div>
               <i class="zmdi zmdi-videocam zmdi-hc-fw"></i>
               <span>Video Feed</span>
             </div>
           </a>
-          <a class="card-body-item" (click)="onClickJunctionProfile()">
+          <a class="card-body-item" (click)="onClickJunctionProfile()" [ngClass]="{'current': selected == 'Junction Profile'}">
             <div>
               <i class="zmdi zmdi-settings-square zmdi-hc-fw"></i>
               <span>Junction Profile</span>
             </div>
           </a>
-          <a class="card-body-item" (click)="onClickHistory()">
+          <a class="card-body-item" (click)="onClickHistory()" [ngClass]="{'current': selected == 'History'}">
             <div>
               <i class="zmdi zmdi-calendar zmdi-hc-fw"></i>
               <span>History</span>
             </div>
           </a>
-          <a class="card-body-item" (click)="onClickSimulator()">
+          <a class="card-body-item" (click)="onClickSimulator()" [ngClass]="{'current': selected == 'Simulator'}">
             <div>
               <i class="zmdi zmdi-car zmdi-hc-fw"></i>
               <span>Simulator</span>
@@ -86,13 +86,13 @@
 
       <div id="collapseUser" class="collapse" role="tabpanel" aria-labelledby="collapseUser">
         <div class="card-body">
-          <a class="card-body-item" (click)="onClickNewUser()">
+          <a class="card-body-item" (click)="onClickNewUser()" [ngClass]="{'current': selected == 'New User'}">
             <div>
               <i class="zmdi zmdi-account-add zmdi-hc-fw"></i>
               <span>New User</span>
             </div>
           </a>
-          <a class="card-body-item" (click)="onClickManageUsers()">
+          <a class="card-body-item" (click)="onClickManageUsers()" [ngClass]="{'current': selected == 'Manage Users'}">
             <div>
               <i class="zmdi zmdi-accounts zmdi-hc-fw"></i>
               <span>Manage Users</span>
@@ -110,13 +110,13 @@
 
       <div id="collapseAdministration" class="collapse" role="tabpanel" aria-labelledby="collapseAdministration">
         <div class="card-body">
-          <a class="card-body-item" (click)="onClickServerLog()">
+          <a class="card-body-item" (click)="onClickServerLog()" [ngClass]="{'current': selected == 'Server Log'}">
             <div>
               <i class="zmdi zmdi-laptop zmdi-hc-fw"></i>
               <span>Server Log</span>
             </div>
           </a>
-          <a class="card-body-item" (click)="onClickLoginHistory()">
+          <a class="card-body-item" (click)="onClickLoginHistory()" [ngClass]="{'current': selected == 'Login History'}">
             <div>
               <i class="zmdi zmdi-collection-bookmark zmdi-hc-fw"></i>
               <span>Login History</span>

@@ -97,6 +97,16 @@ $sidebar-width: 250px;
           font-weight: 500;
         }
       }
+
+      .current{
+        i{
+          color: #55c4f5;
+        }
+
+        span{
+          color: #55c4f5;
+        }
+      }
     }
 
     .side-nav-option-title:hover{
@@ -372,9 +382,9 @@ $sidebar-width: 250px;
         cursor: pointer;
       }
 
-      //.card-body-item::selection{
-      //  color: #55c4f5;
-      //}
+      .current{
+        color: #55c4f5;
+      }
     }
   }
 

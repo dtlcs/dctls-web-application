@@ -62,6 +62,10 @@
           margin-left: 10px;
           color: #bbbdc0;
           font-weight: 500; }
+      .side-nav .side-nav-option .side-nav-option-title .current i {
+        color: #55c4f5; }
+      .side-nav .side-nav-option .side-nav-option-title .current span {
+        color: #55c4f5; }
     .side-nav .side-nav-option .side-nav-option-title:hover {
       background-color: #38404c;
       cursor: pointer; }
@@ -227,6 +231,8 @@
       .side-nav .card .card-body .card-body-item:hover {
         background-color: #38404c;
         cursor: pointer; }
+      .side-nav .card .card-body .current {
+        color: #55c4f5; }
   .side-nav .card:hover {
     background-color: #38404c; }
 

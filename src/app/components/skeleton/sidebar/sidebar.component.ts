@@ -23,6 +23,8 @@ export class SidebarComponent implements OnInit {
 
   @ViewChild(MatMenuTrigger) junctionOverviewMenuTrigger: MatMenuTrigger;
 
+  public selected = 'control';
+
   constructor(private contentService: ContentService) {
 
   }
@@ -35,6 +37,7 @@ export class SidebarComponent implements OnInit {
   }
 
   onClickJunctionOverview() {
+    this.selected = 'Junction Overview';
     this.contentService.loadComponent(MapComponent);
   }
 
@@ -43,38 +46,47 @@ export class SidebarComponent implements OnInit {
   }
 
   onClickControl() {
+    this.selected = 'Control';
     this.contentService.loadComponent(ControlComponent);
   }
 
   onClickVideoFeed() {
+    this.selected = 'Video Feed';
     this.contentService.loadComponent(VideoFeedComponent);
   }
 
   onClickJunctionProfile() {
+    this.selected = 'Junction Profile';
     this.contentService.loadComponent(JunctionProfileComponent);
   }
 
   onClickHistory() {
+    this.selected = 'History';
     this.contentService.loadComponent(JunctionHistoryComponent);
   }
 
   onClickSimulator() {
+    this.selected = 'Simulator';
     this.contentService.loadComponent(SimulatorComponent);
   }
 
   onClickNewUser() {
+    this.selected = 'New User';
     this.contentService.loadComponent(NewUserComponent);
   }
 
   onClickManageUsers() {
+    this.selected = 'Manage Users';
     this.contentService.loadComponent(ManageUsersComponent);
   }
 
   onClickServerLog() {
+    this.selected = 'Server Log';
     this.contentService.loadComponent(ServerLogComponent);
   }
 
   onClickLoginHistory() {
+    this.selected = 'Login History';
     this.contentService.loadComponent(LoginHistoryComponent);
   }
 
