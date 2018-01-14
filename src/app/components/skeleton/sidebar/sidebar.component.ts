@@ -24,7 +24,7 @@ export class SidebarComponent implements OnInit {
   @ViewChild(MatMenuTrigger) junctionOverviewMenuTrigger: MatMenuTrigger;
 
   constructor(private contentService: ContentService) {
-    this.contentService = contentService;
+
   }
 
   ngOnInit() {

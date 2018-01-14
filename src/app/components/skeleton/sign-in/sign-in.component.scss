@@ -1,0 +1,11 @@
+.fluid-container{
+  height: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .sign-in-form{
+    width: 400px;
+  }
+}

@@ -49,7 +49,6 @@ import {AngularFireDatabaseModule} from 'angularfire2/database';
 import {AngularFireAuthModule} from 'angularfire2/auth';
 import { ConsoleComponent } from './components/skeleton/console/console.component';
 import { RouterModule, Routes } from '@angular/router';
-import {routes} from "./app.routing";
 import {FirebaseAuthService} from "./services/firebase-auth.service";
 import {UserService} from "./services/user.service";
 
@@ -87,6 +86,8 @@ import {UserService} from "./services/user.service";
     ConsoleComponent,
   ],
   entryComponents: [
+    ConsoleComponent,
+    SignInComponent,
     DashboardComponent,
     MapComponent,
     ControlComponent,
@@ -99,10 +100,11 @@ import {UserService} from "./services/user.service";
     ServerLogComponent,
     LoginHistoryComponent,
     ManageJunctionsComponent,
+    EditProfileComponent,
   ],
   imports: [
     BrowserModule,
-    [RouterModule.forRoot(routes)],
+    [RouterModule.forRoot([{ path: "", component: AppComponent}])],
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
