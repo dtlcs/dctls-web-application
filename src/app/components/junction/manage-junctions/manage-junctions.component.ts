@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {Content} from "../../../common/models/content";
+import {Content} from "../../../models/content";
 import {ManageJunctionsService} from "./manage-junctions.service";
 
 @Component({

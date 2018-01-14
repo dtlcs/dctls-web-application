@@ -1,6 +1,6 @@
 import {Lane} from "./lane";
 import {Vehicle} from "./vehicle";
-import {AppInjector} from "../../../../common/injector";
+import {AppInjector} from "../../../../injector";
 import {SessionService} from "../services/session.service";
 
 export class Road {

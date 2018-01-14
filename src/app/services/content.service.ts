@@ -1,5 +1,4 @@
 import {ComponentFactoryResolver, Injectable, Type, ViewContainerRef} from '@angular/core';
-import {Content} from "../models/content";
 
 @Injectable()
 export class ContentService {

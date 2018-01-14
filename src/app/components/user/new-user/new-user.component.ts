@@ -1,8 +1,8 @@
 import {Component, OnInit} from '@angular/core';
 import {NewUserService} from "./new-user.service";
 import {FormBuilder, FormControl, FormGroup, Validators} from '@angular/forms';
-import {Content} from "../../../common/models/content";
-import {defaultUserPassword} from "../../../common/globals";
+import {Content} from "../../../models/content";
+import {defaultUserPassword} from "../../../globals";
 
 @Component({
   selector: 'app-new-user',

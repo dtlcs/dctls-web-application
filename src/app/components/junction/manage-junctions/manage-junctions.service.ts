@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import {restApiHost} from '../../../common/globals';
+import {restApiHost} from '../../../globals';
 import { HttpClient } from '@angular/common/http';
 
 @Injectable()

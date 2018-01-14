@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Router} from "@angular/router";
-import {FirebaseAuthService} from "../../../common/services/firebase-auth.service";
+import {FirebaseAuthService} from "../../../services/firebase-auth.service";
 
 @Component({
   selector: 'app-sign-in',

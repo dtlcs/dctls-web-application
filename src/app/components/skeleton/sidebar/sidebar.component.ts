@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import {ContentService} from "../../../common/services/content.service";
+import {ContentService} from "../../../services/content.service";
 import {DashboardComponent} from "../../administration/dashboard/dashboard.component";
 import {MapComponent} from "../../junction/map/map.component";
 import {ControlComponent} from "../../junction/control/control.component";

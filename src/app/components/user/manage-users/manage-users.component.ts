@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {Content} from "../../../common/models/content";
-import {User} from "../../../common/models/user";
+import {Content} from "../../../models/content";
+import {User} from "../../../models/user";
 import {ManageUsersService} from "./manage-users.service";
 
 @Component({

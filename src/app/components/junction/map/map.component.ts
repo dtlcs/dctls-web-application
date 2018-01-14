@@ -1,6 +1,6 @@
 import { MapService } from './map.service';
 import { Component, OnInit, ElementRef, ViewChild, NgZone } from '@angular/core';
-import {Content} from '../../../common/models/content';
+import {Content} from '../../../models/content';
 import {MAP_STYLE} from './map.style';
 import {MapsAPILoader} from '@agm/core';
 import { FormControl } from '@angular/forms';

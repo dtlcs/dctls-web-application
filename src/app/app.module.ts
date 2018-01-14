@@ -3,8 +3,8 @@ import {Injector, NgModule} from '@angular/core';
 
 import {AppComponent} from './app.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
-import {ContentService} from './common/services/content.service';
-import {setAppInjector} from './common/injector';
+import {ContentService} from './services/content.service';
+import {setAppInjector} from './injector';
 import {SimulatorComponent} from './components/junction/simulator/simulator.component';
 import {JunctionHistoryComponent} from './components/junction/junction-history/junction-history.component';
 import {JunctionProfileComponent} from './components/junction/junction-profile/junction-profile.component';
@@ -50,7 +50,7 @@ import {AngularFireAuthModule} from 'angularfire2/auth';
 import { ConsoleComponent } from './components/console/console.component';
 import { RouterModule, Routes } from '@angular/router';
 import {routes} from "./app.routing";
-import {FirebaseAuthService} from "./common/services/firebase-auth.service";
+import {FirebaseAuthService} from "./services/firebase-auth.service";
 
 
 @NgModule({

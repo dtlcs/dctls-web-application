@@ -1,5 +1,5 @@
 import {Component, OnInit, ViewChild, ViewContainerRef} from '@angular/core';
-import {ContentService} from "../../../common/services/content.service";
+import {ContentService} from "../../../services/content.service";
 
 @Component({
   selector: 'app-header',
