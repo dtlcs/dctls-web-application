@@ -38,6 +38,3 @@ testem.log
 # System Files
 .DS_Store
 Thumbs.db
-
-# Private key settings etc.
-environment.ts

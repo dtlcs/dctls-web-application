@@ -51,6 +51,7 @@ import { ConsoleComponent } from './components/console/console.component';
 import { RouterModule, Routes } from '@angular/router';
 import {routes} from "./app.routing";
 import {FirebaseAuthService} from "./services/firebase-auth.service";
+import {UserService} from "./services/user.service";
 
 
 @NgModule({
@@ -126,6 +127,7 @@ import {FirebaseAuthService} from "./services/firebase-auth.service";
     ManageJunctionsService,
     MapService,
     FirebaseAuthService,
+    UserService,
   ],
   exports: [
     RouterModule
