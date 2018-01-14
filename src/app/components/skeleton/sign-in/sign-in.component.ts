@@ -29,7 +29,7 @@ export class SignInComponent implements OnInit {
     this.error = { name: '', message: '' };
   }
 
-  onLoginEmail(): void {
+  onSignInEmail(): void {
     this.clearErrorMessage()
 
     if (this.validateForm(this.email, this.password)) {

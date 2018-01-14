@@ -13,7 +13,7 @@ import * as moment from 'moment';
 })
 export class ConsoleComponent implements OnInit {
 
-  constructor(public firebaseAuthService: FirebaseAuthService, private angularFireDatabase: AngularFireDatabase) {
+  constructor(private firebaseAuthService: FirebaseAuthService, private angularFireDatabase: AngularFireDatabase) {
 
   }
 

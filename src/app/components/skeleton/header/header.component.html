@@ -11,12 +11,16 @@
         <div class="header-mat-menu-top-content-name">Oshan Mudannayake</div>
         <div class="header-mat-menu-top-content-email">oshan.ivantha@gmail.com</div>
         <div class="header-mat-menu-top-content-link">
-          <a>History</a><p>-</p><a>Permission</a>
+          <a (click)="onClickActivitiesButton()">Activities</a><p>-</p><a (click)="onClickPermissionButton()">Permission</a>
         </div>
-        <a class="header-mat-menu-top-content-button">My Account</a>
+        <a class="header-mat-menu-top-content-button" (click)="onClickMyAccount()">My Account</a>
       </div>
     </div>
-    <div class="header-mat-menu-bottom"></div>
+    <div class="header-mat-menu-bottom">
+      <div>
+        <a (click)="onClickSignOutButton()">Sign Out</a>
+      </div>
+    </div>
   </mat-menu>
 </div>
 <div class="sub-header">

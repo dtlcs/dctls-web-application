@@ -1,2 +1,2 @@
-<router-outlet *ngIf="isAuthenticated(); else sign_in"></router-outlet>
-<ng-template #sign_in></ng-template>
+<router-outlet *ngIf="isAuthenticated()"></router-outlet>
+<app-sign-in *ngIf="!isAuthenticated()"></app-sign-in>
