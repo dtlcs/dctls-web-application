@@ -14,7 +14,6 @@ import {EditJunctionComponent} from './components/junction/edit-junction/edit-ju
 import {EditUserComponent} from './components/user/edit-user/edit-user.component';
 import {NotificationsComponent} from './components/skeleton/notifications/notifications.component';
 import {LoginHistoryComponent} from './components/administration/login-history/login-history.component';
-import {JunctionPopupComponent} from './components/junction/map/junction-popup/junction-popup.component';
 import {EditProfileComponent} from './components/user/edit-profile/edit-profile.component';
 import {SettingsComponent} from './components/administration/settings/settings.component';
 import {ForgotPasswordComponent} from './components/skeleton/forgot-password/forgot-password.component';
@@ -71,7 +70,6 @@ import {UserService} from "./services/user.service";
     ForgotPasswordComponent,
     SettingsComponent,
     EditProfileComponent,
-    JunctionPopupComponent,
     LoginHistoryComponent,
     NotificationsComponent,
     EditUserComponent,

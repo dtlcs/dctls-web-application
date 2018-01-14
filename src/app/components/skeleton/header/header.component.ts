@@ -15,6 +15,7 @@ import * as moment from 'moment';
 export class HeaderComponent implements OnInit {
 
   public contentTitle: string;
+  public selectedJunction = 'Smart Traffic Light System';
 
   @ViewChild(MatMenuTrigger) profileMenuTrigger: MatMenuTrigger;
 

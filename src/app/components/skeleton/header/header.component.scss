@@ -1,4 +1,4 @@
-.main-header{
+.main-header {
   box-sizing: border-box;
 
   display: flex;
@@ -12,17 +12,30 @@
   display: flex;
   align-items: center;
 
-  .space-flex{
+  .header-title {
+    margin-left: 20px;
+
+    font-size: 14px;
+
+    font-weight: 500;
+    color: rgb(255, 255, 255) !important;
+  }
+
+  .header-title:hover{
+    cursor: default;
+  }
+
+  .space-flex {
     display: block;
     flex-grow: 1;
     flex-shrink: 1;
   }
 
-  div{
+  div {
     display: flex;
     align-items: center;
 
-    i{
+    i {
       display: inline-block;
 
       font-size: 24px;
@@ -32,14 +45,14 @@
       color: #bbe1f6;
     }
 
-    i:hover{
+    i:hover {
       color: #ffffff;
 
       cursor: pointer;
     }
 
-    a{
-      img{
+    a {
+      img {
         display: inline-block;
 
         width: 32px;
@@ -49,13 +62,13 @@
       }
     }
 
-    a:hover{
+    a:hover {
       cursor: pointer;
     }
   }
 }
 
-.sub-header{
+.sub-header {
   height: 55px;
 
   background-color: #1b9ce2;
@@ -64,7 +77,7 @@
   flex-direction: row;
   align-items: center;
 
-  #contentTitle{
+  #contentTitle {
     font-size: 24px;
 
     margin-left: 20px;
@@ -73,47 +86,47 @@
     color: #ffffff;
   }
 
-  .space-flex{
+  .space-flex {
     display: block;
     flex-grow: 1;
     flex-shrink: 1;
   }
 
-  #contentHelp{
+  #contentHelp {
     font-size: 25px;
 
     margin-right: 25px;
 
     color: #bbe1f6;
 
-    i{
+    i {
       display: inline;
 
       width: 100%;
     }
 
-    .zmdi-help{
+    .zmdi-help {
       margin-right: -12px;
     }
 
-    .zmdi-caret-down{
+    .zmdi-caret-down {
       opacity: 0;
     }
   }
 
-  #contentHelp:hover{
+  #contentHelp:hover {
     color: #ffffff;
 
     cursor: pointer;
 
-    .zmdi-help{
+    .zmdi-help {
       animation-name: help-show;
       animation-duration: 300ms;
       animation-iteration-count: 1;
       animation-fill-mode: forwards;
     }
 
-    .zmdi-caret-down{
+    .zmdi-caret-down {
       animation-name: caret-show;
       animation-duration: 300ms;
       animation-iteration-count: 1;
@@ -121,19 +134,19 @@
     }
 
     @keyframes help-show {
-      from{
+      from {
         margin-right: -12px;
       }
-      to{
+      to {
         margin-right: 0px;
       }
     }
 
     @keyframes caret-show {
-      from{
+      from {
         opacity: 0;
       }
-      to{
+      to {
         opacity: 1;
       }
     }
