@@ -47,7 +47,7 @@ import {MapService} from "./components/junction/map/map.service";
 import {AngularFireModule} from 'angularfire2';
 import {AngularFireDatabaseModule} from 'angularfire2/database';
 import {AngularFireAuthModule} from 'angularfire2/auth';
-import { ConsoleComponent } from './components/console/console.component';
+import { ConsoleComponent } from './components/skeleton/console/console.component';
 import { RouterModule, Routes } from '@angular/router';
 import {routes} from "./app.routing";
 import {FirebaseAuthService} from "./services/firebase-auth.service";

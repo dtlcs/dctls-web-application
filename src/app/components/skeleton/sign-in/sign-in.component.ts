@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {Router} from "@angular/router";
 import {FirebaseAuthService} from "../../../services/firebase-auth.service";
+import {AngularFireDatabase} from "angularfire2/database";
+import * as moment from 'moment';
 
 @Component({
   selector: 'app-sign-in',
@@ -15,7 +17,7 @@ export class SignInComponent implements OnInit {
   errorMessage = '';
   error: { name: string, message: string } = { name: '', message: '' };
 
-  constructor(public firebaseAuthService: FirebaseAuthService, private router: Router) {
+  constructor(public firebaseAuthService: FirebaseAuthService, private angularFireDatabase: AngularFireDatabase, private router: Router) {
 
   }
 
@@ -32,7 +34,10 @@ export class SignInComponent implements OnInit {
 
     if (this.validateForm(this.email, this.password)) {
       this.firebaseAuthService.signInWithEmail(this.email, this.password)
-        .then(() => this.router.navigate(['/user']))
+        .then(() => {
+          this.router.navigate(['/']);
+          this.angularFireDatabase.list('/users/' + this.firebaseAuthService.currentUserId + '/sessions').push({ signin: moment().format() });
+        })
         .catch(_error => {
           this.error = _error;
           this.router.navigate(['/']);

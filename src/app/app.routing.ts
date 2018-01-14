@@ -1,6 +1,6 @@
 import {Routes} from '@angular/router';
 
-import {ConsoleComponent} from "./components/console/console.component";
+import {ConsoleComponent} from "./components/skeleton/console/console.component";
 
 export const routes: Routes = [
   // {path: '', redirectTo: 'console', pathMatch: 'full'},
