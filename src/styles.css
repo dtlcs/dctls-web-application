@@ -5,7 +5,10 @@
 @import '../node_modules/material-design-iconic-font/dist/css/material-design-iconic-font.css';
 
 /*Roboto fontface*/
-@import "../node_modules/roboto-fontface/css/roboto/roboto-fontface.css";
+/*@import "../node_modules/roboto-fontface/css/roboto/roboto-fontface.css";*/
+
+/*Roboto regular*/
+@import "../node_modules/roboto-regular/index.css";
 
 /*Angular Material Default theme*/
 @import "assets/css/custom_material_theme.css";

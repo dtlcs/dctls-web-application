@@ -1,316 +1,139 @@
-<div class="container">
-  <div class="radio">
-    <label><input type="radio" name="optradio">Automatic</label>
+<div class="fluid-container">
+  <div class="control-mode">
+    <div class="form-check form-check-inline">
+      <input class="form-check-input" type="radio" name="controlModeRadioOptions" id="automaticRadio" value="automatic">
+      <label class="form-check-label" for="automaticRadio">Automatic</label>
+    </div>
+    <div class="form-check form-check-inline">
+      <input class="form-check-input" type="radio" name="controlModeRadioOptions" id="manualRadio" value="manual">
+      <label class="form-check-label" for="manualRadio">Manual</label>
+    </div>
   </div>
-  <div class="radio">
-    <label><input type="radio" name="optradio">Manual</label>
-  </div>
-  <div class="row">
-    <div class="card" style="width: 18rem;">
-      <div class="row">
-        <div class="col-md-4">
-          <div id="file1" class="btn-group-vertical" data-toggle="buttons" >
-            <div>
-              <label>
-                <input type="radio" name="option1"  id="l" />Red
-              </label>
-            </div>
-            <div>
-              <label>
-                <input type="radio" name="option1" />Green
-              </label>
-            </div>
-            <div>
-              <label>
-                <input type="radio" name="option1" />Yellow
-              </label>
-            </div>
-            <div>
-              <label>
-                <input type="radio" name="option1" />Off
-              </label>
-            </div>
+  <div class="controls">
+    <div class="road-control">
+      <h4>North</h4>
+      <div class="road-control-lanes">
+        <div>
+          <h5>Lane 1</h5>
+          <div class="road-control-lane-lights">
+            <input type="radio" class="red-light" name="northLane1" id="northLane1Red" value="red">
+            <input type="radio" class="orange-light" name="northLane1" id="northLane1Orange" value="green">
+            <input type="radio" class="green-light" name="northLane1" id="northLane1Green" value="blue">
+            <input type="radio" class="off-light" name="northLane1" id="northLane1Off" value="off">
           </div>
         </div>
-        <div class="col-md-4">
-          <div id="file2" class="btn-group-vertical" data-toggle="buttons" >
-            <div>
-              <label>
-                <input type="radio" name="option1"  id="l" />Red
-              </label>
-            </div>
-            <div>
-              <label>
-                <input type="radio" name="option1" />Green
-              </label>
-            </div>
-            <div>
-              <label>
-                <input type="radio" name="option1" />Yellow
-              </label>
-            </div>
-            <div>
-              <label>
-                <input type="radio" name="option1" />Off
-              </label>
-            </div>
+        <div>
+          <h5>Lane 2</h5>
+          <div class="road-control-lane-lights">
+            <input type="radio" class="red-light" name="northLane2" id="northLane2Red" value="red">
+            <input type="radio" class="orange-light" name="northLane2" id="northLane2Orange" value="green">
+            <input type="radio" class="green-light" name="northLane2" id="northLane2Green" value="blue">
+            <input type="radio" class="off-light" name="northLane2" id="northLane2Off" value="off">
           </div>
         </div>
-        <div class="col-md-4">
-          <div id="file3" class="btn-group-vertical" data-toggle="buttons" >
-            <div>
-              <label>
-                <input type="radio" name="option1"  id="l" />Red
-              </label>
-            </div>
-            <div>
-              <label>
-                <input type="radio" name="option1" />Green
-              </label>
-            </div>
-            <div>
-              <label>
-                <input type="radio" name="option1" />Yellow
-              </label>
-            </div>
-            <div>
-              <label>
-                <input type="radio" name="option1" />Off
-              </label>
-            </div>
+        <div>
+          <h5>Lane 3</h5>
+          <div class="road-control-lane-lights">
+            <input type="radio" class="red-light" name="northLane3" id="northLane3Red" value="red">
+            <input type="radio" class="orange-light" name="northLane3" id="northLane3Orange" value="green">
+            <input type="radio" class="green-light" name="northLane3" id="northLane3Green" value="blue">
+            <input type="radio" class="off-light" name="northLane3" id="northLane3Off" value="off">
           </div>
         </div>
       </div>
     </div>
-    <div class="col-md-2"></div>
-    <div class="card" style="width: 18rem;">
-      <div class="row">
-        <div class="col-md-4">
-          <div id="file1" class="btn-group-vertical" data-toggle="buttons" >
-            <div>
-              <label>
-                <input type="radio" name="option1"  id="l" />Red
-              </label>
-            </div>
-            <div>
-              <label>
-                <input type="radio" name="option1" />Green
-              </label>
-            </div>
-            <div>
-              <label>
-                <input type="radio" name="option1" />Yellow
-              </label>
-            </div>
-            <div>
-              <label>
-                <input type="radio" name="option1" />Off
-              </label>
-            </div>
+    <div class="road-control">
+      <h4>East</h4>
+      <div class="road-control-lanes">
+        <div>
+          <h5>Lane 1</h5>
+          <div class="road-control-lane-lights">
+            <input type="radio" class="red-light" name="eastLane1" id="eastLane1Red" value="red">
+            <input type="radio" class="orange-light" name="eastLane1" id="eastLane1Orange" value="green">
+            <input type="radio" class="green-light" name="eastLane1" id="eastLane1Green" value="blue">
+            <input type="radio" class="off-light" name="eastLane1" id="eastLane1Off" value="off">
           </div>
         </div>
-        <div class="col-md-4">
-          <div id="file2" class="btn-group-vertical" data-toggle="buttons" >
-            <div>
-              <label>
-                <input type="radio" name="option1"  id="l" />Red
-              </label>
-            </div>
-            <div>
-              <label>
-                <input type="radio" name="option1" />Green
-              </label>
-            </div>
-            <div>
-              <label>
-                <input type="radio" name="option1" />Yellow
-              </label>
-            </div>
-            <div>
-              <label>
-                <input type="radio" name="option1" />Off
-              </label>
-            </div>
+        <div>
+          <h5>Lane 2</h5>
+          <div class="road-control-lane-lights">
+            <input type="radio" class="red-light" name="eastLane2" id="eastLane2Red" value="red">
+            <input type="radio" class="orange-light" name="eastLane2" id="eastLane2Orange" value="green">
+            <input type="radio" class="green-light" name="eastLane2" id="eastLane2Green" value="blue">
+            <input type="radio" class="off-light" name="eastLane2" id="eastLane2Off" value="off">
           </div>
         </div>
-        <div class="col-md-4">
-          <div id="file3" class="btn-group-vertical" data-toggle="buttons" >
-            <div>
-              <label>
-                <input type="radio" name="option1"  id="l" />Red
-              </label>
-            </div>
-            <div>
-              <label>
-                <input type="radio" name="option1" />Green
-              </label>
-            </div>
-            <div>
-              <label>
-                <input type="radio" name="option1" />Yellow
-              </label>
-            </div>
-            <div>
-              <label>
-                <input type="radio" name="option1" />Off
-              </label>
-            </div>
+        <div>
+          <h5>Lane 3</h5>
+          <div class="road-control-lane-lights">
+            <input type="radio" class="red-light" name="eastLane3" id="eastLane3Red" value="red">
+            <input type="radio" class="orange-light" name="eastLane3" id="eastLane3Orange" value="green">
+            <input type="radio" class="green-light" name="eastLane3" id="eastLane3Green" value="blue">
+            <input type="radio" class="off-light" name="eastLane3" id="eastLane3Off" value="off">
           </div>
         </div>
       </div>
     </div>
-  </div>
-  <br>
-  <div class="row">
-    <div class="card" style="width: 18rem;">
-      <div class="row">
-        <div class="col-md-4">
-          <div id="file1" class="btn-group-vertical" data-toggle="buttons" >
-            <div>
-              <label>
-                <input type="radio" name="option1"  id="l" />Red
-              </label>
-            </div>
-            <div>
-              <label>
-                <input type="radio" name="option1" />Green
-              </label>
-            </div>
-            <div>
-              <label>
-                <input type="radio" name="option1" />Yellow
-              </label>
-            </div>
-            <div>
-              <label>
-                <input type="radio" name="option1" />Off
-              </label>
-            </div>
+    <div class="road-control">
+      <h4>South</h4>
+      <div class="road-control-lanes">
+        <div>
+          <h5>Lane 1</h5>
+          <div class="road-control-lane-lights">
+            <input type="radio" class="red-light" name="southLane1" id="southLane1Red" value="red">
+            <input type="radio" class="orange-light" name="southLane1" id="southLane1Orange" value="green">
+            <input type="radio" class="green-light" name="southLane1" id="southLane1Green" value="blue">
+            <input type="radio" class="off-light" name="southLane1" id="southLane1Off" value="off">
           </div>
         </div>
-        <div class="col-md-4">
-          <div id="file2" class="btn-group-vertical" data-toggle="buttons" >
-            <div>
-              <label>
-                <input type="radio" name="option1"  id="l" />Red
-              </label>
-            </div>
-            <div>
-              <label>
-                <input type="radio" name="option1" />Green
-              </label>
-            </div>
-            <div>
-              <label>
-                <input type="radio" name="option1" />Yellow
-              </label>
-            </div>
-            <div>
-              <label>
-                <input type="radio" name="option1" />Off
-              </label>
-            </div>
+        <div>
+          <h5>Lane 2</h5>
+          <div class="road-control-lane-lights">
+            <input type="radio" class="red-light" name="southLane2" id="southLane2Red" value="red">
+            <input type="radio" class="orange-light" name="southLane2" id="southLane2Orange" value="green">
+            <input type="radio" class="green-light" name="southLane2" id="southLane2Green" value="blue">
+            <input type="radio" class="off-light" name="southLane2" id="southLane2Off" value="off">
           </div>
         </div>
-        <div class="col-md-4">
-          <div id="file3" class="btn-group-vertical" data-toggle="buttons" >
-            <div>
-              <label>
-                <input type="radio" name="option1"  id="l" />Red
-              </label>
-            </div>
-            <div>
-              <label>
-                <input type="radio" name="option1" />Green
-              </label>
-            </div>
-            <div>
-              <label>
-                <input type="radio" name="option1" />Yellow
-              </label>
-            </div>
-            <div>
-              <label>
-                <input type="radio" name="option1" />Off
-              </label>
-            </div>
+        <div>
+          <h5>Lane 3</h5>
+          <div class="road-control-lane-lights">
+            <input type="radio" class="red-light" name="southLane3" id="southLane3Red" value="red">
+            <input type="radio" class="orange-light" name="southLane3" id="southLane3Orange" value="green">
+            <input type="radio" class="green-light" name="southLane3" id="southLane3Green" value="blue">
+            <input type="radio" class="off-light" name="southLane3" id="southLane3Off" value="off">
           </div>
         </div>
       </div>
     </div>
-    <div class="col-md-2"></div>
-    <div class="card" style="width: 18rem;">
-      <div class="row">
-        <div class="col-md-4">
-          <div id="file1" class="btn-group-vertical" data-toggle="buttons" >
-            <div>
-              <label>
-                <input type="radio" name="option1"  id="l" />Red
-              </label>
-            </div>
-            <div>
-              <label>
-                <input type="radio" name="option1" />Green
-              </label>
-            </div>
-            <div>
-              <label>
-                <input type="radio" name="option1" />Yellow
-              </label>
-            </div>
-            <div>
-              <label>
-                <input type="radio" name="option1" />Off
-              </label>
-            </div>
+    <div class="road-control">
+      <h4>West</h4>
+      <div class="road-control-lanes">
+        <div>
+          <h5>Lane 1</h5>
+          <div class="road-control-lane-lights">
+            <input type="radio" class="red-light" name="westLane1" id="westLane1Red" value="red">
+            <input type="radio" class="orange-light" name="westLane1" id="westLane1Orange" value="green">
+            <input type="radio" class="green-light" name="westLane1" id="westLane1Green" value="blue">
+            <input type="radio" class="off-light" name="westLane1" id="westLane1Off" value="off">
           </div>
         </div>
-        <div class="col-md-4">
-          <div id="file2" class="btn-group-vertical" data-toggle="buttons" >
-            <div>
-              <label>
-                <input type="radio" name="option1"  id="l" />Red
-              </label>
-            </div>
-            <div>
-              <label>
-                <input type="radio" name="option1" />Green
-              </label>
-            </div>
-            <div>
-              <label>
-                <input type="radio" name="option1" />Yellow
-              </label>
-            </div>
-            <div>
-              <label>
-                <input type="radio" name="option1" />Off
-              </label>
-            </div>
+        <div>
+          <h5>Lane 2</h5>
+          <div class="road-control-lane-lights">
+            <input type="radio" class="red-light" name="westLane2" id="westLane2Red" value="red">
+            <input type="radio" class="orange-light" name="westLane2" id="westLane2Orange" value="green">
+            <input type="radio" class="green-light" name="westLane2" id="westLane2Green" value="blue">
+            <input type="radio" class="off-light" name="westLane2" id="westLane2Off" value="off">
           </div>
         </div>
-        <div class="col-md-4">
-          <div id="file3" class="btn-group-vertical" data-toggle="buttons" >
-            <div>
-              <label>
-                <input type="radio" name="option1"  id="l" />Red
-              </label>
-            </div>
-            <div>
-              <label>
-                <input type="radio" name="option1" />Green
-              </label>
-            </div>
-            <div>
-              <label>
-                <input type="radio" name="option1" />Yellow
-              </label>
-            </div>
-            <div>
-              <label>
-                <input type="radio" name="option1" />Off
-              </label>
-            </div>
+        <div>
+          <h5>Lane 3</h5>
+          <div class="road-control-lane-lights">
+            <input type="radio" class="red-light" name="westLane3" id="westLane3Red" value="red">
+            <input type="radio" class="orange-light" name="westLane3" id="westLane3Orange" value="green">
+            <input type="radio" class="green-light" name="westLane3" id="westLane3Green" value="blue">
+            <input type="radio" class="off-light" name="westLane3" id="westLane3Off" value="off">
           </div>
         </div>
       </div>

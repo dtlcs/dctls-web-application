@@ -99,6 +99,7 @@ import {UserService} from "./services/user.service";
     LoginHistoryComponent,
     ManageJunctionsComponent,
     EditProfileComponent,
+    EditUserComponent,
   ],
   imports: [
     BrowserModule,

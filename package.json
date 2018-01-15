@@ -35,7 +35,7 @@
     "material-design-iconic-font": "^2.2.0",
     "moment": "^2.20.1",
     "popper.js": "^1.12.9",
-    "roboto-fontface": "^0.8.0",
+    "roboto-regular": "^1.0.0",
     "rxjs": "^5.5.2",
     "tslib": "^1.8.1",
     "zone.js": "^0.8.14"

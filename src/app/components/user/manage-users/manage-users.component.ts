@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {Content} from "../../../models/content";
-import {User} from "../../../models/user";
 import {ManageUsersService} from "./manage-users.service";
+import {ContentService} from "../../../services/content.service";
+import {EditUserComponent} from "../edit-user/edit-user.component";
 
 @Component({
   selector: 'app-manage-users',
@@ -13,7 +14,7 @@ export class ManageUsersComponent implements OnInit, Content {
 
   public users: any;
 
-  constructor(private manageUsersService: ManageUsersService) {
+  constructor(private manageUsersService: ManageUsersService, private contentService: ContentService) {
     this.users = [];
   }
 
@@ -25,6 +26,11 @@ export class ManageUsersComponent implements OnInit, Content {
       .catch(err => {
         console.log(err);
       });
+  }
+
+  setSelectedUser(i: number){
+    this.manageUsersService.changeSelectedUser(this.users[i]);
+    this.contentService.loadComponent(EditUserComponent);
   }
 
 }

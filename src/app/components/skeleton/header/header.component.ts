@@ -41,7 +41,8 @@ export class HeaderComponent implements OnInit {
   }
 
   onClickSignOutButton(){
-    this.angularFireDatabase.list('/users/' + this.firebaseAuthService.currentUserId + '/sessions').push({ signout: moment().format() });
+    this.angularFireDatabase.list(`/users/${this.firebaseAuthService.currentUserId}/activities/${moment().utc().format("YYYY-MM-DD")}`)
+      .push({ [moment().format()] : 'signout' });
     this.firebaseAuthService.signOut();
     this.router.navigate(['/']);
   }

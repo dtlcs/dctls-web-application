@@ -35,7 +35,8 @@ export class SignInComponent implements OnInit {
     if (this.validateForm(this.email, this.password)) {
       this.firebaseAuthService.signInWithEmail(this.email, this.password)
         .then(() => {
-          this.angularFireDatabase.list('/users/' + this.firebaseAuthService.currentUserId + '/sessions').push({ signin: moment().format() });
+          this.angularFireDatabase.list(`/users/${this.firebaseAuthService.currentUserId}/activities/${moment().utc().format("YYYY-MM-DD")}`)
+            .push({ [moment().format()] : 'signin' });
           this.router.navigate(['/']);
         })
         .catch(_error => {
