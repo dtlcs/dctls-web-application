@@ -63,7 +63,7 @@
     "karma-requirejs": "^1.1.0",
     "karma-safari-launcher": "^1.0.0",
     "less": "^2.7.3",
-    "nodemon": "^1.14.7",
+    "nodemon": "^1.17.1",
     "protractor": "~5.1.2",
     "requirejs": "^2.3.5",
     "ts-node": "~3.2.0",
