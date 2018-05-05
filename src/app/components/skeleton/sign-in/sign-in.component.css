@@ -1,9 +1,0 @@
-.fluid-container {
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center; }
-  .fluid-container .sign-in-form {
-    width: 400px; }
-
-/*# sourceMappingURL=sign-in.component.css.map */

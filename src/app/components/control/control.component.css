@@ -1,0 +1,40 @@
+.fluid-container {
+  margin: 5%;
+  text-align: center;
+}
+
+.fluid-container .control-mode .form-check.form-check-inline {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.fluid-container .controls {
+  margin-top: 20px;
+}
+
+.fluid-container .controls .road-control {
+  display: inline-block;
+  border: 1px solid;
+  margin: 20px;
+  padding: 10px;
+}
+
+.fluid-container .controls .road-control h4 {
+  display: block;
+  width: 100%;
+}
+
+.fluid-container .controls .road-control .road-control-lanes div h5 {
+  display: inline-block;
+  margin: 0 20px 0 0;
+}
+
+.fluid-container .controls .road-control .road-control-lanes div .road-control-lane-lights {
+  display: inline-block;
+}
+
+.fluid-container .controls .road-control .road-control-lanes div .road-control-lane-lights input {
+  margin: 0 10px 0 0;
+}
+
+/*# sourceMappingURL=control.component.css.map */

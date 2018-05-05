@@ -1,0 +1,9 @@
+{
+  "version": 3,
+  "mappings": "AAAA,cAAc;EACZ,OAAO,EAAE,IAAI;EAEb,MAAM,EAAE,IAAI;EAEZ,OAAO,EAAE,CAAC;;AAGZ,kBAAkB;EAChB,OAAO,EAAE,YAAY;EAErB,KAAK,EAAE,KAAK;;AAGd,gBAAgB;EACd,OAAO,EAAE,IAAI;EACb,cAAc,EAAE,MAAM;EAEtB,MAAM,EAAE,IAAI;EACZ,SAAS,EAAE,CAAC;EAEZ,kCAAiB;IACf,OAAO,EAAE,KAAK;IAEd,MAAM,EAAE,KAAK;EAGf,mCAAkB;IAChB,SAAS,EAAE,CAAC;IACZ,UAAU,EAAE,MAAM",
+  "sources": [
+    "console.component.scss"
+  ],
+  "names": [],
+  "file": "console.component.css"
+}

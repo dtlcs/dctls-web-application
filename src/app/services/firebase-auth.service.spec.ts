@@ -1,6 +1,6 @@
-import { TestBed, inject } from '@angular/core/testing';
+import {inject, TestBed} from '@angular/core/testing';
 
-import { FirebaseAuthService } from './firebase-auth.service';
+import {FirebaseAuthService} from './firebase-auth.service';
 
 describe('FirebaseAuthService', () => {
   beforeEach(() => {

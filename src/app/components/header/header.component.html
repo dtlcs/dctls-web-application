@@ -1,0 +1,38 @@
+<div class="main-header">
+  <div>
+    <span class="header-title">{{selectedJunction}}</span>
+  </div>
+  <div class="space-flex"></div>
+  <div>
+    <i class="zmdi zmdi-notifications zmdi-hc-fw"></i>
+    <a #profileMenuTrigger="matMenuTrigger" [matMenuTriggerFor]="profileMenu"><img src="../../../assets/img/oshan.jpg"
+                                                                                   alt="Avatar"></a>
+  </div>
+  <mat-menu #profileMenu="matMenu" class="header-mat-menu">
+    <div class="header-mat-menu-top">
+      <a><img src="../../../assets/img/oshan.jpg" alt="Avatar"></a>
+      <div class="header-mat-menu-top-content">
+        <div class="header-mat-menu-top-content-name">Oshan Mudannayake</div>
+        <div class="header-mat-menu-top-content-email">oshan.ivantha@gmail.com</div>
+        <div class="header-mat-menu-top-content-link">
+          <a (click)="onClickActivitiesButton()">Activities</a>
+          <p>-</p><a (click)="onClickPermissionButton()">Permission</a>
+        </div>
+        <a class="header-mat-menu-top-content-button" (click)="onClickMyAccount()">My Account</a>
+      </div>
+    </div>
+    <div class="header-mat-menu-bottom">
+      <div>
+        <a (click)="onClickSignOutButton()">Sign Out</a>
+      </div>
+    </div>
+  </mat-menu>
+</div>
+<div class="sub-header">
+  <div id="contentTitle">{{contentTitle}}</div>
+  <div class="space-flex"></div>
+  <div id="contentHelp">
+    <i class="zmdi zmdi-help zmdi-hc-fw"></i>
+    <i class="zmdi zmdi-caret-down zmdi-hc-fw"></i>
+  </div>
+</div>
