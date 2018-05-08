@@ -43,7 +43,7 @@
   "devDependencies": {
     "@angular/cli": "^1.7.4",
     "@angular/compiler-cli": "^5.2.10",
-    "@angular/language-service": "^5.2.10",
+    "@angular/language-service": "^6.0.0",
     "@types/googlemaps": "^3.30.8",
     "@types/jasmine": "~2.8.7",
     "@types/jasminewd2": "~2.0.2",
