@@ -39,6 +39,12 @@
 
 agm-map {
   height: 100vh;
+
+  agm-marker {
+    agm-info-window {
+      
+    }
+  }
 }
 
 .marker-popup-title {

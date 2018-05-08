@@ -1,10 +1,10 @@
 import {MatMenuTrigger} from '@angular/material/menu';
 import {Component, OnInit, ViewChild} from '@angular/core';
 import {ContentService} from '../../services/content.service';
-import {FirebaseAuthService} from "../../services/firebase-auth.service";
-import {EditProfileComponent} from "../edit-profile/edit-profile.component";
-import {Router} from "@angular/router";
-import {AngularFireDatabase} from "angularfire2/database";
+import {FirebaseAuthService} from '../../services/firebase-auth.service';
+import {EditProfileComponent} from '../edit-profile/edit-profile.component';
+import {Router} from '@angular/router';
+import {AngularFireDatabase} from 'angularfire2/database';
 import * as moment from 'moment';
 
 @Component({
@@ -19,7 +19,8 @@ export class HeaderComponent implements OnInit {
 
   @ViewChild(MatMenuTrigger) profileMenuTrigger: MatMenuTrigger;
 
-  constructor(private contentService: ContentService, public firebaseAuthService: FirebaseAuthService, private angularFireDatabase: AngularFireDatabase, private router: Router) {
+  constructor(private contentService: ContentService, public firebaseAuthService: FirebaseAuthService,
+              private angularFireDatabase: AngularFireDatabase, private router: Router) {
     this.contentService.changeContentTitle = (title: string): void => {
       this.contentTitle = title;
     };
@@ -41,7 +42,7 @@ export class HeaderComponent implements OnInit {
   }
 
   onClickSignOutButton() {
-    this.angularFireDatabase.list(`/users/${this.firebaseAuthService.currentUserId}/activities/${moment().utc().format("YYYY-MM-DD")}`)
+    this.angularFireDatabase.list(`/users/${this.firebaseAuthService.currentUserId}/activities/${moment().utc().format('YYYY-MM-DD')}`)
       .push({[moment().format()]: 'signout'});
     this.firebaseAuthService.signOut();
     this.router.navigate(['/']);
