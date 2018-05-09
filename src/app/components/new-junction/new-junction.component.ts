@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {Content} from "../../models/content";
+import {Content} from '../../models/content';
 
 @Component({
   selector: 'app-new-junction',
@@ -7,7 +7,7 @@ import {Content} from "../../models/content";
   styleUrls: ['./new-junction.component.scss']
 })
 export class NewJunctionComponent implements OnInit, Content {
-  title: string = 'New Junction';
+  title = 'New Junction';
 
   constructor() {
   }

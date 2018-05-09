@@ -1,6 +1,6 @@
 import {Injectable} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
-import {restApiHost} from "../../globals";
+import {REST_API_HOST} from "../../globals";
 
 @Injectable()
 export class ManageJunctionsService {
@@ -10,7 +10,7 @@ export class ManageJunctionsService {
   }
 
   getAllJunctions(): Promise<Object> {
-    const url = restApiHost + '/junction/all';
+    const url = REST_API_HOST + '/junction/all';
     return this.http.get(url).toPromise();
   }
 

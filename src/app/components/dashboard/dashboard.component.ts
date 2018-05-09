@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {Content} from "../../models/content";
+import {Content} from '../../models/content';
 
 @Component({
   selector: 'app-dashboard',
@@ -7,7 +7,7 @@ import {Content} from "../../models/content";
   styleUrls: ['./dashboard.component.scss']
 })
 export class DashboardComponent implements OnInit, Content {
-  title: string = 'Dashboard';
+  title = 'Dashboard';
 
   constructor() {
   }

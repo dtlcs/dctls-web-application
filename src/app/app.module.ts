@@ -36,20 +36,21 @@ import {AngularFireDatabaseModule} from 'angularfire2/database';
 import {AngularFireAuthModule} from 'angularfire2/auth';
 import {ConsoleComponent} from './components/console/console.component';
 import {RouterModule} from '@angular/router';
-import {FirebaseAuthService} from "./services/firebase-auth.service";
-import {UserService} from "./services/user.service";
-import {SimulatorComponent} from "./components/simulator/simulator.component";
-import {MapComponent} from "./components/map/map.component";
-import {NewJunctionComponent} from "./components/new-junction/new-junction.component";
-import {ControlComponent} from "./components/control/control.component";
-import {ManageJunctionsComponent} from "./components/manage-junctions/manage-junctions.component";
-import {EditJunctionComponent} from "./components/edit-junction/edit-junction.component";
-import {VideoFeedComponent} from "./components/video-feed/video-feed.component";
-import {JunctionProfileComponent} from "./components/junction-profile/junction-profile.component";
-import {JunctionHistoryComponent} from "./components/junction-history/junction-history.component";
-import {SessionService} from "./components/simulator/services/session.service";
-import {ManageJunctionsService} from "./components/manage-junctions/manage-junctions.service";
-import {MapService} from "./components/map/map.service";
+import {FirebaseAuthService} from './services/firebase-auth.service';
+import {UserService} from './services/user.service';
+import {SimulatorComponent} from './components/simulator/simulator.component';
+import {MapComponent} from './components/map/map.component';
+import {NewJunctionComponent} from './components/new-junction/new-junction.component';
+import {ControlComponent} from './components/control/control.component';
+import {ManageJunctionsComponent} from './components/manage-junctions/manage-junctions.component';
+import {EditJunctionComponent} from './components/edit-junction/edit-junction.component';
+import {VideoFeedComponent} from './components/video-feed/video-feed.component';
+import {JunctionProfileComponent} from './components/junction-profile/junction-profile.component';
+import {JunctionHistoryComponent} from './components/junction-history/junction-history.component';
+import {SessionService} from './components/simulator/services/session.service';
+import {ManageJunctionsService} from './components/manage-junctions/manage-junctions.service';
+import {MapService} from './components/map/map.service';
+import {GlobalVarService} from './services/global-var.service';
 
 
 @NgModule({
@@ -103,7 +104,7 @@ import {MapService} from "./components/map/map.service";
   ],
   imports: [
     BrowserModule,
-    [RouterModule.forRoot([{path: "", component: AppComponent}])],
+    [RouterModule.forRoot([{path: '', component: AppComponent}])],
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
@@ -129,6 +130,7 @@ import {MapService} from "./components/map/map.service";
     MapService,
     FirebaseAuthService,
     UserService,
+    GlobalVarService
   ],
   exports: [
     RouterModule

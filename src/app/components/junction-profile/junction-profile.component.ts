@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {Content} from "../../models/content";
+import {Content} from '../../models/content';
 
 @Component({
   selector: 'app-junction-profile',
@@ -7,7 +7,7 @@ import {Content} from "../../models/content";
   styleUrls: ['./junction-profile.component.scss']
 })
 export class JunctionProfileComponent implements OnInit, Content {
-  title: string = 'Junction Profile';
+  title = 'Junction Profile';
 
   constructor() {
   }

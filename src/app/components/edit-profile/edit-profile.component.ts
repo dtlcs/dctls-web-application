@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {Content} from "../../models/content";
+import {Content} from '../../models/content';
 
 @Component({
   selector: 'app-edit-profile',
@@ -7,7 +7,7 @@ import {Content} from "../../models/content";
   styleUrls: ['./edit-profile.component.scss']
 })
 export class EditProfileComponent implements OnInit, Content {
-  title: string = 'Edit Profile';
+  title = 'Edit Profile';
 
   constructor() {
   }

@@ -6,13 +6,13 @@ import {ManageUsersComponent} from '../manage-users/manage-users.component';
 import {ServerLogComponent} from '../server-log/server-log.component';
 import {LoginHistoryComponent} from '../login-history/login-history.component';
 import {MatMenuTrigger} from '@angular/material/menu';
-import {MapComponent} from "../map/map.component";
-import {ManageJunctionsComponent} from "../manage-junctions/manage-junctions.component";
-import {ControlComponent} from "../control/control.component";
-import {VideoFeedComponent} from "../video-feed/video-feed.component";
-import {JunctionProfileComponent} from "../junction-profile/junction-profile.component";
-import {JunctionHistoryComponent} from "../junction-history/junction-history.component";
-import {SimulatorComponent} from "../simulator/simulator.component";
+import {MapComponent} from '../map/map.component';
+import {ManageJunctionsComponent} from '../manage-junctions/manage-junctions.component';
+import {ControlComponent} from '../control/control.component';
+import {VideoFeedComponent} from '../video-feed/video-feed.component';
+import {JunctionProfileComponent} from '../junction-profile/junction-profile.component';
+import {JunctionHistoryComponent} from '../junction-history/junction-history.component';
+import {SimulatorComponent} from '../simulator/simulator.component';
 
 @Component({
   selector: 'app-sidebar',
@@ -88,6 +88,10 @@ export class SidebarComponent implements OnInit {
   onClickLoginHistory() {
     this.selected = 'Login History';
     this.contentService.loadComponent(LoginHistoryComponent);
+  }
+
+  onClickReset(){
+
   }
 
 }

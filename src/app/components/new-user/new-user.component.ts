@@ -1,8 +1,8 @@
 import {Component, OnInit} from '@angular/core';
-import {NewUserService} from "./new-user.service";
+import {NewUserService} from './new-user.service';
 import {FormBuilder, FormControl, FormGroup, Validators} from '@angular/forms';
-import {Content} from "../../models/content";
-import {defaultUserPassword} from "../../globals";
+import {Content} from '../../models/content';
+import {DEFAULT_NEW_USER_PASSWORD} from './new-user.constants';
 
 @Component({
   selector: 'app-new-user',
@@ -10,7 +10,7 @@ import {defaultUserPassword} from "../../globals";
   styleUrls: ['./new-user.component.scss']
 })
 export class NewUserComponent implements OnInit, Content {
-  title: string = 'New User';
+  title = 'New User';
 
   public newUserForm: FormGroup;
   public roles: any;
@@ -68,7 +68,7 @@ export class NewUserComponent implements OnInit, Content {
     console.log(user);
     user['role_id'] = user.role;
     // delete user['role'];
-    user['password'] = defaultUserPassword;
+    user['password'] = DEFAULT_NEW_USER_PASSWORD;
     user['street'] = user.address.street;
     user['city'] = user.address.city;
     user['province'] = user.address.province;
@@ -77,12 +77,12 @@ export class NewUserComponent implements OnInit, Content {
 
     this.newUserService.submitNewUser(user)
       .subscribe(res => {
-          console.log("New user successfully added");
+          console.log('New user successfully added');
           this.newUserForm.reset();
         },
         err => {
           console.log(err);
-        })
+        });
   }
 
 }

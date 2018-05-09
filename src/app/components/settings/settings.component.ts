@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {Content} from "../../models/content";
+import {Content} from '../../models/content';
 
 @Component({
   selector: 'app-settings',
@@ -7,7 +7,7 @@ import {Content} from "../../models/content";
   styleUrls: ['./settings.component.scss']
 })
 export class SettingsComponent implements OnInit, Content {
-  title: string = 'Settings';
+  title = 'Settings';
 
   constructor() {
   }

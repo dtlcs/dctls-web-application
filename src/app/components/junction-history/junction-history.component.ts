@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {Content} from "../../models/content";
+import {Content} from '../../models/content';
 
 @Component({
   selector: 'app-junction-history',
@@ -7,7 +7,7 @@ import {Content} from "../../models/content";
   styleUrls: ['./junction-history.component.css']
 })
 export class JunctionHistoryComponent implements OnInit, Content {
-  title: string = 'Junction History';
+  title = 'Junction History';
 
   constructor() {
   }

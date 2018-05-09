@@ -1,13 +1,13 @@
 import {Component, OnInit} from '@angular/core';
-import {SessionService} from "./services/session.service";
-import {RoadMap} from "./models/road-map";
+import {SessionService} from './services/session.service';
+import {RoadMap} from './models/road-map';
 import {
   moveInLaneVehicles,
   moveIntersectionVehiclesLargeArc,
   moveIntersectionVehiclesSmallArc,
   moveIntersectionVehiclesStraight,
   moveOutLaneVehicles
-} from "./functions/worker";
+} from './functions/worker';
 import {
   BACKGROUND_REFRESH_INTERVAL,
   CANVAS_RADIUS,
@@ -15,7 +15,7 @@ import {
   ROAD_LENGTH,
   ROAD_RADIUS,
   TRAFFIC_LIGHT_RADIUS
-} from "./simulator.constants";
+} from './simulator.constants';
 import {
   drawBackground,
   drawTrafficLight,
@@ -23,8 +23,8 @@ import {
   drawVehicleOnIntersectionArc,
   drawVehicleOnLane,
   setBackgroundLayout
-} from "./functions/draw";
-import {Content} from "../../models/content";
+} from './functions/draw';
+import {Content} from '../../models/content';
 
 @Component({
   selector: 'app-simulator',
@@ -32,7 +32,7 @@ import {Content} from "../../models/content";
   styleUrls: ['./simulator.component.scss']
 })
 export class SimulatorComponent implements OnInit, Content {
-  title: string = 'Simulator';
+  title = 'Simulator';
 
   constructor(sessionService: SessionService) {
     sessionService.setRoadMap(new RoadMap());
@@ -84,10 +84,10 @@ export class SimulatorComponent implements OnInit, Content {
 
     // Canvas worker
     window.setInterval(function () {
-      var vehicles;
-      var iter;
-      var canvas: any = document.querySelector('#backgroundCanvasAnchorPane');
-      var ctx = canvas.getContext('2d');
+      let vehicles;
+      let iter;
+      const canvas: any = document.querySelector('#backgroundCanvasAnchorPane');
+      const ctx = canvas.getContext('2d');
 
       drawBackground(ctx);
 
@@ -95,7 +95,7 @@ export class SimulatorComponent implements OnInit, Content {
       vehicles = sessionService.roadMap.junction.getRoad(0).getLane(0).vehicleList;
       iter = vehicles.length;
       while (iter--) {
-        var vehicle = vehicles[iter];
+        const vehicle = vehicles[iter];
         drawVehicleOnLane(ctx, vehicle, vehicle.length, vehicle.width,
           CANVAS_RADIUS + ((ROAD_RADIUS / 6 * 5) - vehicle.width / 2),
           vehicle.trajectory.location - vehicle.length);
@@ -105,7 +105,7 @@ export class SimulatorComponent implements OnInit, Content {
       vehicles = sessionService.roadMap.junction.getRoad(0).getLane(1).vehicleList;
       iter = vehicles.length;
       while (iter--) {
-        var vehicle = vehicles[iter];
+        const vehicle = vehicles[iter];
         drawVehicleOnLane(ctx, vehicle, vehicle.length, vehicle.width,
           CANVAS_RADIUS + ((ROAD_RADIUS / 6 * 3) - vehicle.width / 2),
           vehicle.trajectory.location - vehicle.length);
@@ -115,7 +115,7 @@ export class SimulatorComponent implements OnInit, Content {
       vehicles = sessionService.roadMap.junction.getRoad(0).getLane(2).vehicleList;
       iter = vehicles.length;
       while (iter--) {
-        var vehicle = vehicles[iter];
+        const vehicle = vehicles[iter];
         drawVehicleOnLane(ctx, vehicle, vehicle.length, vehicle.width,
           CANVAS_RADIUS + ((ROAD_RADIUS / 6 * 1) - vehicle.width / 2),
           vehicle.trajectory.location - vehicle.length);
@@ -125,7 +125,7 @@ export class SimulatorComponent implements OnInit, Content {
       vehicles = sessionService.roadMap.junction.getRoad(0).getLane(3).vehicleList;
       iter = vehicles.length;
       while (iter--) {
-        var vehicle = vehicles[iter];
+        const vehicle = vehicles[iter];
         drawVehicleOnLane(ctx, vehicle, vehicle.length, vehicle.width,
           CANVAS_RADIUS + (((-1) * ROAD_RADIUS / 6 * 1) - vehicle.width / 2),
           ROAD_LENGTH - vehicle.trajectory.location);
@@ -135,7 +135,7 @@ export class SimulatorComponent implements OnInit, Content {
       vehicles = sessionService.roadMap.junction.getRoad(0).getLane(4).vehicleList;
       iter = vehicles.length;
       while (iter--) {
-        var vehicle = vehicles[iter];
+        const vehicle = vehicles[iter];
         drawVehicleOnLane(ctx, vehicle, vehicle.length, vehicle.width,
           CANVAS_RADIUS + (((-1) * ROAD_RADIUS / 6 * 3) - vehicle.width / 2),
           ROAD_LENGTH - vehicle.trajectory.location);
@@ -145,7 +145,7 @@ export class SimulatorComponent implements OnInit, Content {
       vehicles = sessionService.roadMap.junction.getRoad(0).getLane(5).vehicleList;
       iter = vehicles.length;
       while (iter--) {
-        var vehicle = vehicles[iter];
+        const vehicle = vehicles[iter];
         drawVehicleOnLane(ctx, vehicle, vehicle.length, vehicle.width,
           CANVAS_RADIUS + (((-1) * ROAD_RADIUS / 6 * 5) - vehicle.width / 2),
           ROAD_LENGTH - vehicle.trajectory.location);
@@ -155,7 +155,7 @@ export class SimulatorComponent implements OnInit, Content {
       vehicles = sessionService.roadMap.junction.getRoad(1).getLane(0).vehicleList;
       iter = vehicles.length;
       while (iter--) {
-        var vehicle = vehicles[iter];
+        const vehicle = vehicles[iter];
         drawVehicleOnLane(ctx, vehicle, vehicle.width, vehicle.length,
           (2 * CANVAS_RADIUS) - vehicle.trajectory.location,
           CANVAS_RADIUS + ((ROAD_RADIUS / 6 * 5) - vehicle.width / 2));
@@ -165,7 +165,7 @@ export class SimulatorComponent implements OnInit, Content {
       vehicles = sessionService.roadMap.junction.getRoad(1).getLane(1).vehicleList;
       iter = vehicles.length;
       while (iter--) {
-        var vehicle = vehicles[iter];
+        const vehicle = vehicles[iter];
         drawVehicleOnLane(ctx, vehicle, vehicle.width, vehicle.length,
           (2 * CANVAS_RADIUS) - vehicle.trajectory.location,
           CANVAS_RADIUS + ((ROAD_RADIUS / 6 * 3) - vehicle.width / 2));
@@ -175,7 +175,7 @@ export class SimulatorComponent implements OnInit, Content {
       vehicles = sessionService.roadMap.junction.getRoad(1).getLane(2).vehicleList;
       iter = vehicles.length;
       while (iter--) {
-        var vehicle = vehicles[iter];
+        const vehicle = vehicles[iter];
         drawVehicleOnLane(ctx, vehicle, vehicle.width, vehicle.length,
           (2 * CANVAS_RADIUS) - vehicle.trajectory.location,
           CANVAS_RADIUS + ((ROAD_RADIUS / 6 * 1) - vehicle.width / 2));
@@ -185,7 +185,7 @@ export class SimulatorComponent implements OnInit, Content {
       vehicles = sessionService.roadMap.junction.getRoad(1).getLane(3).vehicleList;
       iter = vehicles.length;
       while (iter--) {
-        var vehicle = vehicles[iter];
+        const vehicle = vehicles[iter];
         drawVehicleOnLane(ctx, vehicle, vehicle.width, vehicle.length,
           CANVAS_RADIUS + ROAD_RADIUS + vehicle.trajectory.location - vehicle.length,
           CANVAS_RADIUS + (((-1) * ROAD_RADIUS / 6 * 1) - vehicle.width / 2));
@@ -195,7 +195,7 @@ export class SimulatorComponent implements OnInit, Content {
       vehicles = sessionService.roadMap.junction.getRoad(1).getLane(4).vehicleList;
       iter = vehicles.length;
       while (iter--) {
-        var vehicle = vehicles[iter];
+        const vehicle = vehicles[iter];
         drawVehicleOnLane(ctx, vehicle, vehicle.width, vehicle.length,
           CANVAS_RADIUS + ROAD_RADIUS + vehicle.trajectory.location - vehicle.length,
           CANVAS_RADIUS + (((-1) * ROAD_RADIUS / 6 * 3) - vehicle.width / 2));
@@ -205,7 +205,7 @@ export class SimulatorComponent implements OnInit, Content {
       vehicles = sessionService.roadMap.junction.getRoad(1).getLane(5).vehicleList;
       iter = vehicles.length;
       while (iter--) {
-        var vehicle = vehicles[iter];
+        const vehicle = vehicles[iter];
         drawVehicleOnLane(ctx, vehicle, vehicle.width, vehicle.length,
           CANVAS_RADIUS + ROAD_RADIUS + vehicle.trajectory.location - vehicle.length,
           CANVAS_RADIUS + (((-1) * ROAD_RADIUS / 6 * 5) - vehicle.width / 2));
@@ -215,7 +215,7 @@ export class SimulatorComponent implements OnInit, Content {
       vehicles = sessionService.roadMap.junction.getRoad(2).getLane(0).vehicleList;
       iter = vehicles.length;
       while (iter--) {
-        var vehicle = vehicles[iter];
+        const vehicle = vehicles[iter];
         drawVehicleOnLane(ctx, vehicle, vehicle.length, vehicle.width,
           CANVAS_RADIUS + (((-1) * ROAD_RADIUS / 6 * 5) - vehicle.width / 2),
           (2 * CANVAS_RADIUS) - vehicle.trajectory.location);
@@ -225,7 +225,7 @@ export class SimulatorComponent implements OnInit, Content {
       vehicles = sessionService.roadMap.junction.getRoad(2).getLane(1).vehicleList;
       iter = vehicles.length;
       while (iter--) {
-        var vehicle = vehicles[iter];
+        const vehicle = vehicles[iter];
         drawVehicleOnLane(ctx, vehicle, vehicle.length, vehicle.width,
           CANVAS_RADIUS + (((-1) * ROAD_RADIUS / 6 * 3) - vehicle.width / 2),
           (2 * CANVAS_RADIUS) - vehicle.trajectory.location);
@@ -235,7 +235,7 @@ export class SimulatorComponent implements OnInit, Content {
       vehicles = sessionService.roadMap.junction.getRoad(2).getLane(2).vehicleList;
       iter = vehicles.length;
       while (iter--) {
-        var vehicle = vehicles[iter];
+        const vehicle = vehicles[iter];
         drawVehicleOnLane(ctx, vehicle, vehicle.length, vehicle.width,
           CANVAS_RADIUS + (((-1) * ROAD_RADIUS / 6 * 1) - vehicle.width / 2),
           (2 * CANVAS_RADIUS) - vehicle.trajectory.location);
@@ -245,7 +245,7 @@ export class SimulatorComponent implements OnInit, Content {
       vehicles = sessionService.roadMap.junction.getRoad(2).getLane(3).vehicleList;
       iter = vehicles.length;
       while (iter--) {
-        var vehicle = vehicles[iter];
+        const vehicle = vehicles[iter];
         drawVehicleOnLane(ctx, vehicle, vehicle.length, vehicle.width,
           CANVAS_RADIUS + ((ROAD_RADIUS / 6 * 1) - vehicle.width / 2),
           CANVAS_RADIUS + ROAD_RADIUS + vehicle.trajectory.location - vehicle.length);
@@ -255,7 +255,7 @@ export class SimulatorComponent implements OnInit, Content {
       vehicles = sessionService.roadMap.junction.getRoad(2).getLane(4).vehicleList;
       iter = vehicles.length;
       while (iter--) {
-        var vehicle = vehicles[iter];
+        const vehicle = vehicles[iter];
         drawVehicleOnLane(ctx, vehicle, vehicle.length, vehicle.width,
           CANVAS_RADIUS + ((ROAD_RADIUS / 6 * 3) - vehicle.width / 2),
           CANVAS_RADIUS + ROAD_RADIUS + vehicle.trajectory.location - vehicle.length);
@@ -265,7 +265,7 @@ export class SimulatorComponent implements OnInit, Content {
       vehicles = sessionService.roadMap.junction.getRoad(2).getLane(5).vehicleList;
       iter = vehicles.length;
       while (iter--) {
-        var vehicle = vehicles[iter];
+        const vehicle = vehicles[iter];
         drawVehicleOnLane(ctx, vehicle, vehicle.length, vehicle.width,
           CANVAS_RADIUS + ((ROAD_RADIUS / 6 * 5) - vehicle.width / 2),
           CANVAS_RADIUS + ROAD_RADIUS + vehicle.trajectory.location - vehicle.length);
@@ -275,7 +275,7 @@ export class SimulatorComponent implements OnInit, Content {
       vehicles = sessionService.roadMap.junction.getRoad(3).getLane(0).vehicleList;
       iter = vehicles.length;
       while (iter--) {
-        var vehicle = vehicles[iter];
+        const vehicle = vehicles[iter];
         drawVehicleOnLane(ctx, vehicle, vehicle.width, vehicle.length,
           vehicle.trajectory.location - vehicle.length,
           CANVAS_RADIUS + (((-1) * ROAD_RADIUS / 6 * 5) - vehicle.width / 2));
@@ -285,7 +285,7 @@ export class SimulatorComponent implements OnInit, Content {
       vehicles = sessionService.roadMap.junction.getRoad(3).getLane(1).vehicleList;
       iter = vehicles.length;
       while (iter--) {
-        var vehicle = vehicles[iter];
+        const vehicle = vehicles[iter];
         drawVehicleOnLane(ctx, vehicle, vehicle.width, vehicle.length,
           vehicle.trajectory.location - vehicle.length,
           CANVAS_RADIUS + (((-1) * ROAD_RADIUS / 6 * 3) - vehicle.width / 2));
@@ -295,7 +295,7 @@ export class SimulatorComponent implements OnInit, Content {
       vehicles = sessionService.roadMap.junction.getRoad(3).getLane(2).vehicleList;
       iter = vehicles.length;
       while (iter--) {
-        var vehicle = vehicles[iter];
+        const vehicle = vehicles[iter];
         drawVehicleOnLane(ctx, vehicle, vehicle.width, vehicle.length,
           vehicle.trajectory.location - vehicle.length,
           CANVAS_RADIUS + (((-1) * ROAD_RADIUS / 6 * 1) - vehicle.width / 2));
@@ -305,7 +305,7 @@ export class SimulatorComponent implements OnInit, Content {
       vehicles = sessionService.roadMap.junction.getRoad(3).getLane(3).vehicleList;
       iter = vehicles.length;
       while (iter--) {
-        var vehicle = vehicles[iter];
+        const vehicle = vehicles[iter];
         drawVehicleOnLane(ctx, vehicle, vehicle.width, vehicle.length,
           ROAD_LENGTH - vehicle.trajectory.location,
           CANVAS_RADIUS + ((ROAD_RADIUS / 6 * 1) - vehicle.width / 2));
@@ -315,7 +315,7 @@ export class SimulatorComponent implements OnInit, Content {
       vehicles = sessionService.roadMap.junction.getRoad(3).getLane(4).vehicleList;
       iter = vehicles.length;
       while (iter--) {
-        var vehicle = vehicles[iter];
+        const vehicle = vehicles[iter];
         drawVehicleOnLane(ctx, vehicle, vehicle.width, vehicle.length,
           ROAD_LENGTH - vehicle.trajectory.location,
           CANVAS_RADIUS + ((ROAD_RADIUS / 6 * 3) - vehicle.width / 2));
@@ -325,7 +325,7 @@ export class SimulatorComponent implements OnInit, Content {
       vehicles = sessionService.roadMap.junction.getRoad(3).getLane(5).vehicleList;
       iter = vehicles.length;
       while (iter--) {
-        var vehicle = vehicles[iter];
+        const vehicle = vehicles[iter];
         drawVehicleOnLane(ctx, vehicle, vehicle.width, vehicle.length,
           ROAD_LENGTH - vehicle.trajectory.location,
           CANVAS_RADIUS + ((ROAD_RADIUS / 6 * 5) - vehicle.width / 2));
@@ -336,9 +336,9 @@ export class SimulatorComponent implements OnInit, Content {
       vehicles = sessionService.roadMap.junction.intersection.nIntRoad.get(6).vehicleList;
       iter = vehicles.length;
       while (iter--) {
-        var vehicle = vehicles[iter];
-        var radius = ROAD_RADIUS / 6;
-        var thetaRad = vehicle.trajectory.location / (radius + vehicle.length / 2);
+        const vehicle = vehicles[iter];
+        const radius = ROAD_RADIUS / 6;
+        const thetaRad = vehicle.trajectory.location / (radius + vehicle.length / 2);
         drawVehicleOnIntersectionArc(ctx, vehicle, vehicle.length, vehicle.width,
           (CANVAS_RADIUS + (ROAD_RADIUS / 6 * 5)) - vehicle.width / 2, (CANVAS_RADIUS - ROAD_RADIUS) - vehicle.length,
           (-1) * thetaRad * 180 / Math.PI,
@@ -349,7 +349,7 @@ export class SimulatorComponent implements OnInit, Content {
       vehicles = sessionService.roadMap.junction.intersection.nIntRoad.get(7).vehicleList;
       iter = vehicles.length;
       while (iter--) {
-        var vehicle = vehicles[iter];
+        const vehicle = vehicles[iter];
         drawVehicleOnIntersection(ctx, vehicle, vehicle.length, vehicle.width,
           (CANVAS_RADIUS + (ROAD_RADIUS / 6 * 3)) - vehicle.width / 2, ROAD_LENGTH + vehicle.trajectory.location - vehicle.length);
       }
@@ -358,9 +358,9 @@ export class SimulatorComponent implements OnInit, Content {
       vehicles = sessionService.roadMap.junction.intersection.nIntRoad.get(8).vehicleList;
       iter = vehicles.length;
       while (iter--) {
-        var vehicle = vehicles[iter];
-        var radius = ROAD_RADIUS + ROAD_RADIUS / 6;
-        var thetaRad = vehicle.trajectory.location / (radius + vehicle.length / 2);
+        const vehicle = vehicles[iter];
+        const radius = ROAD_RADIUS + ROAD_RADIUS / 6;
+        const thetaRad = vehicle.trajectory.location / (radius + vehicle.length / 2);
         drawVehicleOnIntersectionArc(ctx, vehicle, vehicle.length, vehicle.width,
           (CANVAS_RADIUS + (ROAD_RADIUS / 6 * 1)) - vehicle.width / 2, (CANVAS_RADIUS - ROAD_RADIUS) - vehicle.length,
           thetaRad * 180 / Math.PI,
@@ -371,9 +371,9 @@ export class SimulatorComponent implements OnInit, Content {
       vehicles = sessionService.roadMap.junction.intersection.eIntRoad.get(6).vehicleList;
       iter = vehicles.length;
       while (iter--) {
-        var vehicle = vehicles[iter];
-        var radius = ROAD_RADIUS / 6;
-        var thetaRad = vehicle.trajectory.location / (radius + vehicle.length / 2);
+        const vehicle = vehicles[iter];
+        const radius = ROAD_RADIUS / 6;
+        const thetaRad = vehicle.trajectory.location / (radius + vehicle.length / 2);
         drawVehicleOnIntersectionArc(ctx, vehicle, vehicle.width, vehicle.length,
           (CANVAS_RADIUS + ROAD_RADIUS), (CANVAS_RADIUS + (ROAD_RADIUS / 6 * 5)) - vehicle.width / 2,
           (-1) * thetaRad * 180 / Math.PI,
@@ -384,7 +384,7 @@ export class SimulatorComponent implements OnInit, Content {
       vehicles = sessionService.roadMap.junction.intersection.eIntRoad.get(7).vehicleList;
       iter = vehicles.length;
       while (iter--) {
-        var vehicle = vehicles[iter];
+        const vehicle = vehicles[iter];
         drawVehicleOnIntersection(ctx, vehicle, vehicle.width, vehicle.length,
           CANVAS_RADIUS + ROAD_RADIUS - vehicle.trajectory.location, (CANVAS_RADIUS + (ROAD_RADIUS / 6 * 3)) - vehicle.width / 2);
       }
@@ -393,9 +393,9 @@ export class SimulatorComponent implements OnInit, Content {
       vehicles = sessionService.roadMap.junction.intersection.eIntRoad.get(8).vehicleList;
       iter = vehicles.length;
       while (iter--) {
-        var vehicle = vehicles[iter];
-        var radius = ROAD_RADIUS + ROAD_RADIUS / 6;
-        var thetaRad = vehicle.trajectory.location / (radius + vehicle.length / 2);
+        const vehicle = vehicles[iter];
+        const radius = ROAD_RADIUS + ROAD_RADIUS / 6;
+        const thetaRad = vehicle.trajectory.location / (radius + vehicle.length / 2);
         drawVehicleOnIntersectionArc(ctx, vehicle, vehicle.width, vehicle.length,
           (CANVAS_RADIUS + ROAD_RADIUS), (CANVAS_RADIUS + (ROAD_RADIUS / 6 * 1)) - vehicle.width / 2,
           thetaRad * 180 / Math.PI,
@@ -406,9 +406,9 @@ export class SimulatorComponent implements OnInit, Content {
       vehicles = sessionService.roadMap.junction.intersection.sIntRoad.get(6).vehicleList;
       iter = vehicles.length;
       while (iter--) {
-        var vehicle = vehicles[iter];
-        var radius = ROAD_RADIUS / 6;
-        var thetaRad = vehicle.trajectory.location / (radius + vehicle.length / 2);
+        const vehicle = vehicles[iter];
+        const radius = ROAD_RADIUS / 6;
+        const thetaRad = vehicle.trajectory.location / (radius + vehicle.length / 2);
         drawVehicleOnIntersectionArc(ctx, vehicle, vehicle.length, vehicle.width,
           (CANVAS_RADIUS - (ROAD_RADIUS / 6 * 5)) - vehicle.width / 2, (CANVAS_RADIUS + ROAD_RADIUS),
           (-1) * thetaRad * 180 / Math.PI,
@@ -419,7 +419,7 @@ export class SimulatorComponent implements OnInit, Content {
       vehicles = sessionService.roadMap.junction.intersection.sIntRoad.get(7).vehicleList;
       iter = vehicles.length;
       while (iter--) {
-        var vehicle = vehicles[iter];
+        const vehicle = vehicles[iter];
         drawVehicleOnIntersection(ctx, vehicle, vehicle.length, vehicle.width,
           (CANVAS_RADIUS - (ROAD_RADIUS / 6 * 3)) - vehicle.width / 2, CANVAS_RADIUS + ROAD_RADIUS - vehicle.trajectory.location);
       }
@@ -428,9 +428,9 @@ export class SimulatorComponent implements OnInit, Content {
       vehicles = sessionService.roadMap.junction.intersection.sIntRoad.get(8).vehicleList;
       iter = vehicles.length;
       while (iter--) {
-        var vehicle = vehicles[iter];
-        var radius = ROAD_RADIUS + ROAD_RADIUS / 6;
-        var thetaRad = vehicle.trajectory.location / (radius + vehicle.length / 2);
+        const vehicle = vehicles[iter];
+        const radius = ROAD_RADIUS + ROAD_RADIUS / 6;
+        const thetaRad = vehicle.trajectory.location / (radius + vehicle.length / 2);
         drawVehicleOnIntersectionArc(ctx, vehicle, vehicle.length, vehicle.width,
           (CANVAS_RADIUS - (ROAD_RADIUS / 6 * 1)) - vehicle.width / 2, (CANVAS_RADIUS + ROAD_RADIUS),
           thetaRad * 180 / Math.PI,
@@ -441,9 +441,9 @@ export class SimulatorComponent implements OnInit, Content {
       vehicles = sessionService.roadMap.junction.intersection.wIntRoad.get(6).vehicleList;
       iter = vehicles.length;
       while (iter--) {
-        var vehicle = vehicles[iter];
-        var radius = ROAD_RADIUS / 6;
-        var thetaRad = vehicle.trajectory.location / (radius + vehicle.length / 2);
+        const vehicle = vehicles[iter];
+        const radius = ROAD_RADIUS / 6;
+        const thetaRad = vehicle.trajectory.location / (radius + vehicle.length / 2);
         drawVehicleOnIntersectionArc(ctx, vehicle, vehicle.width, vehicle.length,
           (ROAD_LENGTH) - vehicle.length, (CANVAS_RADIUS - (ROAD_RADIUS / 6 * 5)) - vehicle.width / 2,
           (-1) * thetaRad * 180 / Math.PI,
@@ -454,7 +454,7 @@ export class SimulatorComponent implements OnInit, Content {
       vehicles = sessionService.roadMap.junction.intersection.wIntRoad.get(7).vehicleList;
       iter = vehicles.length;
       while (iter--) {
-        var vehicle = vehicles[iter];
+        const vehicle = vehicles[iter];
         drawVehicleOnIntersection(ctx, vehicle, vehicle.width, vehicle.length,
           ROAD_LENGTH + vehicle.trajectory.location - vehicle.length, (CANVAS_RADIUS - (ROAD_RADIUS / 6 * 3)) - vehicle.width / 2);
       }
@@ -463,36 +463,48 @@ export class SimulatorComponent implements OnInit, Content {
       vehicles = sessionService.roadMap.junction.intersection.wIntRoad.get(8).vehicleList;
       iter = vehicles.length;
       while (iter--) {
-        var vehicle = vehicles[iter];
-        var radius = ROAD_RADIUS + ROAD_RADIUS / 6;
-        var thetaRad = vehicle.trajectory.location / (radius + vehicle.length / 2);
+        const vehicle = vehicles[iter];
+        const radius = ROAD_RADIUS + ROAD_RADIUS / 6;
+        const thetaRad = vehicle.trajectory.location / (radius + vehicle.length / 2);
         drawVehicleOnIntersectionArc(ctx, vehicle, vehicle.width, vehicle.length,
           (ROAD_LENGTH) - vehicle.length, (CANVAS_RADIUS - (ROAD_RADIUS / 6 * 1)) - vehicle.width / 2,
           thetaRad * 180 / Math.PI,
           ROAD_LENGTH - vehicle.length / 2, CANVAS_RADIUS + ROAD_RADIUS + vehicle.length / 2);
       }
 
-      drawTrafficLight(ctx, CANVAS_RADIUS + (ROAD_RADIUS / 6 * 5), ROAD_LENGTH - (1.5 * TRAFFIC_LIGHT_RADIUS), sessionService.northLane1TrafficLight.state);
-      drawTrafficLight(ctx, CANVAS_RADIUS + (ROAD_RADIUS / 6 * 3), ROAD_LENGTH - (1.5 * TRAFFIC_LIGHT_RADIUS), sessionService.northLane2TrafficLight.state);
-      drawTrafficLight(ctx, CANVAS_RADIUS + (ROAD_RADIUS / 6 * 1), ROAD_LENGTH - (1.5 * TRAFFIC_LIGHT_RADIUS), sessionService.northLane3TrafficLight.state);
+      drawTrafficLight(ctx, CANVAS_RADIUS + (ROAD_RADIUS / 6 * 5), ROAD_LENGTH - (1.5 * TRAFFIC_LIGHT_RADIUS),
+        sessionService.northLane1TrafficLight.state);
+      drawTrafficLight(ctx, CANVAS_RADIUS + (ROAD_RADIUS / 6 * 3), ROAD_LENGTH - (1.5 * TRAFFIC_LIGHT_RADIUS),
+        sessionService.northLane2TrafficLight.state);
+      drawTrafficLight(ctx, CANVAS_RADIUS + (ROAD_RADIUS / 6 * 1), ROAD_LENGTH - (1.5 * TRAFFIC_LIGHT_RADIUS),
+        sessionService.northLane3TrafficLight.state);
 
-      drawTrafficLight(ctx, CANVAS_RADIUS + ROAD_RADIUS + (1.5 * TRAFFIC_LIGHT_RADIUS), CANVAS_RADIUS + (ROAD_RADIUS / 6 * 5), sessionService.eastLane1TrafficLight.state);
-      drawTrafficLight(ctx, CANVAS_RADIUS + ROAD_RADIUS + (1.5 * TRAFFIC_LIGHT_RADIUS), CANVAS_RADIUS + (ROAD_RADIUS / 6 * 3), sessionService.eastLane2TrafficLight.state);
-      drawTrafficLight(ctx, CANVAS_RADIUS + ROAD_RADIUS + (1.5 * TRAFFIC_LIGHT_RADIUS), CANVAS_RADIUS + (ROAD_RADIUS / 6 * 1), sessionService.eastLane3TrafficLight.state);
+      drawTrafficLight(ctx, CANVAS_RADIUS + ROAD_RADIUS + (1.5 * TRAFFIC_LIGHT_RADIUS), CANVAS_RADIUS + (ROAD_RADIUS / 6 * 5),
+        sessionService.eastLane1TrafficLight.state);
+      drawTrafficLight(ctx, CANVAS_RADIUS + ROAD_RADIUS + (1.5 * TRAFFIC_LIGHT_RADIUS), CANVAS_RADIUS + (ROAD_RADIUS / 6 * 3),
+        sessionService.eastLane2TrafficLight.state);
+      drawTrafficLight(ctx, CANVAS_RADIUS + ROAD_RADIUS + (1.5 * TRAFFIC_LIGHT_RADIUS), CANVAS_RADIUS + (ROAD_RADIUS / 6 * 1),
+        sessionService.eastLane3TrafficLight.state);
 
-      drawTrafficLight(ctx, CANVAS_RADIUS - (ROAD_RADIUS / 6 * 5), CANVAS_RADIUS + ROAD_RADIUS + (1.5 * TRAFFIC_LIGHT_RADIUS), sessionService.southLane1TrafficLight.state);
-      drawTrafficLight(ctx, CANVAS_RADIUS - (ROAD_RADIUS / 6 * 3), CANVAS_RADIUS + ROAD_RADIUS + (1.5 * TRAFFIC_LIGHT_RADIUS), sessionService.southLane2TrafficLight.state);
-      drawTrafficLight(ctx, CANVAS_RADIUS - (ROAD_RADIUS / 6 * 1), CANVAS_RADIUS + ROAD_RADIUS + (1.5 * TRAFFIC_LIGHT_RADIUS), sessionService.southLane3TrafficLight.state);
+      drawTrafficLight(ctx, CANVAS_RADIUS - (ROAD_RADIUS / 6 * 5), CANVAS_RADIUS + ROAD_RADIUS + (1.5 * TRAFFIC_LIGHT_RADIUS),
+        sessionService.southLane1TrafficLight.state);
+      drawTrafficLight(ctx, CANVAS_RADIUS - (ROAD_RADIUS / 6 * 3), CANVAS_RADIUS + ROAD_RADIUS + (1.5 * TRAFFIC_LIGHT_RADIUS),
+        sessionService.southLane2TrafficLight.state);
+      drawTrafficLight(ctx, CANVAS_RADIUS - (ROAD_RADIUS / 6 * 1), CANVAS_RADIUS + ROAD_RADIUS + (1.5 * TRAFFIC_LIGHT_RADIUS),
+        sessionService.southLane3TrafficLight.state);
 
-      drawTrafficLight(ctx, ROAD_LENGTH - (1.5 * TRAFFIC_LIGHT_RADIUS), CANVAS_RADIUS - (ROAD_RADIUS / 6 * 5), sessionService.westLane1TrafficLight.state);
-      drawTrafficLight(ctx, ROAD_LENGTH - (1.5 * TRAFFIC_LIGHT_RADIUS), CANVAS_RADIUS - (ROAD_RADIUS / 6 * 3), sessionService.westLane2TrafficLight.state);
-      drawTrafficLight(ctx, ROAD_LENGTH - (1.5 * TRAFFIC_LIGHT_RADIUS), CANVAS_RADIUS - (ROAD_RADIUS / 6 * 1), sessionService.westLane3TrafficLight.state);
+      drawTrafficLight(ctx, ROAD_LENGTH - (1.5 * TRAFFIC_LIGHT_RADIUS), CANVAS_RADIUS - (ROAD_RADIUS / 6 * 5),
+        sessionService.westLane1TrafficLight.state);
+      drawTrafficLight(ctx, ROAD_LENGTH - (1.5 * TRAFFIC_LIGHT_RADIUS), CANVAS_RADIUS - (ROAD_RADIUS / 6 * 3),
+        sessionService.westLane2TrafficLight.state);
+      drawTrafficLight(ctx, ROAD_LENGTH - (1.5 * TRAFFIC_LIGHT_RADIUS), CANVAS_RADIUS - (ROAD_RADIUS / 6 * 1),
+        sessionService.westLane3TrafficLight.state);
 
     }, CANVAS_REFRESH_INTERVAL);
 
     window.onload = function () {
-      var canvas: any = document.querySelector('#backgroundCanvasAnchorPane');
-      var ctx = canvas.getContext('2d');
+      const canvas: any = document.querySelector('#backgroundCanvasAnchorPane');
+      const ctx = canvas.getContext('2d');
       setBackgroundLayout(canvas);
       drawBackground(ctx);
     };

@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
-import {AngularFireDatabase, AngularFireObject} from "angularfire2/database";
-import {Content} from "../../models/content";
+import {AngularFireDatabase, AngularFireObject} from 'angularfire2/database';
+import {Content} from '../../models/content';
 
 @Component({
   selector: 'app-control',
@@ -8,7 +8,7 @@ import {Content} from "../../models/content";
   styleUrls: ['./control.component.scss']
 })
 export class ControlComponent implements OnInit, Content {
-  title: string = 'Control';
+  title = 'Control';
 
   public junctionObservable: AngularFireObject<any>;
   public junction = {

@@ -1,5 +1,6 @@
 import {Component, OnInit, ViewChild, ViewContainerRef} from '@angular/core';
-import {ContentService} from "../../services/content.service";
+import {ContentService} from '../../services/content.service';
+import {MapComponent} from '../map/map.component';
 
 @Component({
   selector: 'app-content',
@@ -18,6 +19,7 @@ export class ContentComponent implements OnInit {
   ngOnInit() {
     this.contentService.contentViewContainerRef = this.contentViewContainerRef;
 
-    // this.contentService.loadComponent(SimulatorComponent);
+    // Load default
+    this.contentService.loadComponent(MapComponent);
   }
 }

@@ -1,8 +1,8 @@
 import {Component, OnInit} from '@angular/core';
-import {ManageUsersService} from "./manage-users.service";
-import {EditUserComponent} from "../edit-user/edit-user.component";
-import {ContentService} from "../../services/content.service";
-import {Content} from "../../models/content";
+import {ManageUsersService} from './manage-users.service';
+import {EditUserComponent} from '../edit-user/edit-user.component';
+import {ContentService} from '../../services/content.service';
+import {Content} from '../../models/content';
 
 @Component({
   selector: 'app-manage-users',
@@ -10,7 +10,7 @@ import {Content} from "../../models/content";
   styleUrls: ['./manage-users.component.scss']
 })
 export class ManageUsersComponent implements OnInit, Content {
-  title: string = 'Manage Users';
+  title = 'Manage Users';
 
   public users: any;
 

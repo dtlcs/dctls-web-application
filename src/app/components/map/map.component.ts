@@ -5,7 +5,8 @@ import {MapsAPILoader} from '@agm/core';
 import {FormControl} from '@angular/forms';
 import { } from 'googlemaps';
 import {DEFAULT_MAP_ZOOM} from './map.constants';
-import {Content} from "../../models/content";
+import {Content} from '../../models/content';
+import {GlobalVarService} from '../../services/global-var.service';
 
 @Component({
   selector: 'app-map',
@@ -27,7 +28,8 @@ export class MapComponent implements OnInit, Content {
   @ViewChild('search')
   public searchElementRef: ElementRef;
 
-  constructor(private mapsAPILoader: MapsAPILoader, private ngZone: NgZone, private mapService: MapService) {
+  constructor(private mapsAPILoader: MapsAPILoader, private ngZone: NgZone, private mapService: MapService,
+              private globalVarService: GlobalVarService) {
 
   }
 
@@ -47,13 +49,13 @@ export class MapComponent implements OnInit, Content {
 
     // Load Places Autocomplete
     this.mapsAPILoader.load().then(() => {
-      let autocomplete = new google.maps.places.Autocomplete(this.searchElementRef.nativeElement, {
+      const autocomplete = new google.maps.places.Autocomplete(this.searchElementRef.nativeElement, {
         types: ['address']
       });
       autocomplete.addListener('place_changed', () => {
         this.ngZone.run(() => {
           // Get the place result
-          let place: google.maps.places.PlaceResult = autocomplete.getPlace();
+          const place: google.maps.places.PlaceResult = autocomplete.getPlace();
 
           // Verify result
           if (place.geometry === undefined || place.geometry === null) {
@@ -85,6 +87,10 @@ export class MapComponent implements OnInit, Content {
         this.zoom = DEFAULT_MAP_ZOOM;
       });
     }
+  }
+
+  public setCurrentJunction(junction: any) {
+    this.globalVarService.currentJunction = junction;
   }
 
 }

@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {Content} from "../../models/content";
+import {Content} from '../../models/content';
 
 @Component({
   selector: 'app-login-history',
@@ -7,7 +7,7 @@ import {Content} from "../../models/content";
   styleUrls: ['./login-history.component.scss']
 })
 export class LoginHistoryComponent implements OnInit, Content {
-  title: string = 'Login History';
+  title = 'Login History';
 
   constructor() {
   }

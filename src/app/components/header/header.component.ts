@@ -6,6 +6,7 @@ import {EditProfileComponent} from '../edit-profile/edit-profile.component';
 import {Router} from '@angular/router';
 import {AngularFireDatabase} from 'angularfire2/database';
 import * as moment from 'moment';
+import {GlobalVarService} from '../../services/global-var.service';
 
 @Component({
   selector: 'app-header',
@@ -20,7 +21,7 @@ export class HeaderComponent implements OnInit {
   @ViewChild(MatMenuTrigger) profileMenuTrigger: MatMenuTrigger;
 
   constructor(private contentService: ContentService, public firebaseAuthService: FirebaseAuthService,
-              private angularFireDatabase: AngularFireDatabase, private router: Router) {
+              private angularFireDatabase: AngularFireDatabase, private router: Router, private globalVarService: GlobalVarService) {
     this.contentService.changeContentTitle = (title: string): void => {
       this.contentTitle = title;
     };

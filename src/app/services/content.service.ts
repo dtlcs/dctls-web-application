@@ -11,11 +11,11 @@ export class ContentService {
   }
 
   loadComponent(component: Type<{}>) {
-    let componentFactory = this.componentFactoryResolver.resolveComponentFactory(component);
+    const componentFactory = this.componentFactoryResolver.resolveComponentFactory(component);
     this.contentViewContainerRef.clear();
-    let componentRef = this.contentViewContainerRef.createComponent(componentFactory);
+    const componentRef = this.contentViewContainerRef.createComponent(componentFactory);
 
-    let childContent: any = componentRef.instance;
+    const childContent: any = componentRef.instance;
     this.changeContentTitle(childContent.title);
   }
 }

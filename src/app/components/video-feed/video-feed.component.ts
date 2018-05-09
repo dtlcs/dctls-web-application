@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {Content} from "../../models/content";
+import {Content} from '../../models/content';
 
 @Component({
   selector: 'app-video-feed',
@@ -7,7 +7,7 @@ import {Content} from "../../models/content";
   styleUrls: ['./video-feed.component.scss']
 })
 export class VideoFeedComponent implements OnInit, Content {
-  title: string = 'Video Feed';
+  title = 'Video Feed';
 
   constructor() {
   }
