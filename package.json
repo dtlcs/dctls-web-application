@@ -22,7 +22,7 @@
     "@angular/http": "^5.2.10",
     "@angular/material": "^5.2.5",
     "@angular/platform-browser": "^5.2.10",
-    "@angular/platform-browser-dynamic": "^5.2.10",
+    "@angular/platform-browser-dynamic": "^6.0.2",
     "@angular/router": "^5.2.10",
     "angularfire2": "^5.0.0-rc.5-next",
     "bootstrap": "4.1.1",
