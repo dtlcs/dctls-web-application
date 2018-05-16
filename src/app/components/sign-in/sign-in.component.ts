@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
-import {Router} from "@angular/router";
-import {FirebaseAuthService} from "../../services/firebase-auth.service";
-import {AngularFireDatabase} from "angularfire2/database";
+import {Router} from '@angular/router';
+import {FirebaseAuthService} from '../../services/firebase-auth.service';
+import {AngularFireDatabase} from 'angularfire2/database';
 import * as moment from 'moment';
 
 @Component({
@@ -35,14 +35,14 @@ export class SignInComponent implements OnInit {
     if (this.validateForm(this.email, this.password)) {
       this.firebaseAuthService.signInWithEmail(this.email, this.password)
         .then(() => {
-          this.angularFireDatabase.list(`/users/${this.firebaseAuthService.currentUserId}/activities/${moment().utc().format("YYYY-MM-DD")}`)
+          this.angularFireDatabase.list(`/users/${this.firebaseAuthService.currentUserId}/activities/${moment().utc().format('YYYY-MM-DD')}`)
             .push({[moment().format()]: 'signin'});
           this.router.navigate(['/']);
         })
         .catch(_error => {
           this.error = _error;
           this.router.navigate(['/']);
-        })
+        });
     }
   }
 
@@ -64,7 +64,7 @@ export class SignInComponent implements OnInit {
 
     this.errorMessage = '';
 
-    return true
+    return true;
   }
 
   isValidMailFormat(email: string) {

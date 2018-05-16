@@ -90,8 +90,8 @@ export class SidebarComponent implements OnInit {
     this.contentService.loadComponent(LoginHistoryComponent);
   }
 
-  onClickReset(){
-
+  onClickReset() {
+    
   }
 
 }

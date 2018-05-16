@@ -1,7 +1,7 @@
-import {Lane} from "./lane";
-import {Vehicle} from "./vehicle";
-import {SessionService} from "../services/session.service";
-import {AppInjector} from "../../../injector";
+import {Lane} from './lane';
+import {Vehicle} from './vehicle';
+import {SessionService} from '../services/session.service';
+import {AppInjector} from '../../../injector';
 
 export class Road {
 

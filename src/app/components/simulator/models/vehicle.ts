@@ -1,7 +1,7 @@
-import {Trajectory} from "./trajectory";
-import {CANVAS_RADIUS} from "../simulator.constants";
-import {SessionService} from "../services/session.service";
-import {AppInjector} from "../../../injector";
+import {Trajectory} from './trajectory';
+import {CANVAS_RADIUS} from '../simulator.constants';
+import {SessionService} from '../services/session.service';
+import {AppInjector} from '../../../injector';
 
 export class Vehicle {
 

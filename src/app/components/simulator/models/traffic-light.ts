@@ -1,4 +1,4 @@
-import {TrafficLightState} from "./traffic-light-state.enum";
+import {TrafficLightState} from './traffic-light-state.enum';
 
 export class TrafficLight {
 

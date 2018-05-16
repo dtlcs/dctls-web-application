@@ -1,9 +1,9 @@
-import {LaneType} from "./lane-type.enum";
-import {Vehicle} from "./vehicle";
-import {TrafficLight} from "./traffic-light";
-import {ROAD_LENGTH, ROAD_RADIUS} from "../simulator.constants";
-import {SessionService} from "../services/session.service";
-import {AppInjector} from "../../../injector";
+import {LaneType} from './lane-type.enum';
+import {Vehicle} from './vehicle';
+import {TrafficLight} from './traffic-light';
+import {ROAD_LENGTH, ROAD_RADIUS} from '../simulator.constants';
+import {SessionService} from '../services/session.service';
+import {AppInjector} from '../../../injector';
 
 export class Lane {
 

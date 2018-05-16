@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {AngularFireDatabase} from 'angularfire2/database';
-import {FirebaseAuthService} from "../../services/firebase-auth.service";
+import {FirebaseAuthService} from '../../services/firebase-auth.service';
 
 @Component({
   selector: 'app-console',

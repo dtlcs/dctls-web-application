@@ -1,5 +1,5 @@
 import {Injectable} from '@angular/core';
-import {REST_API_HOST} from "../../globals";
+import {REST_API_HOST} from '../../globals';
 import {HttpClient} from '@angular/common/http';
 import {BehaviorSubject} from 'rxjs/BehaviorSubject';
 
@@ -14,7 +14,7 @@ export class ManageUsersService {
   }
 
   changeSelectedUser(user: Object) {
-    this.selectedUserSource.next(user)
+    this.selectedUserSource.next(user);
   }
 
   getAllUsersWithRoles(): Promise<Object> {

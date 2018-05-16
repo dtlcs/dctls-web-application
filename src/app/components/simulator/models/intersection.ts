@@ -1,5 +1,5 @@
-import {Lane} from "./lane";
-import {Vehicle} from "./vehicle";
+import {Lane} from './lane';
+import {Vehicle} from './vehicle';
 
 export class Intersection {
 

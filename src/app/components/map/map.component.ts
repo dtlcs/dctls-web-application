@@ -3,7 +3,6 @@ import {Component, ElementRef, NgZone, OnInit, ViewChild} from '@angular/core';
 import {MAP_STYLE} from './map.style';
 import {MapsAPILoader} from '@agm/core';
 import {FormControl} from '@angular/forms';
-import { } from 'googlemaps';
 import {DEFAULT_MAP_ZOOM} from './map.constants';
 import {Content} from '../../models/content';
 import {GlobalVarService} from '../../services/global-var.service';
@@ -79,6 +78,10 @@ export class MapComponent implements OnInit, Content {
       });
   }
 
+  public setCurrentJunction(junction: any) {
+    this.globalVarService.currentJunction = junction;
+  }
+
   private setCurrentPosition() {
     if ('geolocation' in navigator) {
       navigator.geolocation.getCurrentPosition((position) => {
@@ -87,10 +90,6 @@ export class MapComponent implements OnInit, Content {
         this.zoom = DEFAULT_MAP_ZOOM;
       });
     }
-  }
-
-  public setCurrentJunction(junction: any) {
-    this.globalVarService.currentJunction = junction;
   }
 
 }

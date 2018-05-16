@@ -1,6 +1,6 @@
 import {Injectable} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
-import {REST_API_HOST} from "../../globals";
+import {REST_API_HOST} from '../../globals';
 
 @Injectable()
 export class ManageJunctionsService {

@@ -1,5 +1,5 @@
-import {Road} from "./road";
-import {Intersection} from "./intersection";
+import {Road} from './road';
+import {Intersection} from './intersection';
 
 export class Junction {
 
@@ -7,7 +7,7 @@ export class Junction {
   intersection: Intersection;
   getRoad = (roadId: number): Road => {
     return this.roadList[roadId];
-  }
+  };
 
   constructor() {
     this.roadList = [];
