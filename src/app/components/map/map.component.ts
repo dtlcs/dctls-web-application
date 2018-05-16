@@ -3,6 +3,7 @@ import {Component, ElementRef, NgZone, OnInit, ViewChild} from '@angular/core';
 import {MAP_STYLE} from './map.style';
 import {MapsAPILoader} from '@agm/core';
 import {FormControl} from '@angular/forms';
+import { } from 'googlemaps';
 import {DEFAULT_MAP_ZOOM} from './map.constants';
 import {Content} from '../../models/content';
 import {GlobalVarService} from '../../services/global-var.service';
