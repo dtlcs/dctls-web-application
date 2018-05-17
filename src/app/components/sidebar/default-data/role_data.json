@@ -1,0 +1,17 @@
+[
+	{
+		"id" : 1,
+		"name" : "Admin",
+		"description" : null
+	},
+	{
+		"id" : 2,
+		"name" : "Control room operator",
+		"description" : null
+	},
+	{
+		"id" : 3,
+		"name" : "Traffic officer",
+		"description" : null
+	}
+]

@@ -1,5 +1,5 @@
-process.env.NODE_ENV= process.env.NODE_ENV || 'development';
-process.env.SERVER_PORT= process.env.SERVER_PORT || '4040';
+process.env.NODE_ENV = process.env.NODE_ENV || 'development';
+process.env.SERVER_PORT = process.env.SERVER_PORT || '4040';
 
 const express = require('express');
 const bodyParser = require('body-parser');
@@ -9,7 +9,7 @@ const app = express();
 
 // Parsers
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false}));
+app.use(bodyParser.urlencoded({extended: false}));
 
 // Angular DIST output folder
 app.use(express.static(path.join(__dirname, 'dist')));

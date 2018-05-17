@@ -129,11 +129,23 @@
               <span>Login History</span>
             </div>
           </a>
-          <a class="card-body-item" (click)="onClickReset()"
-             [ngClass]="{'current': selected == 'Login History'}">
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <a id="headingDevelopment" class="card-header collapsed" data-toggle="collapse" href="#collapseDevelopment"
+         role="button" aria-expanded="false" aria-controls="collapseAdministration">
+        <span>Development<i class="zmdi zmdi-chevron-down"></i></span>
+        <p>Reset</p>
+      </a>
+
+      <div id="collapseDevelopment" class="collapse" role="tabpanel" aria-labelledby="collapseAdministration">
+        <div class="card-body">
+          <a class="card-body-item" (click)="onClickReset()">
             <div>
               <i class="zmdi zmdi-time-restore-setting zmdi-hc-fw"></i>
-              <span>Reset [Dev]</span>
+              <span>Reset</span>
             </div>
           </a>
         </div>

@@ -21,7 +21,9 @@ export class HeaderComponent implements OnInit {
   @ViewChild(MatMenuTrigger) profileMenuTrigger: MatMenuTrigger;
 
   constructor(private contentService: ContentService, public firebaseAuthService: FirebaseAuthService,
-              private angularFireDatabase: AngularFireDatabase, private router: Router, private globalVarService: GlobalVarService) {
+              private angularFireDatabase: AngularFireDatabase, private router: Router,
+              public globalVarService: GlobalVarService) {
+
     this.contentService.changeContentTitle = (title: string): void => {
       this.contentTitle = title;
     };

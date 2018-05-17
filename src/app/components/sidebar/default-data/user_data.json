@@ -1,0 +1,54 @@
+[
+	{
+		"id" : 1,
+		"name" : "Oshan",
+		"nic" : "950722355V",
+		"role_id" : 1,
+		"email" : "oshan.ivantha@gmail.com",
+		"telephone" : "0719084020",
+		"street" : "Colombo road, Dambokka",
+		"city" : "Kurunegala",
+		"province" : "North Western",
+		"postal_code" : "60027",
+		"verified" : null
+	},
+	{
+		"id" : 2,
+		"name" : "Sachini",
+		"nic" : "100000001V",
+		"role_id" : 2,
+		"email" : "sachini.thaksala@gmail.com",
+		"telephone" : "0713256039",
+		"street" : null,
+		"city" : null,
+		"province" : null,
+		"postal_code" : null,
+		"verified" : null
+	},
+	{
+		"id" : 3,
+		"name" : "Nethma",
+		"nic" : "100000002V",
+		"role_id" : 2,
+		"email" : "95thathsarani@gmail.com",
+		"telephone" : "0769161912",
+		"street" : null,
+		"city" : null,
+		"province" : null,
+		"postal_code" : null,
+		"verified" : null
+	},
+	{
+		"id" : 4,
+		"name" : "Sameera",
+		"nic" : "100000003V",
+		"role_id" : 3,
+		"email" : "ppathumm@gmail.com",
+		"telephone" : "0714037810",
+		"street" : "Walasmulla Road",
+		"city" : "Katuwana",
+		"province" : "Southern",
+		"postal_code" : "82500",
+		"verified" : null
+	}
+]

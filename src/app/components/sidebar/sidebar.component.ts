@@ -14,6 +14,11 @@ import {JunctionProfileComponent} from '../junction-profile/junction-profile.com
 import {JunctionHistoryComponent} from '../junction-history/junction-history.component';
 import {SimulatorComponent} from '../simulator/simulator.component';
 
+import * as junction_data from './default-data/junction_data.json';
+import * as role_data from './default-data/role_data.json';
+import * as user_data from './default-data/user_data.json';
+import {AngularFireDatabase} from 'angularfire2/database';
+
 @Component({
   selector: 'app-sidebar',
   templateUrl: './sidebar.component.html',
@@ -25,7 +30,7 @@ export class SidebarComponent implements OnInit {
 
   public selected = 'control';
 
-  constructor(private contentService: ContentService) {
+  constructor(private contentService: ContentService, private fireDatabase: AngularFireDatabase) {
 
   }
 
@@ -91,7 +96,20 @@ export class SidebarComponent implements OnInit {
   }
 
   onClickReset() {
-    
+    this.fireDatabase.object('/junctions').set(junction_data)
+      .catch(error => {
+        console.log(error);
+      });
+
+    this.fireDatabase.object('/roles').set(role_data)
+      .catch(error => {
+        console.log(error);
+      });
+
+    this.fireDatabase.object('/users').set(user_data)
+      .catch(error => {
+        console.log(error);
+      });
   }
 
 }
