@@ -4,43 +4,43 @@ import {AngularFireAuth} from 'angularfire2/auth';
 @Injectable()
 export class FirebaseAuthService {
 
-  authState: any = null;
+    authState: any = null;
 
-  constructor(private angularFireAuth: AngularFireAuth) {
-    this.angularFireAuth.authState.subscribe((auth) => {
-      this.authState = auth;
-    });
-  }
+    constructor(private angularFireAuth: AngularFireAuth) {
+        this.angularFireAuth.authState.subscribe((auth) => {
+            this.authState = auth;
+        });
+    }
 
-  get currentUserId(): string {
-    return (this.authState !== null) ? this.authState.uid : '';
-  }
+    get currentUserId(): string {
+        return (this.authState !== null) ? this.authState.uid : '';
+    }
 
-  get currentUserName(): string {
-    return this.authState['email'];
-  }
+    get currentUserName(): string {
+        return this.authState['email'];
+    }
 
-  get currentUser(): any {
-    return (this.authState !== null) ? this.authState : null;
-  }
+    get currentUser(): any {
+        return (this.authState !== null) ? this.authState : null;
+    }
 
-  get isUserEmailLoggedIn(): boolean {
-    return this.authState !== null;
-  }
+    get isUserEmailLoggedIn(): boolean {
+        return this.authState !== null;
+    }
 
-  signInWithEmail(email: string, password: string) {
-    return this.angularFireAuth.auth.signInWithEmailAndPassword(email, password)
-      .then((user) => {
-        this.authState = user;
-      })
-      .catch(error => {
-        console.log(error);
-        throw error;
-      });
-  }
+    signInWithEmail(email: string, password: string) {
+        return this.angularFireAuth.auth.signInWithEmailAndPassword(email, password)
+            .then((user) => {
+                this.authState = user;
+            })
+            .catch(error => {
+                console.log(error);
+                throw error;
+            });
+    }
 
-  signOut(): void {
-    this.angularFireAuth.auth.signOut();
-  }
+    signOut(): void {
+        this.angularFireAuth.auth.signOut();
+    }
 
 }

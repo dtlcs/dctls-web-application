@@ -1,5 +1,5 @@
 export enum LaneType {
-  In,
-  Out,
-  Int
+    In,
+    Out,
+    Int
 }

@@ -6,20 +6,20 @@ import {BehaviorSubject} from 'rxjs/BehaviorSubject';
 @Injectable()
 export class ManageUsersService {
 
-  private selectedUserSource = new BehaviorSubject<Object>({});
-  selectedUser = this.selectedUserSource.asObservable();
+    private selectedUserSource = new BehaviorSubject<Object>({});
+    selectedUser = this.selectedUserSource.asObservable();
 
-  constructor(private http: HttpClient) {
+    constructor(private http: HttpClient) {
 
-  }
+    }
 
-  changeSelectedUser(user: Object) {
-    this.selectedUserSource.next(user);
-  }
+    changeSelectedUser(user: Object) {
+        this.selectedUserSource.next(user);
+    }
 
-  getAllUsersWithRoles(): Promise<Object> {
-    let url = REST_API_HOST + '/user/all';
-    return this.http.get(url).toPromise();
-  }
+    getAllUsersWithRoles(): Promise<Object> {
+        let url = REST_API_HOST + '/user/all';
+        return this.http.get(url).toPromise();
+    }
 
 }

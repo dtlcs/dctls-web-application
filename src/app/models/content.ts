@@ -1,4 +1,3 @@
 export interface Content {
-  title: string;
+    title: string;
 }
-
