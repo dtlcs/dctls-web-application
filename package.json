@@ -16,7 +16,7 @@
     "@angular/animations": "^6.1.8",
     "@angular/cdk": "^6.4.6",
     "@angular/common": "^6.1.4",
-    "@angular/compiler": "^6.1.7",
+    "@angular/compiler": "^6.1.10",
     "@angular/core": "^5.2.10",
     "@angular/forms": "^6.1.6",
     "@angular/http": "^6.1.4",
