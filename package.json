@@ -68,6 +68,6 @@
     "requirejs": "^2.3.6",
     "ts-node": "~7.0.1",
     "tslint": "~5.7.0",
-    "typescript": "~3.0.3"
+    "typescript": "~3.1.3"
   }
 }
