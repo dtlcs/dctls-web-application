@@ -23,7 +23,7 @@
     "@angular/material": "^7.0.1",
     "@angular/platform-browser": "^7.0.3",
     "@angular/platform-browser-dynamic": "^7.0.3",
-    "@angular/router": "^6.1.0",
+    "@angular/router": "^7.0.3",
     "angularfire2": "^5.1.0",
     "body-parser": "^1.18.3",
     "bootstrap": "4.1.3",
