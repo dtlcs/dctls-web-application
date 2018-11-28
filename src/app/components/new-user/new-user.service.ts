@@ -5,17 +5,17 @@ import {HttpClient} from '@angular/common/http';
 @Injectable()
 export class NewUserService {
 
-  constructor(private http: HttpClient) {
-  }
+    constructor(private http: HttpClient) {
+    }
 
-  getAllRoles(): Promise<Object> {
-    const url = REST_API_HOST + '/role/all';
-    return this.http.get(url).toPromise();
-  }
+    getAllRoles(): Promise<Object> {
+        const url = REST_API_HOST + '/role/all';
+        return this.http.get(url).toPromise();
+    }
 
-  submitNewUser(user: any) {
-    const url = REST_API_HOST + '/user/add';
-    return this.http.post(url, user);
-  }
+    submitNewUser(user: any) {
+        const url = REST_API_HOST + '/user/add';
+        return this.http.post(url, user);
+    }
 
 }

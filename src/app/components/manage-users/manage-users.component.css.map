@@ -1,9 +1,9 @@
 {
-  "version": 3,
-  "mappings": "AAAA,UAAU;EACR,MAAM,EAAE,EAAE;EAGR,0BAAQ;IACN,MAAM,EAAE,OAAO",
-  "sources": [
-    "manage-users.component.scss"
-  ],
-  "names": [],
-  "file": "manage-users.component.css"
+    "version": 3,
+    "mappings": "AAAA,UAAU;EACR,MAAM,EAAE,EAAE;EAGR,0BAAQ;IACN,MAAM,EAAE,OAAO",
+    "sources": [
+        "manage-users.component.scss"
+    ],
+    "names": [],
+    "file": "manage-users.component.css"
 }

@@ -5,12 +5,12 @@ import {REST_API_HOST} from '../../globals';
 @Injectable()
 export class MapService {
 
-  constructor(private http: HttpClient) {
-  }
+    constructor(private http: HttpClient) {
+    }
 
-  getAllJunctions(): Promise<Object> {
-    const url = REST_API_HOST + '/junction/all';
-    return this.http.get(url).toPromise();
-  }
+    getAllJunctions(): Promise<Object> {
+        const url = REST_API_HOST + '/junction/all';
+        return this.http.get(url).toPromise();
+    }
 
 }

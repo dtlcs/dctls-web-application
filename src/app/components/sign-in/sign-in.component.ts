@@ -5,75 +5,75 @@ import {AngularFireDatabase} from 'angularfire2/database';
 import * as moment from 'moment';
 
 @Component({
-  selector: 'app-sign-in',
-  templateUrl: './sign-in.component.html',
-  styleUrls: ['./sign-in.component.scss']
+    selector: 'app-sign-in',
+    templateUrl: './sign-in.component.html',
+    styleUrls: ['./sign-in.component.scss']
 })
 export class SignInComponent implements OnInit {
 
-  email = '';
-  password = '';
+    email = '';
+    password = '';
 
-  errorMessage = '';
-  error: { name: string, message: string } = {name: '', message: ''};
+    errorMessage = '';
+    error: { name: string, message: string } = {name: '', message: ''};
 
-  constructor(public firebaseAuthService: FirebaseAuthService, private angularFireDatabase: AngularFireDatabase, private router: Router) {
+    constructor(public firebaseAuthService: FirebaseAuthService, private angularFireDatabase: AngularFireDatabase, private router: Router) {
 
-  }
-
-  ngOnInit() {
-  }
-
-  clearErrorMessage() {
-    this.errorMessage = '';
-    this.error = {name: '', message: ''};
-  }
-
-  onSignInEmail(): void {
-    this.clearErrorMessage();
-
-    if (this.validateForm(this.email, this.password)) {
-      this.firebaseAuthService.signInWithEmail(this.email, this.password)
-        .then(() => {
-          this.angularFireDatabase.list(`/users/${this.firebaseAuthService.currentUserId}/activities/${moment().utc().format('YYYY-MM-DD')}`)
-            .push({[moment().format()]: 'signin'});
-          this.router.navigate(['/']);
-        })
-        .catch(_error => {
-          this.error = _error;
-          this.router.navigate(['/']);
-        });
-    }
-  }
-
-  validateForm(email: string, password: string): boolean {
-    if (email.length === 0) {
-      this.errorMessage = 'Please enter the Email!';
-      return false;
     }
 
-    if (password.length === 0) {
-      this.errorMessage = 'Please enter the Password!';
-      return false;
+    ngOnInit() {
     }
 
-    if (password.length < 6) {
-      this.errorMessage = 'Password should be at least 6 characters!';
-      return false;
+    clearErrorMessage() {
+        this.errorMessage = '';
+        this.error = {name: '', message: ''};
     }
 
-    this.errorMessage = '';
+    onSignInEmail(): void {
+        this.clearErrorMessage();
 
-    return true;
-  }
-
-  isValidMailFormat(email: string) {
-    const EMAIL_REGEXP = /^[a-z0-9!#$%&'*+\/=?^_`{|}~.-]+@[a-z0-9]([a-z0-9-]*[a-z0-9])?(\.[a-z0-9]([a-z0-9-]*[a-z0-9])?)*$/i;
-
-    if ((email.length === 0) && (!EMAIL_REGEXP.test(email))) {
-      return false;
+        if (this.validateForm(this.email, this.password)) {
+            this.firebaseAuthService.signInWithEmail(this.email, this.password)
+                .then(() => {
+                    this.angularFireDatabase.list(`/users/${this.firebaseAuthService.currentUserId}/activities/${moment().utc().format('YYYY-MM-DD')}`)
+                        .push({[moment().format()]: 'signin'});
+                    this.router.navigate(['/']);
+                })
+                .catch(_error => {
+                    this.error = _error;
+                    this.router.navigate(['/']);
+                });
+        }
     }
 
-    return true;
-  }
+    validateForm(email: string, password: string): boolean {
+        if (email.length === 0) {
+            this.errorMessage = 'Please enter the Email!';
+            return false;
+        }
+
+        if (password.length === 0) {
+            this.errorMessage = 'Please enter the Password!';
+            return false;
+        }
+
+        if (password.length < 6) {
+            this.errorMessage = 'Password should be at least 6 characters!';
+            return false;
+        }
+
+        this.errorMessage = '';
+
+        return true;
+    }
+
+    isValidMailFormat(email: string) {
+        const EMAIL_REGEXP = /^[a-z0-9!#$%&'*+\/=?^_`{|}~.-]+@[a-z0-9]([a-z0-9-]*[a-z0-9])?(\.[a-z0-9]([a-z0-9-]*[a-z0-9])?)*$/i;
+
+        if ((email.length === 0) && (!EMAIL_REGEXP.test(email))) {
+            return false;
+        }
+
+        return true;
+    }
 }

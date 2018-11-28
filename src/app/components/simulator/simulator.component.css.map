@@ -1,9 +1,9 @@
 {
-  "version": 3,
-  "mappings": "AAAA,2BAA4B;EAC1B,gBAAgB,EAAE,wBAAwB;EAC1C,gBAAgB,EAAE,OAAO",
-  "sources": [
-    "simulator.component.scss"
-  ],
-  "names": [],
-  "file": "simulator.component.css"
+    "version": 3,
+    "mappings": "AAAA,2BAA4B;EAC1B,gBAAgB,EAAE,wBAAwB;EAC1C,gBAAgB,EAAE,OAAO",
+    "sources": [
+        "simulator.component.scss"
+    ],
+    "names": [],
+    "file": "simulator.component.css"
 }

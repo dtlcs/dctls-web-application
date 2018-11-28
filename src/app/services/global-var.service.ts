@@ -1,12 +1,13 @@
-import { Injectable } from '@angular/core';
+import {Injectable} from '@angular/core';
 
 @Injectable()
 export class GlobalVarService {
 
-  currentJunction: any = {
-    name: ''
-  };
+    currentJunction: any = {
+        name: ''
+    };
 
-  constructor() { }
+    constructor() {
+    }
 
 }

@@ -1,6 +1,6 @@
 export enum TrafficLightState {
-  Red,
-  Orange,
-  Green,
-  Off
+    Red,
+    Orange,
+    Green,
+    Off
 }

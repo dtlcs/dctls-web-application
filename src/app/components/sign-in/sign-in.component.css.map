@@ -1,9 +1,9 @@
 {
-  "version": 3,
-  "mappings": "AAAA,gBAAgB;EACd,MAAM,EAAE,IAAI;EAEZ,OAAO,EAAE,IAAI;EACb,eAAe,EAAE,MAAM;EACvB,WAAW,EAAE,MAAM;EAEnB,8BAAa;IACX,KAAK,EAAE,KAAK",
-  "sources": [
-    "sign-in.component.scss"
-  ],
-  "names": [],
-  "file": "sign-in.component.css"
+    "version": 3,
+    "mappings": "AAAA,gBAAgB;EACd,MAAM,EAAE,IAAI;EAEZ,OAAO,EAAE,IAAI;EACb,eAAe,EAAE,MAAM;EACvB,WAAW,EAAE,MAAM;EAEnB,8BAAa;IACX,KAAK,EAAE,KAAK",
+    "sources": [
+        "sign-in.component.scss"
+    ],
+    "names": [],
+    "file": "sign-in.component.css"
 }

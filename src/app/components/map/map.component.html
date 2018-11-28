@@ -1,19 +1,19 @@
 <div class="form-group" id="searchGroup">
-  <input class="form-control" id="search" #search placeholder="Search for junctions" [formControl]="searchControl"
-         autocorrect="off" autocapitalize="off" spellcheck="off" type="text">
+    <input class="form-control" id="search" #search placeholder="Search for junctions" [formControl]="searchControl"
+           autocorrect="off" autocapitalize="off" spellcheck="off" type="text">
 </div>
 <agm-map [latitude]="latitude" [longitude]="longitude" [scrollwheel]="true" [zoom]="zoom" [styles]="styles">
-  <!--<agm-marker [latitude]="latitude" [longitude]="longitude"></agm-marker>-->
-  <agm-marker class="map-marker" *ngFor="let junction of junctions"
-              [latitude]="junction.latitude"
-              [longitude]="junction.longitude">
-    <agm-info-window>
-      <h3 class="marker-popup-title">{{junction.name}}</h3>
-      <p class="marker-popup-info">Address : {{junction.street}}, {{junction.city}}</p>
-      <p class="marker-popup-info">Latitude: {{junction.latitude}}</p>
-      <p class="marker-popup-info">Longitude: {{junction.longitude}}</p>
-      <br/>
-      <button type="button" (click)="setCurrentJunction(junction)">Select</button>
-    </agm-info-window>
-  </agm-marker>
+    <!--<agm-marker [latitude]="latitude" [longitude]="longitude"></agm-marker>-->
+    <agm-marker class="map-marker" *ngFor="let junction of junctions"
+                [latitude]="junction.latitude"
+                [longitude]="junction.longitude">
+        <agm-info-window>
+            <h3 class="marker-popup-title">{{junction.name}}</h3>
+            <p class="marker-popup-info">Address : {{junction.street}}, {{junction.city}}</p>
+            <p class="marker-popup-info">Latitude: {{junction.latitude}}</p>
+            <p class="marker-popup-info">Longitude: {{junction.longitude}}</p>
+            <br/>
+            <button type="button" (click)="setCurrentJunction(junction)">Select</button>
+        </agm-info-window>
+    </agm-marker>
 </agm-map>

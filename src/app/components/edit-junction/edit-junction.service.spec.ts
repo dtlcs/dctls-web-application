@@ -3,13 +3,13 @@ import {inject, TestBed} from '@angular/core/testing';
 import {EditJunctionService} from './edit-junction.service';
 
 describe('EditJunctionService', () => {
-  beforeEach(() => {
-    TestBed.configureTestingModule({
-      providers: [EditJunctionService]
+    beforeEach(() => {
+        TestBed.configureTestingModule({
+            providers: [EditJunctionService]
+        });
     });
-  });
 
-  it('should be created', inject([EditJunctionService], (service: EditJunctionService) => {
-    expect(service).toBeTruthy();
-  }));
+    it('should be created', inject([EditJunctionService], (service: EditJunctionService) => {
+        expect(service).toBeTruthy();
+    }));
 });

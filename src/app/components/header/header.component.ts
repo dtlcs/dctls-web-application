@@ -9,44 +9,46 @@ import * as moment from 'moment';
 import {GlobalVarService} from '../../services/global-var.service';
 
 @Component({
-  selector: 'app-header',
-  templateUrl: './header.component.html',
-  styleUrls: ['./header.component.scss']
+    selector: 'app-header',
+    templateUrl: './header.component.html',
+    styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
 
-  public contentTitle: string;
-  public selectedJunction = 'Smart Traffic Light System';
+    public contentTitle: string;
+    public selectedJunction = 'Smart Traffic Light System';
 
-  @ViewChild(MatMenuTrigger) profileMenuTrigger: MatMenuTrigger;
+    @ViewChild(MatMenuTrigger) profileMenuTrigger: MatMenuTrigger;
 
-  constructor(private contentService: ContentService, public firebaseAuthService: FirebaseAuthService,
-              private angularFireDatabase: AngularFireDatabase, private router: Router, private globalVarService: GlobalVarService) {
-    this.contentService.changeContentTitle = (title: string): void => {
-      this.contentTitle = title;
-    };
-  }
+    constructor(private contentService: ContentService, public firebaseAuthService: FirebaseAuthService,
+                private angularFireDatabase: AngularFireDatabase, private router: Router,
+                public globalVarService: GlobalVarService) {
 
-  ngOnInit() {
-  }
+        this.contentService.changeContentTitle = (title: string): void => {
+            this.contentTitle = title;
+        };
+    }
 
-  onClickActivitiesButton() {
+    ngOnInit() {
+    }
 
-  }
+    onClickActivitiesButton() {
 
-  onClickPermissionButton() {
+    }
 
-  }
+    onClickPermissionButton() {
 
-  onClickMyAccount() {
-    this.contentService.loadComponent(EditProfileComponent);
-  }
+    }
 
-  onClickSignOutButton() {
-    this.angularFireDatabase.list(`/users/${this.firebaseAuthService.currentUserId}/activities/${moment().utc().format('YYYY-MM-DD')}`)
-      .push({[moment().format()]: 'signout'});
-    this.firebaseAuthService.signOut();
-    this.router.navigate(['/']);
-  }
+    onClickMyAccount() {
+        this.contentService.loadComponent(EditProfileComponent);
+    }
+
+    onClickSignOutButton() {
+        this.angularFireDatabase.list(`/users/${this.firebaseAuthService.currentUserId}/activities/${moment().utc().format('YYYY-MM-DD')}`)
+            .push({[moment().format()]: 'signout'});
+        this.firebaseAuthService.signOut();
+        this.router.navigate(['/']);
+    }
 
 }

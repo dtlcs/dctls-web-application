@@ -51,96 +51,100 @@ import {SessionService} from './components/simulator/services/session.service';
 import {ManageJunctionsService} from './components/manage-junctions/manage-junctions.service';
 import {MapService} from './components/map/map.service';
 import {GlobalVarService} from './services/global-var.service';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
+import {ControlDrawService} from './components/control/services/control-draw.service';
 
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    SimulatorComponent,
-    MapComponent,
-    NewUserComponent,
-    ControlComponent,
-    NewJunctionComponent,
-    ManageJunctionsComponent,
-    ManageUsersComponent,
-    ServerLogComponent,
-    DashboardComponent,
-    SidebarComponent,
-    HeaderComponent,
-    SignInComponent,
-    ForgotPasswordComponent,
-    SettingsComponent,
-    EditProfileComponent,
-    LoginHistoryComponent,
-    NotificationsComponent,
-    EditUserComponent,
-    EditJunctionComponent,
-    ContentComponent,
-    VideoFeedComponent,
-    JunctionProfileComponent,
-    JunctionHistoryComponent,
-    AppPreloaderComponent,
-    ContentPreloaderComponent,
-    ActivityHistoryComponent,
-    ConsoleComponent,
-  ],
-  entryComponents: [
-    ConsoleComponent,
-    SignInComponent,
-    DashboardComponent,
-    MapComponent,
-    ControlComponent,
-    VideoFeedComponent,
-    JunctionProfileComponent,
-    JunctionHistoryComponent,
-    SimulatorComponent,
-    NewUserComponent,
-    ManageUsersComponent,
-    ServerLogComponent,
-    LoginHistoryComponent,
-    ManageJunctionsComponent,
-    EditProfileComponent,
-    EditUserComponent,
-  ],
-  imports: [
-    BrowserModule,
-    [RouterModule.forRoot([{path: '', component: AppComponent}])],
-    HttpClientModule,
-    FormsModule,
-    ReactiveFormsModule,
-    AngularFireModule.initializeApp(environment.firebaseConfig),
-    AngularFireDatabaseModule,
-    AngularFireAuthModule,
-    AgmCoreModule.forRoot({
-      apiKey: environment.googleMapsKey,
-      libraries: ['places']
-    }),
+    declarations: [
+        AppComponent,
+        SimulatorComponent,
+        MapComponent,
+        NewUserComponent,
+        ControlComponent,
+        NewJunctionComponent,
+        ManageJunctionsComponent,
+        ManageUsersComponent,
+        ServerLogComponent,
+        DashboardComponent,
+        SidebarComponent,
+        HeaderComponent,
+        SignInComponent,
+        ForgotPasswordComponent,
+        SettingsComponent,
+        EditProfileComponent,
+        LoginHistoryComponent,
+        NotificationsComponent,
+        EditUserComponent,
+        EditJunctionComponent,
+        ContentComponent,
+        VideoFeedComponent,
+        JunctionProfileComponent,
+        JunctionHistoryComponent,
+        AppPreloaderComponent,
+        ContentPreloaderComponent,
+        ActivityHistoryComponent,
+        ConsoleComponent,
+    ],
+    entryComponents: [
+        ConsoleComponent,
+        SignInComponent,
+        DashboardComponent,
+        MapComponent,
+        ControlComponent,
+        VideoFeedComponent,
+        JunctionProfileComponent,
+        JunctionHistoryComponent,
+        SimulatorComponent,
+        NewUserComponent,
+        ManageUsersComponent,
+        ServerLogComponent,
+        LoginHistoryComponent,
+        ManageJunctionsComponent,
+        EditProfileComponent,
+        EditUserComponent,
+    ],
+    imports: [
+        BrowserModule,
+        [RouterModule.forRoot([{path: '', component: AppComponent}])],
+        HttpClientModule,
+        FormsModule,
+        ReactiveFormsModule,
+        AngularFireModule.initializeApp(environment.firebaseConfig),
+        AngularFireDatabaseModule,
+        AngularFireAuthModule,
+        AgmCoreModule.forRoot({
+            apiKey: environment.googleMapsKey,
+            libraries: ['places']
+        }),
 
-    BrowserAnimationsModule,
-    MatMenuModule,
-    MatButtonModule,
-    MatIconModule
-  ],
-  providers: [
-    SessionService,
-    ContentService,
-    NewUserService,
-    ManageUsersService,
-    ManageJunctionsService,
-    MapService,
-    FirebaseAuthService,
-    UserService,
-    GlobalVarService
-  ],
-  exports: [
-    RouterModule
-  ],
-  bootstrap: [
-    AppComponent
-  ]
+        BrowserAnimationsModule,
+        MatMenuModule,
+        MatButtonModule,
+        MatIconModule,
+        MatSnackBarModule
+    ],
+    providers: [
+        SessionService,
+        ContentService,
+        NewUserService,
+        ManageUsersService,
+        ManageJunctionsService,
+        MapService,
+        FirebaseAuthService,
+        UserService,
+        GlobalVarService,
+        ControlDrawService
+    ],
+    exports: [
+        RouterModule
+    ],
+    bootstrap: [
+        AppComponent
+    ]
 })
 export class AppModule {
-  constructor(injector: Injector) {
-    setAppInjector(injector);
-  }
+    constructor(injector: Injector) {
+        setAppInjector(injector);
+    }
 }

@@ -1,0 +1,2372 @@
+[
+    {
+        "id": 1,
+        "name": "Borella Junction",
+        "description": "Just a crowded place",
+        "street": "Borella street",
+        "city": "Colombo",
+        "province": "Western",
+        "postal_code": "00800",
+        "latitude": 6.914832,
+        "longitude": 79.877595,
+        "pi_mac": "001c42146bac",
+        "roads": [
+            {
+                "id": 1,
+                "name": "Some road North",
+                "lanes": [
+                    {
+                        "id": 1,
+                        "type": "IN",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 2,
+                        "type": "IN",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 3,
+                        "type": "IN",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 4,
+                        "type": "OUT",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 5,
+                        "type": "OUT",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 6,
+                        "type": "OUT",
+                        "traffic_light_state": "OFF"
+                    }
+                ]
+            },
+            {
+                "id": 2,
+                "name": "Some road East",
+                "lanes": [
+                    {
+                        "id": 1,
+                        "type": "IN",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 2,
+                        "type": "IN",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 3,
+                        "type": "IN",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 4,
+                        "type": "OUT",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 5,
+                        "type": "OUT",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 6,
+                        "type": "OUT",
+                        "traffic_light_state": "OFF"
+                    }
+                ]
+            },
+            {
+                "id": 3,
+                "name": "Some road South",
+                "lanes": [
+                    {
+                        "id": 1,
+                        "type": "IN",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 2,
+                        "type": "IN",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 3,
+                        "type": "IN",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 4,
+                        "type": "OUT",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 5,
+                        "type": "OUT",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 6,
+                        "type": "OUT",
+                        "traffic_light_state": "OFF"
+                    }
+                ]
+            },
+            {
+                "id": 4,
+                "name": "Some road West",
+                "lanes": [
+                    {
+                        "id": 1,
+                        "type": "IN",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 2,
+                        "type": "IN",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 3,
+                        "type": "IN",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 4,
+                        "type": "OUT",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 5,
+                        "type": "OUT",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 6,
+                        "type": "OUT",
+                        "traffic_light_state": "OFF"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "name": "Bambalapitiya junction",
+        "description": null,
+        "street": "R A de Mel Mawatha",
+        "city": "Colombo",
+        "province": "Western",
+        "postal_code": "00400",
+        "latitude": 6.8948,
+        "longitude": 79.8572,
+        "pi_mac": "01a22ae4d123",
+        "roads": [
+            {
+                "id": 1,
+                "name": "Some road North",
+                "lanes": [
+                    {
+                        "id": 1,
+                        "type": "IN",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 2,
+                        "type": "IN",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 3,
+                        "type": "IN",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 4,
+                        "type": "OUT",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 5,
+                        "type": "OUT",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 6,
+                        "type": "OUT",
+                        "traffic_light_state": "OFF"
+                    }
+                ]
+            },
+            {
+                "id": 2,
+                "name": "Some road East",
+                "lanes": [
+                    {
+                        "id": 1,
+                        "type": "IN",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 2,
+                        "type": "IN",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 3,
+                        "type": "IN",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 4,
+                        "type": "OUT",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 5,
+                        "type": "OUT",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 6,
+                        "type": "OUT",
+                        "traffic_light_state": "OFF"
+                    }
+                ]
+            },
+            {
+                "id": 3,
+                "name": "Some road South",
+                "lanes": [
+                    {
+                        "id": 1,
+                        "type": "IN",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 2,
+                        "type": "IN",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 3,
+                        "type": "IN",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 4,
+                        "type": "OUT",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 5,
+                        "type": "OUT",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 6,
+                        "type": "OUT",
+                        "traffic_light_state": "OFF"
+                    }
+                ]
+            },
+            {
+                "id": 4,
+                "name": "Some road West",
+                "lanes": [
+                    {
+                        "id": 1,
+                        "type": "IN",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 2,
+                        "type": "IN",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 3,
+                        "type": "IN",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 4,
+                        "type": "OUT",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 5,
+                        "type": "OUT",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 6,
+                        "type": "OUT",
+                        "traffic_light_state": "OFF"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "name": "Sri Jayawardenepura Kotte",
+        "description": null,
+        "street": "Talawatugoda street",
+        "city": "Colombo",
+        "province": "Western",
+        "postal_code": "10100",
+        "latitude": 6.8905,
+        "longitude": 79.9035,
+        "pi_mac": "02a1ac34d11e",
+        "roads": [
+            {
+                "id": 1,
+                "name": "Some road North",
+                "lanes": [
+                    {
+                        "id": 1,
+                        "type": "IN",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 2,
+                        "type": "IN",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 3,
+                        "type": "IN",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 4,
+                        "type": "OUT",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 5,
+                        "type": "OUT",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 6,
+                        "type": "OUT",
+                        "traffic_light_state": "OFF"
+                    }
+                ]
+            },
+            {
+                "id": 2,
+                "name": "Some road East",
+                "lanes": [
+                    {
+                        "id": 1,
+                        "type": "IN",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 2,
+                        "type": "IN",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 3,
+                        "type": "IN",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 4,
+                        "type": "OUT",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 5,
+                        "type": "OUT",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 6,
+                        "type": "OUT",
+                        "traffic_light_state": "OFF"
+                    }
+                ]
+            },
+            {
+                "id": 3,
+                "name": "Some road South",
+                "lanes": [
+                    {
+                        "id": 1,
+                        "type": "IN",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 2,
+                        "type": "IN",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 3,
+                        "type": "IN",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 4,
+                        "type": "OUT",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 5,
+                        "type": "OUT",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 6,
+                        "type": "OUT",
+                        "traffic_light_state": "OFF"
+                    }
+                ]
+            },
+            {
+                "id": 4,
+                "name": "Some road West",
+                "lanes": [
+                    {
+                        "id": 1,
+                        "type": "IN",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 2,
+                        "type": "IN",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 3,
+                        "type": "IN",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 4,
+                        "type": "OUT",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 5,
+                        "type": "OUT",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 6,
+                        "type": "OUT",
+                        "traffic_light_state": "OFF"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": 4,
+        "name": "Nugegoda Junction",
+        "description": null,
+        "street": "Nugegoda Road",
+        "city": "Colombo",
+        "province": "Western",
+        "postal_code": "00500",
+        "latitude": 6.872,
+        "longitude": 79.8908,
+        "pi_mac": "15d34e35cae1",
+        "roads": [
+            {
+                "id": 1,
+                "name": "Some road North",
+                "lanes": [
+                    {
+                        "id": 1,
+                        "type": "IN",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 2,
+                        "type": "IN",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 3,
+                        "type": "IN",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 4,
+                        "type": "OUT",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 5,
+                        "type": "OUT",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 6,
+                        "type": "OUT",
+                        "traffic_light_state": "OFF"
+                    }
+                ]
+            },
+            {
+                "id": 2,
+                "name": "Some road East",
+                "lanes": [
+                    {
+                        "id": 1,
+                        "type": "IN",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 2,
+                        "type": "IN",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 3,
+                        "type": "IN",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 4,
+                        "type": "OUT",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 5,
+                        "type": "OUT",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 6,
+                        "type": "OUT",
+                        "traffic_light_state": "OFF"
+                    }
+                ]
+            },
+            {
+                "id": 3,
+                "name": "Some road South",
+                "lanes": [
+                    {
+                        "id": 1,
+                        "type": "IN",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 2,
+                        "type": "IN",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 3,
+                        "type": "IN",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 4,
+                        "type": "OUT",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 5,
+                        "type": "OUT",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 6,
+                        "type": "OUT",
+                        "traffic_light_state": "OFF"
+                    }
+                ]
+            },
+            {
+                "id": 4,
+                "name": "Some road West",
+                "lanes": [
+                    {
+                        "id": 1,
+                        "type": "IN",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 2,
+                        "type": "IN",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 3,
+                        "type": "IN",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 4,
+                        "type": "OUT",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 5,
+                        "type": "OUT",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 6,
+                        "type": "OUT",
+                        "traffic_light_state": "OFF"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": 5,
+        "name": "Kirulapona Junction",
+        "description": null,
+        "street": "Kirulapona Road",
+        "city": "Colombo",
+        "province": "Western",
+        "postal_code": "00600",
+        "latitude": 6.8816,
+        "longitude": 79.8786,
+        "pi_mac": "102aa12cd434",
+        "roads": [
+            {
+                "id": 1,
+                "name": "Some road North",
+                "lanes": [
+                    {
+                        "id": 1,
+                        "type": "IN",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 2,
+                        "type": "IN",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 3,
+                        "type": "IN",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 4,
+                        "type": "OUT",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 5,
+                        "type": "OUT",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 6,
+                        "type": "OUT",
+                        "traffic_light_state": "OFF"
+                    }
+                ]
+            },
+            {
+                "id": 2,
+                "name": "Some road East",
+                "lanes": [
+                    {
+                        "id": 1,
+                        "type": "IN",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 2,
+                        "type": "IN",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 3,
+                        "type": "IN",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 4,
+                        "type": "OUT",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 5,
+                        "type": "OUT",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 6,
+                        "type": "OUT",
+                        "traffic_light_state": "OFF"
+                    }
+                ]
+            },
+            {
+                "id": 3,
+                "name": "Some road South",
+                "lanes": [
+                    {
+                        "id": 1,
+                        "type": "IN",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 2,
+                        "type": "IN",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 3,
+                        "type": "IN",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 4,
+                        "type": "OUT",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 5,
+                        "type": "OUT",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 6,
+                        "type": "OUT",
+                        "traffic_light_state": "OFF"
+                    }
+                ]
+            },
+            {
+                "id": 4,
+                "name": "Some road West",
+                "lanes": [
+                    {
+                        "id": 1,
+                        "type": "IN",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 2,
+                        "type": "IN",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 3,
+                        "type": "IN",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 4,
+                        "type": "OUT",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 5,
+                        "type": "OUT",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 6,
+                        "type": "OUT",
+                        "traffic_light_state": "OFF"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": 6,
+        "name": "Homagama junction",
+        "description": null,
+        "street": "Homagama Road",
+        "city": "Colombo",
+        "province": "Western",
+        "postal_code": "10206",
+        "latitude": 6.8433,
+        "longitude": 80.0032,
+        "pi_mac": "01ab223c4157c",
+        "roads": [
+            {
+                "id": 1,
+                "name": "Some road North",
+                "lanes": [
+                    {
+                        "id": 1,
+                        "type": "IN",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 2,
+                        "type": "IN",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 3,
+                        "type": "IN",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 4,
+                        "type": "OUT",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 5,
+                        "type": "OUT",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 6,
+                        "type": "OUT",
+                        "traffic_light_state": "OFF"
+                    }
+                ]
+            },
+            {
+                "id": 2,
+                "name": "Some road East",
+                "lanes": [
+                    {
+                        "id": 1,
+                        "type": "IN",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 2,
+                        "type": "IN",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 3,
+                        "type": "IN",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 4,
+                        "type": "OUT",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 5,
+                        "type": "OUT",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 6,
+                        "type": "OUT",
+                        "traffic_light_state": "OFF"
+                    }
+                ]
+            },
+            {
+                "id": 3,
+                "name": "Some road South",
+                "lanes": [
+                    {
+                        "id": 1,
+                        "type": "IN",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 2,
+                        "type": "IN",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 3,
+                        "type": "IN",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 4,
+                        "type": "OUT",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 5,
+                        "type": "OUT",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 6,
+                        "type": "OUT",
+                        "traffic_light_state": "OFF"
+                    }
+                ]
+            },
+            {
+                "id": 4,
+                "name": "Some road West",
+                "lanes": [
+                    {
+                        "id": 1,
+                        "type": "IN",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 2,
+                        "type": "IN",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 3,
+                        "type": "IN",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 4,
+                        "type": "OUT",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 5,
+                        "type": "OUT",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 6,
+                        "type": "OUT",
+                        "traffic_light_state": "OFF"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": 7,
+        "name": "Kollupitiya Junction",
+        "description": null,
+        "street": "Kollupitiya Road",
+        "city": "Colombo",
+        "province": "Western",
+        "postal_code": "00700",
+        "latitude": 6.9128,
+        "longitude": 79.8507,
+        "pi_mac": "002a1ba2b4be",
+        "roads": [
+            {
+                "id": 1,
+                "name": "Some road North",
+                "lanes": [
+                    {
+                        "id": 1,
+                        "type": "IN",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 2,
+                        "type": "IN",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 3,
+                        "type": "IN",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 4,
+                        "type": "OUT",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 5,
+                        "type": "OUT",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 6,
+                        "type": "OUT",
+                        "traffic_light_state": "OFF"
+                    }
+                ]
+            },
+            {
+                "id": 2,
+                "name": "Some road East",
+                "lanes": [
+                    {
+                        "id": 1,
+                        "type": "IN",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 2,
+                        "type": "IN",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 3,
+                        "type": "IN",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 4,
+                        "type": "OUT",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 5,
+                        "type": "OUT",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 6,
+                        "type": "OUT",
+                        "traffic_light_state": "OFF"
+                    }
+                ]
+            },
+            {
+                "id": 3,
+                "name": "Some road South",
+                "lanes": [
+                    {
+                        "id": 1,
+                        "type": "IN",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 2,
+                        "type": "IN",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 3,
+                        "type": "IN",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 4,
+                        "type": "OUT",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 5,
+                        "type": "OUT",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 6,
+                        "type": "OUT",
+                        "traffic_light_state": "OFF"
+                    }
+                ]
+            },
+            {
+                "id": 4,
+                "name": "Some road West",
+                "lanes": [
+                    {
+                        "id": 1,
+                        "type": "IN",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 2,
+                        "type": "IN",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 3,
+                        "type": "IN",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 4,
+                        "type": "OUT",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 5,
+                        "type": "OUT",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 6,
+                        "type": "OUT",
+                        "traffic_light_state": "OFF"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": 8,
+        "name": "Kottawa Junction",
+        "description": null,
+        "street": "Pannipitiya Road",
+        "city": "Colombo",
+        "province": "Western",
+        "postal_code": "10230",
+        "latitude": 6.8412,
+        "longitude": 79.9654,
+        "pi_mac": "0013d45ae15a",
+        "roads": [
+            {
+                "id": 1,
+                "name": "Some road North",
+                "lanes": [
+                    {
+                        "id": 1,
+                        "type": "IN",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 2,
+                        "type": "IN",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 3,
+                        "type": "IN",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 4,
+                        "type": "OUT",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 5,
+                        "type": "OUT",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 6,
+                        "type": "OUT",
+                        "traffic_light_state": "OFF"
+                    }
+                ]
+            },
+            {
+                "id": 2,
+                "name": "Some road East",
+                "lanes": [
+                    {
+                        "id": 1,
+                        "type": "IN",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 2,
+                        "type": "IN",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 3,
+                        "type": "IN",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 4,
+                        "type": "OUT",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 5,
+                        "type": "OUT",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 6,
+                        "type": "OUT",
+                        "traffic_light_state": "OFF"
+                    }
+                ]
+            },
+            {
+                "id": 3,
+                "name": "Some road South",
+                "lanes": [
+                    {
+                        "id": 1,
+                        "type": "IN",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 2,
+                        "type": "IN",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 3,
+                        "type": "IN",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 4,
+                        "type": "OUT",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 5,
+                        "type": "OUT",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 6,
+                        "type": "OUT",
+                        "traffic_light_state": "OFF"
+                    }
+                ]
+            },
+            {
+                "id": 4,
+                "name": "Some road West",
+                "lanes": [
+                    {
+                        "id": 1,
+                        "type": "IN",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 2,
+                        "type": "IN",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 3,
+                        "type": "IN",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 4,
+                        "type": "OUT",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 5,
+                        "type": "OUT",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 6,
+                        "type": "OUT",
+                        "traffic_light_state": "OFF"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": 9,
+        "name": "Wellawatta Junction",
+        "description": null,
+        "street": "Wellawatta Road",
+        "city": "Colombo",
+        "province": "Western",
+        "postal_code": "00600",
+        "latitude": 6.8801,
+        "longitude": 79.8672,
+        "pi_mac": "016ad172e2ab",
+        "roads": [
+            {
+                "id": 1,
+                "name": "Some road North",
+                "lanes": [
+                    {
+                        "id": 1,
+                        "type": "IN",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 2,
+                        "type": "IN",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 3,
+                        "type": "IN",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 4,
+                        "type": "OUT",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 5,
+                        "type": "OUT",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 6,
+                        "type": "OUT",
+                        "traffic_light_state": "OFF"
+                    }
+                ]
+            },
+            {
+                "id": 2,
+                "name": "Some road East",
+                "lanes": [
+                    {
+                        "id": 1,
+                        "type": "IN",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 2,
+                        "type": "IN",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 3,
+                        "type": "IN",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 4,
+                        "type": "OUT",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 5,
+                        "type": "OUT",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 6,
+                        "type": "OUT",
+                        "traffic_light_state": "OFF"
+                    }
+                ]
+            },
+            {
+                "id": 3,
+                "name": "Some road South",
+                "lanes": [
+                    {
+                        "id": 1,
+                        "type": "IN",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 2,
+                        "type": "IN",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 3,
+                        "type": "IN",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 4,
+                        "type": "OUT",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 5,
+                        "type": "OUT",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 6,
+                        "type": "OUT",
+                        "traffic_light_state": "OFF"
+                    }
+                ]
+            },
+            {
+                "id": 4,
+                "name": "Some road West",
+                "lanes": [
+                    {
+                        "id": 1,
+                        "type": "IN",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 2,
+                        "type": "IN",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 3,
+                        "type": "IN",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 4,
+                        "type": "OUT",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 5,
+                        "type": "OUT",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 6,
+                        "type": "OUT",
+                        "traffic_light_state": "OFF"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": 10,
+        "name": "Piliyandala  Junction",
+        "description": null,
+        "street": "Piliyandala Road",
+        "city": "Colombo",
+        "province": "Western",
+        "postal_code": "10300",
+        "latitude": 6.7836,
+        "longitude": 79.9305,
+        "pi_mac": "102ca2b4de2a",
+        "roads": [
+            {
+                "id": 1,
+                "name": "Some road North",
+                "lanes": [
+                    {
+                        "id": 1,
+                        "type": "IN",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 2,
+                        "type": "IN",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 3,
+                        "type": "IN",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 4,
+                        "type": "OUT",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 5,
+                        "type": "OUT",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 6,
+                        "type": "OUT",
+                        "traffic_light_state": "OFF"
+                    }
+                ]
+            },
+            {
+                "id": 2,
+                "name": "Some road East",
+                "lanes": [
+                    {
+                        "id": 1,
+                        "type": "IN",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 2,
+                        "type": "IN",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 3,
+                        "type": "IN",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 4,
+                        "type": "OUT",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 5,
+                        "type": "OUT",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 6,
+                        "type": "OUT",
+                        "traffic_light_state": "OFF"
+                    }
+                ]
+            },
+            {
+                "id": 3,
+                "name": "Some road South",
+                "lanes": [
+                    {
+                        "id": 1,
+                        "type": "IN",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 2,
+                        "type": "IN",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 3,
+                        "type": "IN",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 4,
+                        "type": "OUT",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 5,
+                        "type": "OUT",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 6,
+                        "type": "OUT",
+                        "traffic_light_state": "OFF"
+                    }
+                ]
+            },
+            {
+                "id": 4,
+                "name": "Some road West",
+                "lanes": [
+                    {
+                        "id": 1,
+                        "type": "IN",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 2,
+                        "type": "IN",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 3,
+                        "type": "IN",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 4,
+                        "type": "OUT",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 5,
+                        "type": "OUT",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 6,
+                        "type": "OUT",
+                        "traffic_light_state": "OFF"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": 11,
+        "name": "Boralesgamuwa  Junction",
+        "description": null,
+        "street": "Boralesgamuwa Road",
+        "city": "Colombo",
+        "province": "Western",
+        "postal_code": "10290",
+        "latitude": 6.8412,
+        "longitude": 79.9025,
+        "pi_mac": "a012c4d3e4a1",
+        "roads": [
+            {
+                "id": 1,
+                "name": "Some road North",
+                "lanes": [
+                    {
+                        "id": 1,
+                        "type": "IN",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 2,
+                        "type": "IN",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 3,
+                        "type": "IN",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 4,
+                        "type": "OUT",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 5,
+                        "type": "OUT",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 6,
+                        "type": "OUT",
+                        "traffic_light_state": "OFF"
+                    }
+                ]
+            },
+            {
+                "id": 2,
+                "name": "Some road East",
+                "lanes": [
+                    {
+                        "id": 1,
+                        "type": "IN",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 2,
+                        "type": "IN",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 3,
+                        "type": "IN",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 4,
+                        "type": "OUT",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 5,
+                        "type": "OUT",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 6,
+                        "type": "OUT",
+                        "traffic_light_state": "OFF"
+                    }
+                ]
+            },
+            {
+                "id": 3,
+                "name": "Some road South",
+                "lanes": [
+                    {
+                        "id": 1,
+                        "type": "IN",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 2,
+                        "type": "IN",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 3,
+                        "type": "IN",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 4,
+                        "type": "OUT",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 5,
+                        "type": "OUT",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 6,
+                        "type": "OUT",
+                        "traffic_light_state": "OFF"
+                    }
+                ]
+            },
+            {
+                "id": 4,
+                "name": "Some road West",
+                "lanes": [
+                    {
+                        "id": 1,
+                        "type": "IN",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 2,
+                        "type": "IN",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 3,
+                        "type": "IN",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 4,
+                        "type": "OUT",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 5,
+                        "type": "OUT",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 6,
+                        "type": "OUT",
+                        "traffic_light_state": "OFF"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": 12,
+        "name": "Athurigiriya Junction",
+        "description": null,
+        "street": "Athurigiriya Road",
+        "city": "Colombo",
+        "province": "Western",
+        "postal_code": "10150",
+        "latitude": 6.8854,
+        "longitude": 79.992,
+        "pi_mac": "10ac3d5ca1bc",
+        "roads": [
+            {
+                "id": 1,
+                "name": "Some road North",
+                "lanes": [
+                    {
+                        "id": 1,
+                        "type": "IN",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 2,
+                        "type": "IN",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 3,
+                        "type": "IN",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 4,
+                        "type": "OUT",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 5,
+                        "type": "OUT",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 6,
+                        "type": "OUT",
+                        "traffic_light_state": "OFF"
+                    }
+                ]
+            },
+            {
+                "id": 2,
+                "name": "Some road East",
+                "lanes": [
+                    {
+                        "id": 1,
+                        "type": "IN",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 2,
+                        "type": "IN",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 3,
+                        "type": "IN",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 4,
+                        "type": "OUT",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 5,
+                        "type": "OUT",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 6,
+                        "type": "OUT",
+                        "traffic_light_state": "OFF"
+                    }
+                ]
+            },
+            {
+                "id": 3,
+                "name": "Some road South",
+                "lanes": [
+                    {
+                        "id": 1,
+                        "type": "IN",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 2,
+                        "type": "IN",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 3,
+                        "type": "IN",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 4,
+                        "type": "OUT",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 5,
+                        "type": "OUT",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 6,
+                        "type": "OUT",
+                        "traffic_light_state": "OFF"
+                    }
+                ]
+            },
+            {
+                "id": 4,
+                "name": "Some road West",
+                "lanes": [
+                    {
+                        "id": 1,
+                        "type": "IN",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 2,
+                        "type": "IN",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 3,
+                        "type": "IN",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 4,
+                        "type": "OUT",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 5,
+                        "type": "OUT",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 6,
+                        "type": "OUT",
+                        "traffic_light_state": "OFF"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": 13,
+        "name": "Battaramulla Junction",
+        "description": null,
+        "street": "Battaramulla Road",
+        "city": "Colombo",
+        "province": "Western",
+        "postal_code": "10120",
+        "latitude": 6.8979,
+        "longitude": 79.9222,
+        "pi_mac": "02c3d1acbcd1",
+        "roads": [
+            {
+                "id": 1,
+                "name": "Some road North",
+                "lanes": [
+                    {
+                        "id": 1,
+                        "type": "IN",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 2,
+                        "type": "IN",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 3,
+                        "type": "IN",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 4,
+                        "type": "OUT",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 5,
+                        "type": "OUT",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 6,
+                        "type": "OUT",
+                        "traffic_light_state": "OFF"
+                    }
+                ]
+            },
+            {
+                "id": 2,
+                "name": "Some road East",
+                "lanes": [
+                    {
+                        "id": 1,
+                        "type": "IN",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 2,
+                        "type": "IN",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 3,
+                        "type": "IN",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 4,
+                        "type": "OUT",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 5,
+                        "type": "OUT",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 6,
+                        "type": "OUT",
+                        "traffic_light_state": "OFF"
+                    }
+                ]
+            },
+            {
+                "id": 3,
+                "name": "Some road South",
+                "lanes": [
+                    {
+                        "id": 1,
+                        "type": "IN",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 2,
+                        "type": "IN",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 3,
+                        "type": "IN",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 4,
+                        "type": "OUT",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 5,
+                        "type": "OUT",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 6,
+                        "type": "OUT",
+                        "traffic_light_state": "OFF"
+                    }
+                ]
+            },
+            {
+                "id": 4,
+                "name": "Some road West",
+                "lanes": [
+                    {
+                        "id": 1,
+                        "type": "IN",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 2,
+                        "type": "IN",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 3,
+                        "type": "IN",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 4,
+                        "type": "OUT",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 5,
+                        "type": "OUT",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 6,
+                        "type": "OUT",
+                        "traffic_light_state": "OFF"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": 14,
+        "name": "Malabe Junction",
+        "description": null,
+        "street": "Malabe Road",
+        "city": "Colombo",
+        "province": "Western",
+        "postal_code": "10115",
+        "latitude": 6.9036,
+        "longitude": 79.9547,
+        "pi_mac": "1c3ad4bc351c",
+        "roads": [
+            {
+                "id": 1,
+                "name": "Some road North",
+                "lanes": [
+                    {
+                        "id": 1,
+                        "type": "IN",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 2,
+                        "type": "IN",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 3,
+                        "type": "IN",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 4,
+                        "type": "OUT",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 5,
+                        "type": "OUT",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 6,
+                        "type": "OUT",
+                        "traffic_light_state": "OFF"
+                    }
+                ]
+            },
+            {
+                "id": 2,
+                "name": "Some road East",
+                "lanes": [
+                    {
+                        "id": 1,
+                        "type": "IN",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 2,
+                        "type": "IN",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 3,
+                        "type": "IN",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 4,
+                        "type": "OUT",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 5,
+                        "type": "OUT",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 6,
+                        "type": "OUT",
+                        "traffic_light_state": "OFF"
+                    }
+                ]
+            },
+            {
+                "id": 3,
+                "name": "Some road South",
+                "lanes": [
+                    {
+                        "id": 1,
+                        "type": "IN",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 2,
+                        "type": "IN",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 3,
+                        "type": "IN",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 4,
+                        "type": "OUT",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 5,
+                        "type": "OUT",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 6,
+                        "type": "OUT",
+                        "traffic_light_state": "OFF"
+                    }
+                ]
+            },
+            {
+                "id": 4,
+                "name": "Some road West",
+                "lanes": [
+                    {
+                        "id": 1,
+                        "type": "IN",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 2,
+                        "type": "IN",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 3,
+                        "type": "IN",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 4,
+                        "type": "OUT",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 5,
+                        "type": "OUT",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 6,
+                        "type": "OUT",
+                        "traffic_light_state": "OFF"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": 15,
+        "name": "Narahenpita Junction",
+        "description": null,
+        "street": "Nawala Road",
+        "city": "Colombo",
+        "province": "Western",
+        "postal_code": "00500",
+        "latitude": 6.8876,
+        "longitude": 79.8847,
+        "pi_mac": "6c2011da2c31",
+        "roads": [
+            {
+                "id": 1,
+                "name": "Some road North",
+                "lanes": [
+                    {
+                        "id": 1,
+                        "type": "IN",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 2,
+                        "type": "IN",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 3,
+                        "type": "IN",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 4,
+                        "type": "OUT",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 5,
+                        "type": "OUT",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 6,
+                        "type": "OUT",
+                        "traffic_light_state": "OFF"
+                    }
+                ]
+            },
+            {
+                "id": 2,
+                "name": "Some road East",
+                "lanes": [
+                    {
+                        "id": 1,
+                        "type": "IN",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 2,
+                        "type": "IN",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 3,
+                        "type": "IN",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 4,
+                        "type": "OUT",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 5,
+                        "type": "OUT",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 6,
+                        "type": "OUT",
+                        "traffic_light_state": "OFF"
+                    }
+                ]
+            },
+            {
+                "id": 3,
+                "name": "Some road South",
+                "lanes": [
+                    {
+                        "id": 1,
+                        "type": "IN",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 2,
+                        "type": "IN",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 3,
+                        "type": "IN",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 4,
+                        "type": "OUT",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 5,
+                        "type": "OUT",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 6,
+                        "type": "OUT",
+                        "traffic_light_state": "OFF"
+                    }
+                ]
+            },
+            {
+                "id": 4,
+                "name": "Some road West",
+                "lanes": [
+                    {
+                        "id": 1,
+                        "type": "IN",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 2,
+                        "type": "IN",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 3,
+                        "type": "IN",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 4,
+                        "type": "OUT",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 5,
+                        "type": "OUT",
+                        "traffic_light_state": "OFF"
+                    },
+                    {
+                        "id": 6,
+                        "type": "OUT",
+                        "traffic_light_state": "OFF"
+                    }
+                ]
+            }
+        ]
+    }
+]

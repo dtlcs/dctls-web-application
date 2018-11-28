@@ -3,23 +3,23 @@ import {async, ComponentFixture, TestBed} from '@angular/core/testing';
 import {ActivityHistoryComponent} from './activity-history.component';
 
 describe('ActivityHistoryComponent', () => {
-  let component: ActivityHistoryComponent;
-  let fixture: ComponentFixture<ActivityHistoryComponent>;
+    let component: ActivityHistoryComponent;
+    let fixture: ComponentFixture<ActivityHistoryComponent>;
 
-  beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      declarations: [ActivityHistoryComponent]
-    })
-      .compileComponents();
-  }));
+    beforeEach(async(() => {
+        TestBed.configureTestingModule({
+            declarations: [ActivityHistoryComponent]
+        })
+            .compileComponents();
+    }));
 
-  beforeEach(() => {
-    fixture = TestBed.createComponent(ActivityHistoryComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
+    beforeEach(() => {
+        fixture = TestBed.createComponent(ActivityHistoryComponent);
+        component = fixture.componentInstance;
+        fixture.detectChanges();
+    });
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
+    it('should create', () => {
+        expect(component).toBeTruthy();
+    });
 });

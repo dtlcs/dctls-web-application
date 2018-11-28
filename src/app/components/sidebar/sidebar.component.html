@@ -1,144 +1,163 @@
 <div id="sidebar" class="side-nav">
-  <a id="brand" (click)="onClickBrand()">
-    <img src="../../../assets/img/stls_logo.svg">
-    <h1>STLS</h1>
-  </a>
-
-  <div class="side-nav-option">
-    <a class="side-nav-option-title" (click)="onClickJunctionOverview()">
-      <div [ngClass]="{'current': selected == 'Junction Overview'}">
-        <i class="zmdi zmdi-home"></i>
-        <span>Junction Overview</span>
-      </div>
+    <a id="brand" (click)="onClickBrand()">
+        <img src="../../../assets/img/stls_logo.svg">
+        <h1>STLS</h1>
     </a>
-    <a class="side-nav-option-button" #junctionOverviewMenuTrigger="matMenuTrigger"
-       [matMenuTriggerFor]="junctionOverViewSettingsMenu">
-      <i class="zmdi zmdi-settings"></i>
-      <i class="zmdi zmdi-caret-right"></i>
-    </a>
-    <mat-menu #junctionOverViewSettingsMenu="matMenu" class="sidebar-mat-menu">
-      <a class="sidebar-mat-menu-item" (click)="onClickManageJunctions()">Manage Junctions</a>
-      <div class="sidebar-mat-menu-divider"></div>
-      <div class="sidebar-mat-menu-section-header">Managed in Smart Traffic Light System</div>
-      <a class="sidebar-mat-menu-item">[Item]</a>
-    </mat-menu>
-  </div>
-  <div id="accordion" role="tablist">
-    <div class="card">
-      <a id="headingJunction" class="card-header collapsed" data-toggle="collapse" href="#collapseJunction"
-         role="button" aria-expanded="false" aria-controls="collapseJunction">
-        <span>JUNCTION<i class="zmdi zmdi-chevron-down"></i></span>
-        <p>Control Functions, Video Feed, Junction Profile, Simulator</p>
-      </a>
 
-      <div id="collapseJunction" class="collapse" role="tabpanel" aria-labelledby="collapseJunction">
-        <div class="card-body">
-          <a class="card-body-item" (click)="onClickControl()" [ngClass]="{'current': selected == 'Control'}">
-            <div>
-              <i class="zmdi zmdi-traffic zmdi-hc-fw"></i>
-              <span>Control</span>
+    <div class="side-nav-option">
+        <a class="side-nav-option-title" (click)="onClickJunctionOverview()">
+            <div [ngClass]="{'current': selected == 'Junction Overview'}">
+                <i class="zmdi zmdi-home"></i>
+                <span>Junction Overview</span>
             </div>
-          </a>
-          <a class="card-body-item" (click)="onClickVideoFeed()" [ngClass]="{'current': selected == 'Video Feed'}">
-            <div>
-              <i class="zmdi zmdi-videocam zmdi-hc-fw"></i>
-              <span>Video Feed</span>
-            </div>
-          </a>
-          <a class="card-body-item" (click)="onClickJunctionProfile()"
-             [ngClass]="{'current': selected == 'Junction Profile'}">
-            <div>
-              <i class="zmdi zmdi-settings-square zmdi-hc-fw"></i>
-              <span>Junction Profile</span>
-            </div>
-          </a>
-          <a class="card-body-item" (click)="onClickHistory()" [ngClass]="{'current': selected == 'History'}">
-            <div>
-              <i class="zmdi zmdi-calendar zmdi-hc-fw"></i>
-              <span>History</span>
-            </div>
-          </a>
-          <a class="card-body-item" (click)="onClickSimulator()" [ngClass]="{'current': selected == 'Simulator'}">
-            <div>
-              <i class="zmdi zmdi-car zmdi-hc-fw"></i>
-              <span>Simulator</span>
-            </div>
-          </a>
-        </div>
-      </div>
+        </a>
+        <a class="side-nav-option-button" #junctionOverviewMenuTrigger="matMenuTrigger"
+           [matMenuTriggerFor]="junctionOverViewSettingsMenu">
+            <i class="zmdi zmdi-settings"></i>
+            <i class="zmdi zmdi-caret-right"></i>
+        </a>
+        <mat-menu #junctionOverViewSettingsMenu="matMenu" class="sidebar-mat-menu">
+            <a class="sidebar-mat-menu-item" (click)="onClickManageJunctions()">Manage Junctions</a>
+            <div class="sidebar-mat-menu-divider"></div>
+            <div class="sidebar-mat-menu-section-header">Managed in Smart Traffic Light System</div>
+            <a class="sidebar-mat-menu-item">[Item]</a>
+        </mat-menu>
     </div>
+    <div id="accordion" role="tablist">
 
-    <div class="card">
-      <a id="headingAnalytics" class="card-header collapsed" data-toggle="collapse" href="#collapseAnalytics"
-         role="button" aria-expanded="false" aria-controls="collapseAnalytics">
-        <span>Analytics<i class="zmdi zmdi-chevron-down"></i></span>
-        <p>[....]</p>
-      </a>
+        <div *ngIf="globalVarService.currentJunction.name != ''" class="card">
+            <a id="headingJunction" class="card-header collapsed" data-toggle="collapse" href="#collapseJunction"
+               role="button" aria-expanded="false" aria-controls="collapseJunction">
+                <span>JUNCTION<i class="zmdi zmdi-chevron-down"></i></span>
+                <p>Control Functions, Video Feed, Junction Profile, Simulator</p>
+            </a>
 
-      <div id="collapseAnalytics" class="collapse" role="tabpanel" aria-labelledby="collapseAnalytics">
-        <div class="card-body">
-
+            <div id="collapseJunction" class="collapse" role="tabpanel" aria-labelledby="collapseJunction">
+                <div class="card-body">
+                    <a class="card-body-item" (click)="onClickControl()" [ngClass]="{'current': selected == 'Control'}">
+                        <div>
+                            <i class="zmdi zmdi-traffic zmdi-hc-fw"></i>
+                            <span>Control</span>
+                        </div>
+                    </a>
+                    <a class="card-body-item" (click)="onClickVideoFeed()"
+                       [ngClass]="{'current': selected == 'Video Feed'}">
+                        <div>
+                            <i class="zmdi zmdi-videocam zmdi-hc-fw"></i>
+                            <span>Video Feed</span>
+                        </div>
+                    </a>
+                    <a class="card-body-item" (click)="onClickJunctionProfile()"
+                       [ngClass]="{'current': selected == 'Junction Profile'}">
+                        <div>
+                            <i class="zmdi zmdi-settings-square zmdi-hc-fw"></i>
+                            <span>Junction Profile</span>
+                        </div>
+                    </a>
+                    <a class="card-body-item" (click)="onClickHistory()" [ngClass]="{'current': selected == 'History'}">
+                        <div>
+                            <i class="zmdi zmdi-calendar zmdi-hc-fw"></i>
+                            <span>History</span>
+                        </div>
+                    </a>
+                    <a class="card-body-item" (click)="onClickSimulator()"
+                       [ngClass]="{'current': selected == 'Simulator'}">
+                        <div>
+                            <i class="zmdi zmdi-car zmdi-hc-fw"></i>
+                            <span>Simulator</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
 
-    <div class="card">
-      <a id="headingUser" class="card-header collapsed" data-toggle="collapse" href="#collapseUser" role="button"
-         aria-expanded="false" aria-controls="collapseUser">
-        <span>USER<i class="zmdi zmdi-chevron-down"></i></span>
-        <p>New User, Manage Users</p>
-      </a>
+        <div *ngIf="globalVarService.currentJunction.name != ''" class="card">
+            <a id="headingAnalytics" class="card-header collapsed" data-toggle="collapse" href="#collapseAnalytics"
+               role="button" aria-expanded="false" aria-controls="collapseAnalytics">
+                <span>Analytics<i class="zmdi zmdi-chevron-down"></i></span>
+                <p>[....]</p>
+            </a>
 
-      <div id="collapseUser" class="collapse" role="tabpanel" aria-labelledby="collapseUser">
-        <div class="card-body">
-          <a class="card-body-item" (click)="onClickNewUser()" [ngClass]="{'current': selected == 'New User'}">
-            <div>
-              <i class="zmdi zmdi-account-add zmdi-hc-fw"></i>
-              <span>New User</span>
+            <div id="collapseAnalytics" class="collapse" role="tabpanel" aria-labelledby="collapseAnalytics">
+                <div class="card-body">
+
+                </div>
             </div>
-          </a>
-          <a class="card-body-item" (click)="onClickManageUsers()" [ngClass]="{'current': selected == 'Manage Users'}">
-            <div>
-              <i class="zmdi zmdi-accounts zmdi-hc-fw"></i>
-              <span>Manage Users</span>
-            </div>
-          </a>
         </div>
-      </div>
-    </div>
 
-    <div class="card">
-      <a id="headingAdministration" class="card-header collapsed" data-toggle="collapse" href="#collapseAdministration"
-         role="button" aria-expanded="false" aria-controls="collapseAdministration">
-        <span>Administration<i class="zmdi zmdi-chevron-down"></i></span>
-        <p>Server Log, Login History</p>
-      </a>
+        <div class="card">
+            <a id="headingUser" class="card-header collapsed" data-toggle="collapse" href="#collapseUser" role="button"
+               aria-expanded="false" aria-controls="collapseUser">
+                <span>USER<i class="zmdi zmdi-chevron-down"></i></span>
+                <p>New User, Manage Users</p>
+            </a>
 
-      <div id="collapseAdministration" class="collapse" role="tabpanel" aria-labelledby="collapseAdministration">
-        <div class="card-body">
-          <a class="card-body-item" (click)="onClickServerLog()" [ngClass]="{'current': selected == 'Server Log'}">
-            <div>
-              <i class="zmdi zmdi-laptop zmdi-hc-fw"></i>
-              <span>Server Log</span>
+            <div id="collapseUser" class="collapse" role="tabpanel" aria-labelledby="collapseUser">
+                <div class="card-body">
+                    <a class="card-body-item" (click)="onClickNewUser()"
+                       [ngClass]="{'current': selected == 'New User'}">
+                        <div>
+                            <i class="zmdi zmdi-account-add zmdi-hc-fw"></i>
+                            <span>New User</span>
+                        </div>
+                    </a>
+                    <a class="card-body-item" (click)="onClickManageUsers()"
+                       [ngClass]="{'current': selected == 'Manage Users'}">
+                        <div>
+                            <i class="zmdi zmdi-accounts zmdi-hc-fw"></i>
+                            <span>Manage Users</span>
+                        </div>
+                    </a>
+                </div>
             </div>
-          </a>
-          <a class="card-body-item" (click)="onClickLoginHistory()"
-             [ngClass]="{'current': selected == 'Login History'}">
-            <div>
-              <i class="zmdi zmdi-collection-bookmark zmdi-hc-fw"></i>
-              <span>Login History</span>
-            </div>
-          </a>
-          <a class="card-body-item" (click)="onClickReset()"
-             [ngClass]="{'current': selected == 'Login History'}">
-            <div>
-              <i class="zmdi zmdi-time-restore-setting zmdi-hc-fw"></i>
-              <span>Reset [Dev]</span>
-            </div>
-          </a>
         </div>
-      </div>
-    </div>
 
-  </div>
+        <div class="card">
+            <a id="headingAdministration" class="card-header collapsed" data-toggle="collapse"
+               href="#collapseAdministration"
+               role="button" aria-expanded="false" aria-controls="collapseAdministration">
+                <span>Administration<i class="zmdi zmdi-chevron-down"></i></span>
+                <p>Server Log, Login History</p>
+            </a>
+
+            <div id="collapseAdministration" class="collapse" role="tabpanel" aria-labelledby="collapseAdministration">
+                <div class="card-body">
+                    <a class="card-body-item" (click)="onClickServerLog()"
+                       [ngClass]="{'current': selected == 'Server Log'}">
+                        <div>
+                            <i class="zmdi zmdi-laptop zmdi-hc-fw"></i>
+                            <span>Server Log</span>
+                        </div>
+                    </a>
+                    <a class="card-body-item" (click)="onClickLoginHistory()"
+                       [ngClass]="{'current': selected == 'Login History'}">
+                        <div>
+                            <i class="zmdi zmdi-collection-bookmark zmdi-hc-fw"></i>
+                            <span>Login History</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <a id="headingDevelopment" class="card-header collapsed" data-toggle="collapse" href="#collapseDevelopment"
+               role="button" aria-expanded="false" aria-controls="collapseAdministration">
+                <span>Development<i class="zmdi zmdi-chevron-down"></i></span>
+                <p>Reset</p>
+            </a>
+
+            <div id="collapseDevelopment" class="collapse" role="tabpanel" aria-labelledby="collapseAdministration">
+                <div class="card-body">
+                    <a class="card-body-item" (click)="onClickReset()">
+                        <div>
+                            <i class="zmdi zmdi-time-restore-setting zmdi-hc-fw"></i>
+                            <span>Reset</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </div>
 </div>
