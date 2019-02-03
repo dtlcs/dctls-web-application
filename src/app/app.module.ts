@@ -12,6 +12,7 @@ import {FooterComponent} from './components/footer/footer.component';
 
 import {ButtonModule} from 'primeng/button';
 import {PanelMenuModule} from 'primeng/panelmenu';
+import { SimulatorComponent } from './components/simulator/simulator.component';
 
 @NgModule({
     declarations: [
@@ -21,6 +22,7 @@ import {PanelMenuModule} from 'primeng/panelmenu';
         SidebarComponent,
         HeaderComponent,
         FooterComponent,
+        SimulatorComponent,
     ],
     imports: [
         BrowserModule,
