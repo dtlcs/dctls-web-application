@@ -33,5 +33,7 @@ import {PanelMenuModule} from 'primeng/panelmenu';
     providers: [],
     bootstrap: [AppComponent]
 })
+
 export class AppModule {
+
 }

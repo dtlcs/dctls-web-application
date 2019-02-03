@@ -1,34 +1,25 @@
 export const SIDEBAR_ITEMS = [
     {
-        label: 'TMS Now',
+        label: 'Junction',
         icon: 'pi pi-pw pi-file',
-        items: []
+        items: [
+            {
+                label: 'Control',
+                icon: 'pi pi-pw pi-file',
+            },
+            {
+                label: 'Profile',
+                icon: 'pi pi-pw pi-file',
+            },
+            {
+                label: 'History',
+                icon: 'pi pi-pw pi-file',
+            },
+
+        ]
     },
     {
-        label: 'Payments',
-        icon: 'pi pi-pw pi-file',
-        items: []
-    },
-    {
-        label: 'Students',
-        icon: 'pi pi-pw pi-file',
-        items: []
-    },
-    {
-        label: 'Announcements',
-        icon: 'pi pi-pw pi-file',
-        items: []
-    },
-    {
-        label: 'Inbox',
-        icon: 'pi pi-pw pi-file',
-    },
-    {
-        label: 'Calendar',
-        icon: 'pi pi-pw pi-file',
-    },
-    {
-        label: 'Settings',
+        label: 'Simulator',
         icon: 'pi pi-pw pi-file',
     }
 ];
